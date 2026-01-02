@@ -1,7 +1,7 @@
 # 📄 Lisensi & Hak Cipta
 
 Kode sumber untuk situs web ini dilisensikan di bawah **Lisensi MIT**  
-Silakan lihat file [LICENSE](./LICENSE) untuk detail lengkap.
+Silakan lihat file [LICENSE](./LICENSE.txt) untuk detail lengkap.
 
 ---
 
