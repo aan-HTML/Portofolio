@@ -9683,23 +9683,12 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-    /* FIX SCROLL HP */
-  body {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
-  /* Skill slider tidak ganggu scroll */
-  .skill-slider {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-y;
-  }
-
-  /* Matikan animasi di HP */
   @media (max-width: 768px) {
-    .skill-track {
-      animation: none !important;
-      transform: none !important;
-    }
+  .home-slider {
+    pointer-events: none;
   }
+
+  .owl-dots, .owl-nav {
+    display: none;
+  }
+}
