@@ -9684,11 +9684,18 @@ textarea.form-control {
     stroke-dashoffset: -136px; } }
 
 @media (max-width: 768px) {
-  .home-slider {
+  /* Matikan swipe di layer slider aja */
+  .home-slider .owl-stage, .home-slider .owl-stage-outer {
     pointer-events: none;
   }
 
-  .owl-dots, .owl-nav {
+  /* Aktifkan teks & tombol */
+  .home-slider .slider-text, .home-slider .slider-text *, .home-slider a, .home-slider .btn {
+    pointer-events: auto;
+  }
+
+  /* Hilangkan dots */
+  .owl-dots {
     display: none;
   }
 }
