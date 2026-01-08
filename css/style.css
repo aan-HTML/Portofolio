@@ -9683,19 +9683,19 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-@media (max-width: 768px) {
-  /* Matikan swipe di layer slider aja */
-  .home-slider .owl-stage, .home-slider .owl-stage-outer {
-    pointer-events: none;
-  }
+    @media (max-width: 768px) {
+      /* Matikan swipe di layer slider aja */
+      .home-slider .owl-stage, .home-slider .owl-stage-outer {
+        pointer-events: none;
+      }
 
-  /* Aktifkan teks & tombol */
-  .home-slider .slider-text, .home-slider .slider-text *, .home-slider a, .home-slider .btn {
-    pointer-events: auto;
-  }
+      /* Aktifkan teks & tombol */
+      .home-slider .slider-text, .home-slider .slider-text *, .home-slider a, .home-slider .btn {
+        pointer-events: auto;
+      }
 
-  /* Hilangkan dots */
-  .owl-dots {
-    display: none;
-  }
-}
+      /* Hilangkan dots */
+      .owl-dots {
+        display: none;
+      }
+    }
