@@ -481,7 +481,7 @@
 				<div class="row">
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>Point Blank</h3>
+							<h3 translate="no">Github</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
@@ -492,7 +492,7 @@
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>Pro Evolution Soccer (PES)</h3>
+							<h3 translate="no">WordPress</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="85"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:100%">
@@ -545,6 +545,28 @@
 							</div>
 						</div>
 					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3 translate="no">Bootstrap</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:100%">
+							    <span>100%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3 translate="no">Laravel</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
+							    <span>70%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -564,7 +586,7 @@
 				<h3>Permainan Ular Tangga</h3>
 				<p>Website Permainan Ular Tangga Untuk Siapa Saja Dengan Fitur Permainan Teman, Pasangan, Maupun Keluarga</p>
 				<div class="buttons">
-					<button class="btn btn-primary py-3 px-3" onclick="window.open()">Source Code</button>
+					<button class="btn btn-primary py-3 px-3" onclick="window.open('https://github.com/aan-HTML/Permainan-Ular-Tangga')">Source Code</button>
 					<button class="btn btn-primary py-3 px-3" onclick="window.open()">Lihat Detail</button>
 				</div>
 			</div>
@@ -574,7 +596,7 @@
 				<h3>Website Cafe</h3>
 				<p>Landing Page minimalis Cafe Banjarmasin Terdapat bagian menu, contact, dan alamat cafe</p>
 				<div class="buttons">
-					<button class="btn btn-primary py-3 px-3" onclick="window.open('https')">Source Code</button>
+					<button class="btn btn-primary py-3 px-3" onclick="window.open('https://github.com/aan-HTML/Landing-Page-Cafe')">Source Code</button>
 					<button class="btn btn-primary py-3 px-3" onclick="window.open('https')">Lihat Detail</button>
 				</div>
 			</div>
@@ -584,7 +606,7 @@
 				<h3>Website Sekolah</h3>
 				<p>Landing Page minimalis yang mencerminkan sekolah yang ramah dan agamis</p>
 				<div class="buttons">
-					<button class="btn btn-primary py-3 px-3" onclick="window.open('https')">Source Code</button>
+					<button class="btn btn-primary py-3 px-3" onclick="window.open('https://github.com/aan-HTML/Landing-Page-SMA-IT-Nusantara')">Source Code</button>
 					<button class="btn btn-primary py-3 px-3" onclick="window.open('https')">Lihat Detail</button>
 				</div>
 			</div>
@@ -594,7 +616,7 @@
 				<h3>Page Login</h3>
 				<p>Landing Page minimalis yang bisa kalian gunakan secara gratis di repository github saya</p>
 				<div class="buttons">
-					<button class="btn btn-primary py-3 px-3" onclick="window.open('https')">Source Code</button>
+					<button class="btn btn-primary py-3 px-3" onclick="window.open('https://github.com/aan-HTML/Page-Login')">Source Code</button>
 					<button class="btn btn-primary py-3 px-3" onclick="window.open('https')">Lihat Detail</button>
 				</div>
 			</div>
@@ -917,8 +939,8 @@
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">Bima Nusa Tenggara Barat Indonesia</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+6282-3526-85242</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">aan27052010@gmail.com</span></a></li>
+	                <li><a href="tel://6282352685242"><span class="icon icon-phone"></span><span class="text">+6282-3526-85242</span></a></li>
+	                <li><a href="mailto:aan27052010@gmail.com"><span class="icon icon-envelope"></span><span class="text">aan27052010@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -948,15 +970,15 @@
 </div>
 
 <script>
-const url = new URL(window.location);
-if (url.searchParams.get("notif") === "success") {
-    const n = document.getElementById("notif");
-    n.style.display = "block";
-    setTimeout(() => {
-        n.style.display = "none";
-        history.replaceState(null, "", "index.html");
-    }, 3000);
-}
+	const url = new URL(window.location);
+	if (url.searchParams.get("notif") === "success") {
+		const n = document.getElementById("notif");
+		n.style.display = "block";
+		setTimeout(() => {
+			n.style.display = "none";
+			history.replaceState(null, "", "index.html");
+		}, 3000);
+	}
 </script>
 
   <script src="js/jquery.min.js"></script>
