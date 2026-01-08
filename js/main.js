@@ -94,21 +94,19 @@ $(document).ready(function () {
 });
 	};
 
-	onePageClick();
-	
-
+	onePageClick();	
 	var carousel = function() {
 		$(document).ready(function () {
-		$('.home-slider').owlCarousel({
-			loop: true,
-			autoplay: true,
-			margin: 0,
-			animateOut: 'fadeOut',
-			animateIn: 'fadeIn',
-			nav: false,
-			items: 1
-		});
-		});
+	$('.home-slider').owlCarousel({
+		loop: true,
+		autoplay: true,
+		margin: 0,
+		animateOut: 'fadeOut',
+		animateIn: 'fadeIn',
+		nav: false,
+		items: 1
+	});
+	});
 	};
 	carousel();
 
