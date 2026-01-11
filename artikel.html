@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar Artikel</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* CONTAINER */
+.article-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+/* HEADER */
+.article-header h2 {
+  color: #ffc107;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-header p {
+  color: #aaa;
+  margin-bottom: 2.5rem;
+}
+
+/* GRID */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+/* CARD */
+.article-card {
+  background: #111;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.15);
+}
+
+.article-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.article-content {
+  padding: 1.2rem 1.3rem 1.6rem;
+}
+
+.article-tag {
+  display: inline-block;
+  background: #ffc107;
+  color: #000;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.article-content h3 {
+  margin: 0.6rem 0 0.4rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.article-desc {
+  font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* READ MORE */
+.article-read,
+.article-read:hover,
+.article-read:focus,
+.article-read:active,
+.article-read:visited {
+  text-decoration: none;
+}
+
+.article-read {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: #ffc107;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.article-read:hover {
+  opacity: 0.85;
+}
+
+/* RESET GARIS LINK */
+.back-button,
+.back-button:hover,
+.back-button:focus,
+.back-button:active,
+.back-button:visited {
+  text-decoration: none !important;
+}
+
+/* BUTTON STYLE */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+  padding: 0.6rem 1.3rem;
+  border: 2px solid #ffc107;
+  border-radius: 999px;
+  color: #ffc107;
+  background: rgba(255, 193, 7, 0.06);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* ICON */
+.back-icon {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+/* HOVER */
+.back-button:hover {
+  background: #ffc107;
+  color: #000;
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.25);
+}
+
+.back-button:hover .back-icon {
+  transform: translateX(-5px);
+}
+
+/* ACTIVE */
+.back-button:active {
+  transform: scale(0.96);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="article-container">
+
+  <a href="index.html#blog-section" class="back-button">
+    <span class="back-icon">←</span>
+    <span>Kembali</span>
+  </a>
+
+
+  <div class="article-header">
+    <h2>Semua Artikel</h2>
+    <p>Seluruh Artikel Saya Seputar Teknologi, Coding Dan Website.</p>
+  </div>
+
+  <div class="article-grid">
+
+    <div class="article-card">
+      <img src="images/image_2.jpg">
+      <div class="article-content">
+        <span class="article-tag">News</span>
+        <h3>Pengembangan Teknologi Website</h3>
+        <p class="article-desc">
+          Teknologi web terus berkembang, mulai dari desain yang responsif sampai website yang lebih cepat dan ringan.
+        </p>
+        <a href="blog2.html" class="article-read">Baca selengkapnya →</a>
+      </div>
+    </div>
+
+    <div class="article-card">
+      <img src="images/image_1.jpg">
+      <div class="article-content">
+        <span class="article-tag">Tech</span>
+        <h3>Belajar Coding Bagi Pemula</h3>
+        <p class="article-desc">
+          Coding jadi skill penting di era digital sekarang, dan bisa dimulai dari HTML, CSS, dan JavaScript.
+        </p>
+        <a href="blog3.html" class="article-read">Baca selengkapnya →</a>
+      </div>
+    </div>
+
+    <div class="article-card">
+      <img src="images/image_3.jpg">
+      <div class="article-content">
+        <span class="article-tag">News</span>
+        <h3>Krisis Komponen Komputer</h3>
+        <p class="article-desc">
+          Merakit PC di tahun 2026 akan menjadi barang mahal dimana semua komponen komputer telah diserap oleh perusahaan AI, dibalik dia memberikan kita kecerdasan yang sangat luar biasa, disisi lain AI telah mengambil 90% komponen komputer.
+        </p>
+        <a href="article.html" class="article-read">Baca selengkapnya →</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
