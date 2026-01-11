@@ -1,286 +1,304 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teknologi Masa Kini | AI & Blockchain</title>
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknologi Masa Kini | AI & Blockchain</title>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  background:#000;
-  color:#ddd;
-  font-family:Arial, sans-serif;
-  line-height:1.7;
-}
+    <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      background:#000;
+      color:#ddd;
+      font-family:Arial, sans-serif;
+      line-height:1.7;
+    }
 
-/* ===== PROGRESS BAR ===== */
-.reading-progress{
-  position:fixed;
-  top:0;left:0;
-  width:100%;
-  height:4px;
-  background:#111;
-  z-index:9999;
-}
-.progress-bar{
-  height:100%;
-  width:0%;
-  background:linear-gradient(90deg,#ffc107,#ffe082);
-}
+    /* ===== PROGRESS BAR ===== */
+    .reading-progress{
+      position:fixed;
+      top:0;left:0;
+      width:100%;
+      height:4px;
+      background:#111;
+      z-index:9999;
+    }
+    .progress-bar{
+      height:100%;
+      width:0%;
+      background:linear-gradient(90deg,#ffc107,#ffe082);
+    }
 
-/* ===== BACK BUTTON ===== */
-.btn-back{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  margin:80px 20px 20px;
-  padding:10px 18px;
-  border-radius:999px;
-  background:#111;
-  color:#ffc107;
-  text-decoration:none;
-  border:1px solid #222;
-  transition:.3s;
-  font-size:14px;
-}
-.btn-back:hover{
-  background:#ffc107;
-  color:#000;
-}
+    /* ===== BACK BUTTON ===== */
+    .btn-back{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin:80px 20px 20px;
+      padding:10px 18px;
+      border-radius:999px;
+      background:#111;
+      color:#ffc107;
+      text-decoration:none;
+      border:1px solid #222;
+      transition:.3s;
+      font-size:14px;
+    }
+    .btn-back:hover{
+      background:#ffc107;
+      color:#000;
+    }
 
-/* ===== HEADER ===== */
-header{
-  padding:60px 20px;
-  text-align:center;
-  background:radial-gradient(circle at top,#1a1a1a,#000);
-}
-header h1{
-  color:#ffc107;
-  font-size:2.3rem;
-}
-header p{
-  max-width:720px;
-  margin:15px auto;
-  color:#aaa;
-}
-.meta{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  font-size:13px;
-  color:#888;
-}
+    /* ===== HEADER ===== */
+    header{
+      padding:60px 20px;
+      text-align:center;
+      background:radial-gradient(circle at top,#1a1a1a,#000);
+    }
+    header h1{
+      color:#ffc107;
+      font-size:2.3rem;
+    }
+    header p{
+      max-width:720px;
+      margin:15px auto;
+      color:#aaa;
+    }
+    .meta{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      font-size:13px;
+      color:#888;
+    }
 
-/* ===== PILL NAV ===== */
-.tech-pill-nav{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
-  margin:40px 0;
-}
-.tech-pill{
-  padding:12px 22px;
-  border-radius:999px;
-  background:#111;
-  border:1px solid #222;
-  color:#ddd;
-  text-decoration:none;
-  font-size:14px;
-  transition:.3s;
-}
-.tech-pill:hover{
-  border-color:#ffc107;
-  color:#ffc107;
-  box-shadow:0 0 12px rgba(255,193,7,.35);
-}
-.tech-pill.active{
-  background:#ffc107;
-  color:#000;
-  font-weight:600;
-}
+    /* ===== PILL NAV ===== */
+    .tech-pill-nav{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+      margin:40px 0;
+    }
+    .tech-pill{
+      padding:12px 22px;
+      border-radius:999px;
+      background:#111;
+      border:1px solid #222;
+      color:#ddd;
+      text-decoration:none;
+      font-size:14px;
+      transition:.3s;
+    }
+    .tech-pill:hover{
+      border-color:#ffc107;
+      color:#ffc107;
+      box-shadow:0 0 12px rgba(255,193,7,.35);
+    }
+    .tech-pill.active{
+      background:#ffc107;
+      color:#000;
+      font-weight:600;
+    }
 
-/* ===== ARTICLE ===== */
-article{
-  max-width:900px;
-  margin:auto;
-  padding:20px;
-}
-.section{
-  margin-bottom:80px;
-}
-.section h2{
-  color:#ffc107;
-  margin-bottom:15px;
-}
-.section p{
-  color:#ccc;
-}
+    /* ===== ARTICLE ===== */
+    article{
+      max-width:900px;
+      margin:auto;
+      padding:20px;
+    }
+    .section{
+      margin-bottom:80px;
+    }
+    .section h2{
+      color:#ffc107;
+      margin-bottom:15px;
+    }
+    .section p{
+      color:#ccc;
+    }
 
-/* ===== IMAGE ===== */
-.image-box{
-  margin:25px 0;
-  border-radius:14px;
-  overflow:hidden;
-}
-.lazy-img{
-  width:100%;
-  display:block;
-  filter:blur(20px);
-  transform:scale(1.05);
-  transition:.7s ease;
-}
-.lazy-img.loaded{
-  filter:blur(0);
-  transform:scale(1);
-}
+    /* ===== IMAGE ===== */
+    .image-box{
+      margin:25px 0;
+      border-radius:14px;
+      overflow:hidden;
+    }
+    .lazy-img{
+      width:100%;
+      display:block;
+      filter:blur(20px);
+      transform:scale(1.05);
+      transition:.7s ease;
+    }
+    .lazy-img.loaded{
+      filter:blur(0);
+      transform:scale(1);
+    }
 
-/* ===== SCROLL REVEAL ===== */
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:.8s ease;
-}
-.reveal.active{
-  opacity:1;
-  transform:none;
-}
+    /* ===== SCROLL REVEAL ===== */
+    .reveal{
+      opacity:0;
+      transform:translateY(40px);
+      transition:.8s ease;
+    }
+    .reveal.active{
+      opacity:1;
+      transform:none;
+    }
 
-/* ===== BACK TO TOP ===== */
-.back-top{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:46px;
-  height:46px;
-  border-radius:50%;
-  background:#ffc107;
-  color:#000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:20px;
-  text-decoration:none;
-  opacity:0;
-  pointer-events:none;
-  transition:.3s;
-}
-.back-top.show{
-  opacity:1;
-  pointer-events:auto;
-}
+    /* ===== BACK TO TOP ===== */
+    .back-top{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      background:#ffc107;
+      color:#000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:20px;
+      text-decoration:none;
+      opacity:0;
+      pointer-events:none;
+      transition:.3s;
+    }
+    .back-top.show{
+      opacity:1;
+      pointer-events:auto;
+    }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:600px){
-  header h1{font-size:1.8rem}
-  .tech-pill{font-size:13px}
-}
-</style>
-</head>
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:600px){
+      header h1{font-size:1.8rem}
+      .tech-pill{font-size:13px}
+    }
+    </style>
+    </head>
 
-<body>
+    <body>
 
-<!-- PROGRESS BAR -->
-<div class="reading-progress">
-  <div class="progress-bar" id="progressBar"></div>
-</div>
+    <!-- PROGRESS BAR -->
+    <div class="reading-progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
 
-<!-- BACK BUTTON -->
-<a href="index.html#blog-section" class="btn-back">← Kembali ke Blog</a>
+    <!-- BACK BUTTON -->
+    <a href="index.html#blog-section" class="btn-back">← Kembali ke Blog</a>
 
-<header>
-  <h1>TEKNOLOGI MASA KINI</h1>
-  <p>Artificial Intelligence dan Blockchain dijelaskan dengan bahasa santai namun penuh makna.</p>
-  <div class="meta">
-    <span>📅 Diterbitkan: 2026</span>
-    <span>✍️ By Aan-HTML</span>
-  </div>
-</header>
+    <header>
+      <h1>TEKNOLOGI MASA KINI</h1>
+      <p>Artificial Intelligence dan Blockchain dijelaskan dengan bahasa santai namun penuh makna.</p>
+      <div class="meta">
+        <span>📅 Diterbitkan: 2026</span>
+        <span>✍️ By Aan-HTML</span>
+      </div>
+    </header>
 
-<!-- PILL NAV -->
-<nav class="tech-pill-nav">
-  <a href="#ai" class="tech-pill active">🤖 Artificial Intelligence</a>
-  <a href="#blockchain" class="tech-pill">🔗 Blockchain</a>
-  <a href="#makna" class="tech-pill">🚀 Makna Teknologi</a>
-</nav>
+    <!-- PILL NAV -->
+    <nav class="tech-pill-nav">
+      <a href="#ai" class="tech-pill active">🤖 Artificial Intelligence</a>
+      <a href="#blockchain" class="tech-pill">🔗 Blockchain</a>
+      <a href="#makna" class="tech-pill">🚀 Makna Teknologi</a>
+    </nav>
 
-<article>
+    <article>
 
-<section id="ai" class="section reveal">
-<h2>Artificial Intelligence (AI)</h2>
-<p>
-Artificial Intelligence adalah kemampuan mesin untuk belajar, memahami pola,
-dan mengambil keputusan. AI hadir dalam rekomendasi video, kamera pintar,
-hingga asisten virtual yang kita gunakan setiap hari.
-</p>
-<div class="image-box">
-<img src="images/ai.webp" loading="lazy" class="lazy-img" alt="Artificial Intelligence">
-</div>
-</section>
+    <section id="ai" class="section reveal">
+    <h2>Artificial Intelligence (AI)</h2>
+    <p>
+    Artificial Intelligence (AI) atau kecerdasan buatan adalah cabang ilmu komputer yang mempelajari cara membuat mesin atau sistem komputer mampu meniru kecerdasan manusia. Kecerdasan ini meliputi kemampuan belajar, berpikir, menganalisis, memahami bahasa, mengenali gambar, hingga mengambil keputusan secara otomatis.
+    </p>
+    <p>
+      AI dirancang agar komputer tidak hanya menjalankan perintah, tetapi juga dapat belajar dari data dan pengalaman, sehingga kinerjanya semakin baik seiring waktu.
+    </p>
+    <div class="image-box">
+    <img src="images/ai.webp" loading="lazy" class="lazy-img" alt="Artificial Intelligence">
+    </div>
+    <h2>Cara Kerja Artificial Intelligence</h2>
+    <p>
+      AI bekerja dengan memanfaatkan data, algoritma, dan model matematika. Sistem AI memproses data dalam jumlah besar, kemudian mencari pola di dalamnya. Salah satu teknik yang paling sering digunakan adalah machine learning, yaitu metode yang memungkinkan komputer belajar sendiri tanpa harus diprogram secara detail.
+    </p>
+    <p>
+      Selain itu, terdapat juga deep learning, yang menggunakan jaringan saraf tiruan (neural networks) untuk meniru cara kerja otak manusia dalam mengenali pola yang kompleks, seperti suara, teks, dan gambar.
+    </p>
+    </section>
 
-<section id="blockchain" class="section reveal">
-<h2>Blockchain</h2>
-<p>
-Blockchain adalah teknologi pencatatan digital yang transparan dan terdesentralisasi.
-Setiap data tersimpan dalam blok yang saling terhubung dan sulit dimanipulasi,
-menciptakan sistem yang aman dan terpercaya.
-</p>
-<div class="image-box">
-<img src="images/blockchain.webp" loading="lazy" class="lazy-img" alt="Blockchain">
-</div>
-</section>
+    <section id="blockchain" class="section reveal">
+    <h2>Blockchain</h2>
+    <p>
+    Blockchain adalah teknologi penyimpanan data digital yang tersusun dalam bentuk blok-blok dan saling terhubung satu sama lain. Setiap blok berisi kumpulan data dan memiliki kode unik (hash) yang menghubungkannya dengan blok sebelumnya, sehingga data menjadi aman dan sulit diubah.
+    </p>
+    <p>
+      Teknologi blockchain bekerja secara terdesentralisasi, artinya data tidak disimpan di satu server saja, melainkan tersebar di banyak komputer (node) dalam sebuah jaringan.
+    </p>
+    <div class="image-box">
+    <img src="images/blockchain.webp" loading="lazy" class="lazy-img" alt="Blockchain">
+    </div>
+    <h2>Cara Kerja Blockchain</h2>
+    <p>
+      Blockchain mencatat setiap transaksi dalam sebuah blok. Setelah blok penuh, data akan diverifikasi oleh jaringan. Jika sudah valid, blok tersebut ditambahkan ke rantai (chain) blok sebelumnya. Karena setiap blok saling terhubung dan diamankan dengan kriptografi, perubahan data secara sepihak hampir tidak mungkin dilakukan.
+    </p>
+    </section>
 
-<section id="makna" class="section reveal">
-<h2>Makna Teknologi di Masa Kini</h2>
-<p>
-Teknologi bukan hanya soal kecanggihan, tapi tentang bagaimana manusia menggunakannya.
-AI dan Blockchain memberi peluang besar, namun juga menuntut tanggung jawab
-agar kemajuan tetap membawa manfaat.
-</p>
-<div class="image-box">
-<img src="images/future.webp" loading="lazy" class="lazy-img" alt="Teknologi Masa Depan">
-</div>
-</section>
+    <section id="makna" class="section reveal">
+    <h2>Makna Teknologi di Masa Kini</h2>
+    <p>
+    Teknologi masa kini memiliki makna sebagai alat dan sistem canggih yang diciptakan untuk mempermudah, mempercepat, dan meningkatkan kualitas kehidupan manusia. Perkembangan teknologi tidak hanya berfokus pada perangkat, tetapi juga pada cara manusia berkomunikasi, bekerja, belajar, dan mengambil keputusan.
+    </p>
+    <p>Di era digital, teknologi menjadi bagian penting dalam kehidupan sehari-hari. Internet, kecerdasan buatan, dan perangkat pintar memungkinkan informasi diperoleh dengan cepat dan akurat. Teknologi juga membantu meningkatkan efisiensi di berbagai bidang seperti pendidikan, kesehatan, ekonomi, dan industri.</p>
+    <div class="image-box">
+    <img src="images/future.webp" loading="lazy" class="lazy-img" alt="Teknologi Masa Depan">
+    </div>
+    <p>
+      Makna teknologi masa kini juga mencerminkan perubahan pola hidup manusia. Aktivitas yang sebelumnya dilakukan secara manual kini dapat dilakukan secara otomatis dan digital. Namun, penggunaan teknologi harus disertai dengan sikap bijak agar memberikan dampak positif dan tidak menimbulkan ketergantungan berlebihan.
+    </p>
+    <p>
+      Dengan demikian, teknologi masa kini bukan hanya simbol kemajuan, tetapi juga sarana untuk menciptakan kehidupan yang lebih efektif, inovatif, dan berkelanjutan.
+    </p>
+    </section>
 
-</article>
+    </article>
 
-<!-- BACK TO TOP -->
-<a href="#" class="back-top" id="backTop">↑</a>
+    <!-- BACK TO TOP -->
+    <a href="#" class="back-top" id="backTop">↑</a>
 
-<script>
-// PROGRESS BAR
-const progressBar=document.getElementById("progressBar");
-const article=document.querySelector("article");
-window.addEventListener("scroll",()=>{
-  const scrollY=window.scrollY+window.innerHeight;
-  const progress=Math.min(
-    Math.max((scrollY-article.offsetTop)/article.offsetHeight,0),1
-  );
-  progressBar.style.width=(progress*100)+"%";
-});
+    <script>
+    // PROGRESS BAR
+    const progressBar=document.getElementById("progressBar");
+    const article=document.querySelector("article");
+    window.addEventListener("scroll",()=>{
+      const scrollY=window.scrollY+window.innerHeight;
+      const progress=Math.min(
+        Math.max((scrollY-article.offsetTop)/article.offsetHeight,0),1
+      );
+      progressBar.style.width=(progress*100)+"%";
+    });
 
-// SCROLL REVEAL
-const reveals=document.querySelectorAll(".reveal");
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting) e.target.classList.add("active");
-  });
-},{threshold:.15});
-reveals.forEach(el=>observer.observe(el));
+    // SCROLL REVEAL
+    const reveals=document.querySelectorAll(".reveal");
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add("active");
+      });
+    },{threshold:.15});
+    reveals.forEach(el=>observer.observe(el));
 
-// LAZY IMAGE BLUR
-document.querySelectorAll(".lazy-img").forEach(img=>{
-  img.addEventListener("load",()=>img.classList.add("loaded"));
-});
+    // LAZY IMAGE BLUR
+    document.querySelectorAll(".lazy-img").forEach(img=>{
+      img.addEventListener("load",()=>img.classList.add("loaded"));
+    });
 
-// BACK TO TOP
-const backTop=document.getElementById("backTop");
-window.addEventListener("scroll",()=>{
-  backTop.classList.toggle("show",window.scrollY>400);
-});
-</script>
+    // BACK TO TOP
+    const backTop=document.getElementById("backTop");
+    window.addEventListener("scroll",()=>{
+      backTop.classList.toggle("show",window.scrollY>400);
+    });
+    </script>
 
-</body>
-</html>
+    </body>
+    </html>
