@@ -11,13 +11,13 @@ const data = {
     title: "Introduction to Financial Literacy",
     text: "Sertifikat Dicoding ini menunjukkan bahwa saya telah menyelesaikan pembelajaran dasar mengenai literasi keuangan.",
     date: "Diberikan pada 11 Januari 2026",
-    link: "https://www.dicoding.com/certificates/ISI_ID"
+    link: "https://www.dicoding.com/certificates/1RXYQ971QZVM"
   },
   2: {
     title: "Belajar Dasar Artificial Intelligence",
     text: "Sertifikat ini membuktikan pemahaman saya terhadap konsep dasar AI dan penerapannya.",
     date: "Diberikan pada 11 Januari 2026",
-    link: "https://www.dicoding.com/certificates/ISI_ID"
+    link: "https://www.dicoding.com/certificates/JLX156RL5Z72"
   },
   3: {
     title: "Sertifikat Penghargaan Dicoding",
