@@ -1,440 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Blog 5</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara Kerja Internet</title>
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="preload" href="fonts/artikel-font/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link rel="stylesheet" href="css/aos.css">
+<style>
+@font-face{
+font-family:'Inter';
+src:url('fonts/artikel-font/Inter-Regular.woff2') format('woff2');
+font-weight:400;
+font-display:swap;
+}
+@font-face{
+font-family:'Inter';
+src:url('fonts/artikel-font/Inter-Medium.woff2') format('woff2');
+font-weight:500;
+font-display:swap;
+}
+@font-face{
+font-family:'Inter';
+src:url('fonts/artikel-font/Inter-SemiBold.woff2') format('woff2');
+font-weight:600;
+font-display:swap;
+}
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">navigation</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+:root{
+--bg:#0b0b0b;
+--card:#111;
+--text:#eaeaea;
+--muted:#9a9a9a;
+--primary:#ffc107;
+}
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>Tentang Saya</span></a></li>
-	          <li class="nav-item"><a href="index.html#resume-section" class="nav-link"><span>Profil</span></a></li>
-	          <li class="nav-item"><a href="index.html#services-section" class="nav-link"><span translate="no">Penghargaan</span></a></li>
-	          <li class="nav-item"><a href="index.html#skills-section" class="nav-link"><span>Skills</span></a></li>
-	          <li class="nav-item"><a href="index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="index.html#blog-section" class="nav-link"><span>Artikel</span></a></li>
-	          <li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Kontak</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
-          <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
-            <h1 class="mb-3 bread">Cara Kerja Internet</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.html">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i class="ion-ios-arrow-forward"></i></span></p>
-          </div>
-        </div>
-      </div>
-    </section>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',system-ui,sans-serif;
+}
 
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 ftco-animate">
-            <h2 class="mb-3">Cara Kerja Internet</h2>
-            <p>
-              <img src="images/Peta Dunia.png" alt="" class="img-fluid">
-            </p>
-            <p>Internet adalah jaringan global yang menghubungkan jutaan perangkat di seluruh dunia, seperti komputer, smartphone, dan server. Melalui internet, perangkat-perangkat ini dapat saling bertukar data berupa teks, gambar, vidio, hingga suara. Saat kita membuka website, sebenarnya perangkat kita sedang berkomunikasi dengan server lain yang menyimpan data website tersebut.</p>
-            <p>Proses ini dimulai ketika kita mengetikalamat website di browser. Permintaan tersebut akan diterjemahkan oleh sistem DNS (Domain Name System), yaitu sistem yang mengubah nama website menjadi alamat IP agar bisa dikenali oleh server tujuan. Setelah alamat ditemukan, permintaan data akan diteruskan ke server melalui jaringan internet.</p>
-            <p>
-              <img src="images/browser ke server.png" alt="" class="img-fluid">
-            </p>
-            <p>Data yang dikirim melalui internet tidak dikirim sekaligus, melainkan dipecah menjadi bagian-bagian kecil yang disebut Packet. Packet ini dikirim melalui berbagai jalur jaringan dan perangkat seperti router. Setelah semua packet sampai di perangkat pengguan, data tersebut akan disusun kembali sehingga bisa ditampilkan secara utuh oleh browser.</p>
-            <p>
-              <img src="images/alur pengiriman data.png" alt="" class="img-fluid">
-            </p>
-            <p>Agar data dapat berpindah dengan cepat dan stabil, internet menggunakan berbagai media pengiriman. Salah satu yang paling utama adalah Fiber Optik, yaitu kabel berkecepatan tinggi yang memanfaatkan cahaya unuk mentransfer data. Fiber optik mampu mengirim data dalam jumlah besar dengan gangguan yang sangat minim. Untuk menghubungkan jaringan internet antar negara dan benua, digunakan kabel bawah laut berbahan fiber optik yang dipasang di dasar laun dan menjadi jalur utama internet global.</p>
-            <p>
-              <img src="images/fiber optic.png" alt="" class="img-fluid">
-            </p>
-            <p>Selain jaringan kabel, internet juga bisa diakses melalui jaringan seluler. Jaringan ini bekerja menggunakan BTS (Base Transceiver Station), yaitu menara pemancar sinyal yang menghubungkan perangkat seperti smartphone ke jaringan operator. Kualitas dan jarak BTS sangat mempengaruhi kecepatan serta kestabilan koneksi internet.</p>
-            <p>
-              <img src="images/menara bts.png" alt="" class="img-fluid">
-            </p>
-            <p>Disisi lain WIFI adalah jaringan nirkabel yang menghubungkan perangkat ke internet melalui router. WIFI banyak digunakan di rumah, sekolah, dan tempat umum karena praktis dan bisa digunakan oleh banyak perangkat sekaligus.</p>
-            <p>
-              <img src="images/router wifi.png" alt="" class="img-fluid">
-            </p>
-            <p>Agar komunikasi data berjalan dengan benar, internet menggunakan aturan yang disebut protokol. Protokol dasar yang digunakan adalah TCP/IP (Transmission Control Protocol / Internet Protocol). TCP bertugas memastikan data dikirim dengan lengkap dan urut, Sedangkan IP berfungsi sebagai alamat tujuan agar data sampai ke perangkat dengan benar. Contoh IP = "192.168.1.1"</p>
-            <p>
-              <img src="images/diagram tcp-ip.png" alt="" class="img-fluid">
-            </p>
-            <p>Saat Mengakses website, browser menggunakan protokol HTTP (Hypertext Transfer Protocol) atau HTTPS (Hypertext Transfer Protocol Secure). HTTP digunakan untuk pertukaran data antar browser dan server, sedangkan HTTPS adalah versi yang lebih aman karena menggunakan enkripsi untuk melindungi data pengguna.</p>
-            <p>
-              <img src="images/http-dan-https.png" alt="" class="img-fluid">
-            </p>
-            <p>Kesimpulannya, internet bekerja melalui kombinasi perangkat, media jaringan, dan protokol komunikasi yang saling terhubung. Semua proses ini terjadi secara otomatis dan sangat cepat, sehingga kita bisa mengakses informasi dari mana saja dengan mudah dan aman.</p>
-            <div class="tag-widget post-tag-container mb-5 mt-5">
-              <div class="tagcloud">
-                <a href="#" class="tag-cloud-link">Hidup JOKOWI!!!!</a>
-                <a href="#" class="tag-cloud-link">Website</a>
-                <a href="#" class="tag-cloud-link">bahlil</a>
-                <a href="#" class="tag-cloud-link">komdigi tlol</a>
-              </div>
-            </div>
-            
-            <div class="about-author d-flex p-4 bg-dark">
-              <div class="bio mr-5">
-                <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>Gibran Rakabuming Raka</h3>
-                <p>Ya baik saya akan kasih komentar tentang Website ini, selebihnya bagus dan ganteng kaya saya wkwkwkwkwk.</p>
-              </div>
-            </div>
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);}
 
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
 
-            <div class="pt-5 mt-5">
-              <h3 class="mb-5">6 komentar</h3>
-              <ul class="comment-list">
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_2.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>Sahroni</h3>
-                    <div class="meta">25 Desember 2025 jam 2:21pm</div>
-                    <p>Kembalikan flasdisk sayaaa. Siapa yang menemukan dan mengembalikannya kepada saya akan saya kasih 100t hasil dari korupsi saya. Itu flasdisk isinya aib saya semua.</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
-                </li>
+/* BACK */
+.back-btn{
+display:inline-flex;
+gap:8px;
+padding:10px 18px;
+border-radius:999px;
+border:1px solid var(--primary);
+color:var(--primary);
+text-decoration:none;
+font-weight:600;
+}
 
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_3.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>Bahlil</h3>
-                    <div class="meta">25 Desember 2025 jam 9:21pm</div>
-                    <p>Saya bahlil, semua bensin atau bahan bakar di seluruh indonesia akan saya campur dengan ethanol 100%, biarin motor kalian pada rusak wokwokwokwok mampuss, IPK tinggi buat apa, liat saya IPK rendah masih bisa jadi mentri.</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
+/* HERO */
+.hero{
+margin-top:30px;
+padding:80px 30px;
+border-radius:26px;
+text-align:center;
+background:
+radial-gradient(circle at top, rgba(255,193,7,.18), transparent 60%),
+linear-gradient(180deg,#111,#0b0b0b);
+border:1px solid #1f1f1f;
+}
+.hero h1{
+font-size:clamp(2rem,5vw,3.2rem);
+color:var(--primary);
+}
+.hero-line{
+width:80px;
+height:4px;
+background:var(--primary);
+margin:22px auto;
+border-radius:999px;
+}
+.hero p{
+max-width:760px;
+margin:auto;
+line-height:1.9;
+color:#dcdcdc;
+}
 
-                  <ul class="children">
-                    <li class="comment">
-                      <div class="vcard bio">
-                        <img src="images/person_4.jpg" alt="Image placeholder">
-                      </div>
-                      <div class="comment-body">
-                        <h3>Ngab Owi</h3>
-                        <div class="meta">20 Agustus, 2025 jam 2:21pm</div>
-                        <p>Halo saya Jokowi biasa dipanggil ngab owi, btw IKN dah selesai nak?</p>
-                        <p><a href="#" class="reply">Reply</a></p>
-                      </div>
+/* TOC */
+.toc-bullet{
+margin:60px 0;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+.toc-bullet a{
+width:86px;
+height:86px;
+border-radius:50%;
+background:var(--card);
+border:1px solid #1f1f1f;
+text-decoration:none;
+color:var(--text);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:6px;
+transition:.3s;
+}
+.toc-bullet span{font-size:1.5rem;}
+.toc-bullet small{font-size:.7rem;text-align:center;}
+.toc-bullet a:hover{
+border-color:var(--primary);
+color:var(--primary);
+box-shadow:0 0 20px rgba(255,193,7,.25);
+transform:translateY(-4px);
+}
 
+/* ARTICLE */
+article{
+display:flex;
+flex-direction:column;
+gap:40px;
+}
+.section{
+background:var(--card);
+padding:30px;
+border-radius:18px;
+border:1px solid #1f1f1f;
+}
+.section h2{
+color:var(--primary);
+margin-bottom:12px;
+}
+.section p{
+line-height:1.9;
+color:#dcdcdc;
+text-align:justify;
+}
 
-                      <ul class="children">
-                        <li class="comment">
-                          <div class="vcard bio">
-                            <img src="images/staff-1.jpg" alt="Image placeholder">
-                          </div>
-                          <div class="comment-body">
-                            <h3>Ucok</h3>
-                            <div class="meta">21 Agustus 2025 jam 2:21pm</div>
-                            <p>Gw ucok, bawa gw ke indo anj biar gw acak acak tuh indo kek los santos di masa prime gw. Eh gajadi soalnya indo emang dah hancur, korupsi di mana mana.</p>
-                            <p><a href="#" class="reply">Reply</a></p>
-                          </div>
+/* IMAGE */
+.lazy-img{
+width:100%;
+border-radius:14px;
+margin-bottom:18px;
+filter:blur(18px);
+transform:scale(1.05);
+transition:.7s ease;
+}
+.lazy-img.loaded{
+filter:blur(0);
+transform:scale(1);
+}
 
-                            <ul class="children">
-                              <li class="comment">
-                                <div class="vcard bio">
-                                  <img src="images/staff-3.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                  <h3>Ipin</h3>
-                                  <div class="meta">23 Desember 2025 jam 2:21pm</div>
-                                  <p>Liat ni malaysia bagus ga kek indo</p>
-                                  <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                              </li>
-                            </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
+/* REVEAL */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:.8s ease;
+}
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
 
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/staff-2.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>Harmonie</h3>
-                    <div class="meta">24 Desember 2025 jam 2:21pm</div>
-                    <p>Apa gw sihir aja ya seklaian nih pemerintah indo, kek tai soalnya. Gw ganti jadi Hougwarts ae.</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
-                </li>
-              </ul>
-              <!-- END comment-list -->
-              
-              <div class="comment-form-wrap pt-5">
-                <h3 class="mb-5">Tinggalkan komentar</h3>
-                <form action="#" class="p-5 bg-dark">
-                  <div class="form-group">
-                    <label for="name">Nama *</label>
-                    <input type="text" class="form-control" id="name">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" class="form-control" id="email">
-                  </div>
-                  <div class="form-group">
-                    <label for="website">Asal</label>
-                    <input type="url" class="form-control" id="website">
-                  </div>
+/* SCROLL TOP */
+.scroll-top{
+position:fixed;
+bottom:22px;
+right:22px;
+width:48px;
+height:48px;
+border-radius:50%;
+background:var(--primary);
+color:#000;
+border:none;
+font-size:1.4rem;
+cursor:pointer;
+display:none;
+}
 
-                  <div class="form-group">
-                    <label for="message">Pesan</label>
-                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
-                  </div>
+/* PROGRESS BAR */
+.reading-progress{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:#111;
+z-index:9999;
+}
+.progress-bar{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#ffc107,#ffd54f);
+}
+</style>
+</head>
 
-                </form>
-              </div>
-            </div>
+<body>
 
-          </div> <!-- .col-md-8 -->
-          <div class="col-lg-4 sidebar ftco-animate">
-            <div class="sidebar-box">
-              <form action="#" class="search-form">
-                <div class="form-group">
-                  <span class="icon icon-search"></span>
-                  <input type="text" class="form-control" placeholder="Ketik Untuk Mencari">
-                </div>
-              </form>
-            </div>
-            <div class="sidebar-box ftco-animate">
-            	<h3 class="heading-sidebar">Kategori</h3>
-              <ul class="categories">
-                <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Web Development <span>(12)</span></a></li>
-                <li><a href="https://www.freecodecamp.org/learn">Belajar Coding <span>(22)</span></a></li>
-                <li><a href="https://www.teachtarget.com/whatis/">Teknologi <span>(37)</span></a></li>
-                <li><a href="https://www.freecodecamp.org/news/">Tips & Trik <span>(42)</span></a></li>
-              </ul>
-            </div>
+<div class="reading-progress">
+<div class="progress-bar" id="progressBar"></div>
+</div>
 
-            <div class="sidebar-box ftco-animate">
-              <h3 class="heading-sidebar">Artikel Terbaru</h3>
-              <!--ARTIKEL TERBARU-->
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="blog3.html">Belajar Coding Untuk Pemula</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> 12 Desember 2025</a></div>
-                    <div><a href="index.html#about-section"><span class="icon-person"></span> Aan</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 6</a></div>
-                  </div>
-                </div>
-              </div>
+<div class="container">
 
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="blog2.html">Pengembangan Teknologi Dan Website</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> 12 Desember 2025</a></div>
-                    <div><a href="index.html#about-section"><span class="icon-person"></span> Aan</a></div>
-                    <div><a href="blog3.html#coments-section"><span class="icon-chat"></span> 6</a></div>
-                  </div>
-                </div>
-              </div>
+<a href="index.html#blog-section" class="back-btn">← Kembali ke Blog</a>
 
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="blog1.html">Pentingnya Website Responsif</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> 8 Desember 2025</a></div>
-                    <div><a href="index.html#about-section"><span class="icon-person"></span> Aan</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 6</a></div>
-                  </div>
-                </div>
-              </div>
+<section class="hero" id="hero">
+<h1>CARA KERJA INTERNET</h1>
+<div class="hero-line"></div>
+<p>
+Internet adalah jaringan global yang menghubungkan jutaan perangkat
+di seluruh dunia untuk saling bertukar data secara cepat dan otomatis.
+</p>
+</section>
 
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_6.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="blog4.html">Hardware Komputer</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> 12 Desember 2025</a></div>
-                    <div><a href="index.html#about-section"><span class="icon-person"></span> Aan</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 6</a></div>
-                  </div>
-                </div>
-              </div>
+<nav class="toc-bullet" id="toc"></nav>
 
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/Peta\ Dunia.png);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="blog5.html">Cara Kerja Internet</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> 13 Desember 2025</a></div>
-                    <div><a href="index.html#about-section"><span class="icon-person"></span> Aan</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 6</a></div>
-                  </div>
-                </div>
-              </div>
+<article>
 
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/ai.webp);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="blog5.html">Krisis Komponen Komputer</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> 13 Desember 2025</a></div>
-                    <div><a href="index.html#about-section"><span class="icon-person"></span> Aan</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 6</a></div>
-                  </div>
-                </div>
-              </div>
+<section class="section" id="internet">
+<img src="images/internet-map.png" loading="lazy" class="lazy-img">
+<h2>Apa Itu Internet?</h2>
+<p>Internet adalah jaringan global yang menghubungkan komputer, server, smartphone, dan perangkat lainnya. Melalui internet, perangkat-perangkat ini dapat saling bertukar data seperti teks, gambar, video, dan suara dalam waktu sangat singkat.</p>
+<p>Ketika kamu membuka sebuah website, sebenarnya perangkatmu sedang berkomunikasi dengan server yang berada di lokasi lain, bahkan bisa di negara yang berbeda.</p>
+</section>
 
-            </div>
+<section class="section" id="dns">
+<img src="images/browser ke server.png" loading="lazy" class="lazy-img">
+<h2>DNS (Domain Name System)</h2>
+<p>Saat kamu mengetik alamat website seperti google.com, komputer tidak langsung mengerti. Internet menggunakan sistem DNS untuk mengubah nama domain tersebut menjadi alamat IP agar server tujuan dapat ditemukan.</p>
+<p>DNS bekerja seperti buku telepon internet, yang mencocokkan nama website dengan alamat IP server.</p>
+</section>
 
-            <div class="sidebar-box ftco-animate">
-              <h3 class="heading-sidebar">Tag</h3>
-              <div class="tagcloud">
-                <a href="https://www.cloudeka.id/id/berita/web-sec/ethernet-adalah/" target="_blank" class="tag-cloud-link">Ethernet</a>
-                <a href="https://oss.oetiker.ch/mrtg/" class="tag-cloud-link">MRT</a>
-                <a href="https://en.wikipedia.org/wiki/User_datagram_protocol" class="tag-cloud-link">UDP</a>
-                <a href="https://en.wikipedia.org/wiki/internet_control_message_Protocol" class="tag-cloud-link">ICMP</a>
-                <a href="#" class="tag-cloud-link">Pemula</a>
-                <a href="#" class="tag-cloud-link">Tutorial</a>
-                <a href="https://www.teachtarget.com/whatis/" class="tag-cloud-link">Teknologi</a>
-                <a href="https://en.wikipedia.org/wiki.Website" class="tag-cloud-link">Website</a>
-              </div>
-            </div>
+<section class="section" id="packet">
+<img src="images/alur pengiriman data.png" loading="lazy" class="lazy-img">
+<h2>Pengiriman Data (Packet)</h2>
+<p>Data yang dikirim melalui internet tidak dikirim sekaligus, melainkan dipecah menjadi bagian kecil yang disebut packet. Setiap packet bisa melewati jalur jaringan yang berbeda.</p>
+<p>Setelah semua packet sampai di tujuan, perangkat akan menyusunnya kembali sehingga data dapat ditampilkan secara utuh.</p>
+</section>
 
-            <div class="sidebar-box ftco-animate">
-              <h3 class="heading-sidebar">Catatan</h3>
-              <p>Capek njirr buat website, dah berapa hari nih website saya buat kayaknya dah semingguan deh
-              </p>
+<section class="section" id="fiber">
+<img src="images/fiber optic.png" loading="lazy" class="lazy-img">
+<h2>Media Pengiriman Data</h2>
+<p>Internet menggunakan berbagai media pengiriman, salah satunya adalah fiber optik. Fiber optik mengirimkan data menggunakan cahaya dengan kecepatan sangat tinggi dan gangguan minimal.</p>
+<p>Kabel fiber optik bawah laut menghubungkan internet antar negara dan benua.</p>
+</section>
 
-              <p>Coding sangat menyenangkan anjayy (Coding kek taek).</p>
-            </div>
-          </div>
+<section class="section" id="bts">
+<img src="images/menara bts.png" loading="lazy" class="lazy-img">
+<h2>Jaringan Seluler (BTS)</h2>
+<p>Internet pada smartphone bekerja melalui BTS (Base Transceiver Station). BTS menghubungkan perangkat ke jaringan operator menggunakan sinyal radio.</p>
+<p>Semakin dekat dan baik kualitas BTS, semakin stabil koneksi internet.</p>
+</section>
 
-        </div>
-      </div>
-    </section> <!-- .section -->
-		
+<section class="section" id="wifi">
+<img src="images/router wifi.png" loading="lazy" class="lazy-img">
+<h2>WiFi dan Router</h2>
+<p>WiFi adalah jaringan nirkabel yang menghubungkan perangkat ke internet melalui router. Router berfungsi membagi koneksi internet ke banyak perangkat.</p>
+<p>WiFi banyak digunakan di rumah, sekolah, dan tempat umum karena praktis.</p>
+</section>
 
-    <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Tentang Saya</h2>
-              <p>Saya hanya seorang pelajar yang suka dengan teknologi seperti coding dan kecerdasan buatan atau AI.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/ann.x10" taget="_blank"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="index.html#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                <li><a href="index.html#about-section"><span class="icon-long-arrow-right mr-2"></span>Tentang Saya</a></li>
-                <li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>Penghargaan</a></li>
-                <li><a href="index.html#project-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
-                <li><a href="index.html#contact-section"><span class="icon-long-arrow-right mr-2"></span>Kontak</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Layanan</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Mabar Point Blank</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Multimedia</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Kontak Saya</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">Bima, Nusa Tenggara Barat (NTB), Indonesia</span></li>
-	                <li><a href="tel:+62352685242"><span class="icon icon-phone"></span><span class="text">+6282-3526-85242</span></a></li>
-	                <li><a href="mailto:aan27052010@gmail.com"><span class="icon icon-envelope"></span><span class="text">aan27052010@gmail.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+<section class="section" id="tcpip">
+<img src="images/diagram tcp-ip.png" loading="lazy" class="lazy-img">
+<h2>Protokol TCP/IP</h2>
+<p>TCP/IP adalah protokol dasar internet. TCP memastikan data dikirim lengkap dan berurutan, sedangkan IP bertugas menentukan alamat tujuan data.</p>
+<p>Kombinasi keduanya membuat komunikasi data di internet berjalan stabil dan akurat.</p>
+</section>
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Dibuat oleh ann.x10 <i class="icon-heart color-danger" aria-hidden="true"></i>  <a href="" target="_blank"></a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-  
+<section class="section" id="http">
+<img src="images/http-dan-https.png" loading="lazy" class="lazy-img">
+<h2>HTTP dan HTTPS</h2>
+<p>HTTP adalah protokol pertukaran data antara browser dan server. HTTPS adalah versi aman yang menggunakan enkripsi.</p>
+<p>HTTPS melindungi data pengguna seperti password dan informasi pribadi dari penyadapan.</p>
+</section>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+</article>
 
+</div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
+<button class="scroll-top" id="scrollTop">↑</button>
+
+<script>
+/* SCROLL TOP */
+const btn=document.getElementById("scrollTop");
+window.addEventListener("scroll",()=>{btn.style.display=window.scrollY>400?"block":"none";});
+btn.onclick=()=>document.getElementById("hero").scrollIntoView({behavior:"smooth"});
+
+/* TOC */
+const toc=document.getElementById("toc");
+const sections=document.querySelectorAll("article .section");
+const icons={
+internet:"🌍",dns:"📡",packet:"📦",fiber:"💡",
+bts:"📶",wifi:"📡",tcpip:"🔗",http:"🔒"
+};
+sections.forEach(sec=>{
+toc.innerHTML+=`
+<a href="#${sec.id}">
+<span>${icons[sec.id]}</span>
+<small>${sec.querySelector("h2").innerText}</small>
+</a>`;
+});
+
+/* REVEAL */
+const obs=new IntersectionObserver(e=>{
+e.forEach(i=>{if(i.isIntersecting)i.target.classList.add("active");});
+},{threshold:.15});
+document.querySelectorAll(".section").forEach(s=>{s.classList.add("reveal");obs.observe(s);});
+
+/* IMAGE LOAD */
+document.querySelectorAll(".lazy-img").forEach(img=>{
+img.addEventListener("load",()=>img.classList.add("loaded"));
+});
+
+/* PROGRESS BAR */
+const bar=document.getElementById("progressBar");
+const article=document.querySelector("article");
+window.addEventListener("scroll",()=>{
+const p=Math.min(Math.max((window.scrollY+innerHeight-article.offsetTop)/article.offsetHeight,0),1);
+bar.style.width=(p*100)+"%";
+});
+</script>
+
+</body>
 </html>
