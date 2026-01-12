@@ -86,85 +86,6 @@
 			color: #000;
 		}
 		
-		/*CSS BAGIAN PENGHARGAN*/
-		
-		 .penghargaan-section {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .penghargaan-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .penghargaan-card {
-            background-color: #000; /* Kartu putih */
-            border: 2px solid #ffc107; /* Border kuning */
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
-        .penghargaan-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(255, 193, 7, 0.5);
-        }
-        .penghargaan-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-        .detail-btn {
-            background-color: #ffc107; /* Tombol kuning */
-            color: #000000;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-        .detail-btn:hover {
-            background-color: #e6a800; /* Hover lebih gelap */
-        }
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 500px;
-            width: 90%;
-            text-align: left;
-            position: relative;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .close:hover {
-            color: #000;
-        }
 
 		/*POP UP*/
 		.popup{
@@ -203,6 +124,22 @@
 			cursor:pointer;
 		}
 
+		/*Button Artikel*/
+		.btn-primary {
+		background-color: #ffc107;
+		border: none;
+		color: #000;
+		border-radius: 999px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		}
+
+		.btn-primary:hover {
+		background-color: #e0a800;
+		color: #000;
+		}
+
+		/*Responsive*/
 		@media (max-width: 768px) {
 			.projects-section h2 {
 				font-size: 2em;
@@ -243,6 +180,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/penghargaan.css">
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
  
@@ -256,11 +194,11 @@
 		  <!--Navbar-->
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Beranda</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>Tentang Saya</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Profil</span></a></li>
 	          <li class="nav-item"><a href="#services-section" class="nav-link"><span translate="no">Penghargaan</span></a></li>
-	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span translate="no">Skills</span></a></li>
 	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
 	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Artikel</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Kontak</span></a></li>
@@ -308,7 +246,7 @@
 	      </div>
 	    </div>
     </section>
-
+	<!--TENTANG SAYA/ABOUT ME-->
     <section class="ftco-about img ftco-section ftco-no-pb" >
     	<div class="container">
     		<div class="row d-flex">
@@ -324,12 +262,13 @@
 		          <div class="col-md-12 heading-section ftco-animate">
 		          	<h1 class="big" id="about-section">Tentang</h1>
 		            <h2 class="mb-4">Tentang Saya</h2>
-		            <p>Saya ga berpengalaman sihh. Cuman siswa SMP yang belajar web development aja.</p>
+		            <p>Saya Annasirat, biasa dipanggil Aan, seorang pelajar SMP yang tertarik dengan dunia teknologi dan web development. Saya suka belajar dan ngulik hal-hal baru seputar HTML, CSS, JavaScript, serta mengikuti perkembangan teknologi modern seperti AI. Melalui portofolio ini, saya ingin membagikan hasil belajar dan proyek yang saya kerjakan sebagai bagian dari perjalanan saya di dunia teknologi 🚀
+					</p>
 		            <ul class="about-info mt-4 px-md-0 px-2">
 		            	<li class="d-flex"><span>Nama:</span> <span>Annasirat (Aan)</span></li>
 		            	<li class="d-flex"><span>Tanggal Lahir:</span> <span>Mei 27, 2010</span></li>
 		            	<li class="d-flex"><span>Alamat:</span> <span>Bima, Nusa Tenggara Barat, Indonesia</span></li>
-		            	<li class="d-flex"><span>Code Pos:</span> <span>84182</span></li>
+		            	<li class="d-flex"><span>Kode Pos:</span> <span>84182</span></li>
 		            	<li class="d-flex"><span>Email:</span> <span>aan2702010@gmail.com</span></li>
 		            	<li class="d-flex"><span>Telpon: </span> <span>+62 823-526-852-42</span></li>
 		            </ul>
@@ -348,7 +287,7 @@
         </div>
     	</div>
     </section>
-
+	<!--PROFIL-->
     <section class="ftco-section ftco-no-pb" id="resume-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
@@ -361,13 +300,13 @@
     		<div class="row">
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
-    					<span class="date">2022-Sekarang</span>
+    					<span class="date">2023-Sekarang</span>
     					<h2>Siswa SMP</h2>
     					<span class="position">SMP Negeri 1 Sape</span>
     					<p class="mt-4">Saat ini sedang menempuh pendidikan formal. Aktif dalam kegiatan OSIS dan memiliki minat besar dalam dunia teknologi serta build website.</p>
     				</div>
     				<div class="resume-wrap ftco-animate">
-    					<span class="date">2016-2022</span>
+    					<span class="date">2017-2023</span>
     					<h2>Lulusan Sekolah Dasar (SD)</h2>
     					<span class="position">SD Negeri Jia</span>
     					<p class="mt-4">Menyelesaikan pendidikan dasar dengan minat khusus pada komputer, tapi sayangnya di sd saat saya bersekolah tidak ada pelajaran tentang komputer dan saya hanya belajar pada orangtua saya.</p>
@@ -408,67 +347,42 @@
     		</div>
     	</div>
     </section>
+	<!--PENGHARGAAN/SERTIFIKAT-->
+    <section id="penghargaan">
+	<h1>Penghargaan</h1>
+	<p>Sertifikat dan penghargaan yang saya peroleh</p>
 
-    <section class="ftco-section" id="services-section">
-    	<div class="container">
-    		<div class="row justify-content-center py-5 mt-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2" translate="no">Penghargaan</h1>
-            <h2 class="mb-4" translate="no">Penghargaan</h2>
-            <p translate="no">Sertifikat atau penghargaan yang saya dapat di bidang coding</p>
-			<section class="penghargaan-section">
-				<div class="penghargaan-grid">
-            <!-- Kartu Penghargaan 1 -->
-            <div class="penghargaan-card">
-                <img src="images/dicoding1.jpeg" alt="Sertifikat Inovasi" class="penghargaan-image"> <!-- Ganti dengan URL gambar sertifikat asli -->
-                <button class="btn btn-primary py-3 px-3" onclick="openModal('modal1')">Detail</button>
-            </div>
-            <!-- Kartu Penghargaan 2 -->
-            <div class="penghargaan-card">
-                <img src="images/sertifikat-2.jpg" alt="Best Portfolio" class="penghargaan-image"> <!-- Ganti dengan URL gambar sertifikat asli -->
-                <button class="btn btn-primary py-3 px-3" onclick="openModal('modal2')">Detail</button>
-            </div>
-            <!-- Kartu Penghargaan 3 -->
-            <div class="penghargaan-card">
-                <img src="images/sertifikat-3.jpg" alt="Excellence in Coding" class="penghargaan-image"> <!-- Ganti dengan URL gambar sertifikat asli -->
-                <button class="btn btn-primary py-3 px-3" onclick="openModal('modal3')">Detail</button>
-            </div>
-            <!-- Tambahkan lebih banyak kartu sesuai kebutuhan -->
-        </div>
-		</section>
-
-		<!-- Modals untuk Detail -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h3>Sertifikat Kompetensi Dicoding</h3>
-            <p>Penjelasan lengkap: Sertifikat ini diberikan oleh Dicoding Indonesia atas kelulusannya dalam membangun sebuah website yang interaktif menggunakan bahasa pemrograman JavaScript.</p>
-			<span>Diberiikan Pada Tanggal 29 Mei 2025</span>
-        </div>
-    </div>
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h3>Sertifikat Kompetensi Dicoding</h3>
-            <p>Penjelasan lengkap: Penghargaan ini diberikan oleh Dicoding Indonesia atas kelulusannya belajar dasar pemrograman dengan bahasa JavaScript dan mampu menciptakan website yang interaktif antar user dan website.</p>
-			<span>DIberikan Pada Tanggal 29 Mei 2025</span>
-	</div>
-    </div>
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <h3>Sertifikat Penghargaan Dicoding</h3>
-            <p>Penjelasan lengkap: Penghargaan ini diberikan oleh Dicoding Indonesia atas kemenangan dalam festival Website Interaktif yang diadakan secara online di seluruh Indonesia.</p>
-			<span>Diberikan Pada Tanggal 27 November 2025</span>
-        </div>
-    </div>
-
-          </div>
-        </div>
+	<div class="penghargaan-grid">
+		<div class="penghargaan-card">
+		<img src="images/dicoding1.jpeg" alt="">
+		<button onclick="openModal(1)">Detail</button>
 		</div>
-    </section>
 
-		
+		<div class="penghargaan-card">
+		<img src="images/dicoding2.jpeg" alt="">
+		<button onclick="openModal(2)">Detail</button>
+		</div>
+
+		<div class="penghargaan-card">
+		<img src="images/sertifikat-3.jpg" alt="">
+		<button onclick="openModal(3)">Detail</button>
+		</div>
+	</div>
+	</section>
+
+	<!-- MODAL PENJELASAN SERTIFIKAT/POP UP -->
+	<div class="modal" id="modal">
+	<div class="modal-content">
+		<span class="close" onclick="closeModal()">&times;</span>
+		<h3 id="modalTitle"></h3>
+		<p id="modalText"></p>
+		<span id="modalDate"></span>
+		<a id="modalLink" class="verify-btn" target="_blank">
+		Cek keaslian sertifikat
+		</a>
+	</div>
+	</div>
+	<!--SKILLS/KETERAMPILAN-->
 		<section class="ftco-section" id="skills-section">
 			<div class="container">
 				<div class="row justify-content-center pb-5">
@@ -570,7 +484,7 @@
 				</div>
 			</div>
 		</section>
- 
+		<!--PROJECT/PROYEK-->
 	<section class="ftco-section" id="projects-section">
 			<div class="container">
 				<div class="row justify-content-center pb-5">
@@ -696,10 +610,12 @@
           </div>
 
 		  <div class="row justify-content-center mt-5">
-          <div class="col-md-6 text-center ftco-animate">
-            <p><a href="artikel.html" class="btn btn-primary py-4 px-5">More Articles</a></p>
-          </div>
-        </div>
+			<div class="col-md-6 text-center fco-animate">
+			<a href="artikel.html" class="btn btn-primary py-4 px-5">
+			More Articles
+			</a>
+			</div>
+		</div>
 
         </div>
       </div>
@@ -755,7 +671,7 @@
 				</div>
 			</div>
 		</section>
-
+		<!--KONTAK/CONTACT-->
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
@@ -804,7 +720,7 @@
 	          </div>
           </div>
         </div>
-
+		<!--PESAN-->
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
 
@@ -843,7 +759,7 @@
       </div>
     </section>
 		
-
+	<!--FOOTER/AKHIRAN WEBSITE-->
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -945,7 +861,7 @@
   <script src="js/project-filter.js"></script>
   
   <script src="js/main.js"></script>
-  <script src="js/sertifikat.js"></script>
+  <script src="js/penghargaan.js"></script>
   <script src="js/contact.js"></script>
     
   </body>

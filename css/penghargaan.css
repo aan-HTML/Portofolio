@@ -1,0 +1,131 @@
+:root {
+  --primary: #ffc107;
+  --dark: #000;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* SECTION */
+#penghargaan {
+  background: var(--dark);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#penghargaan h1 {
+  color: var(--primary);
+  font-size: 36px;
+}
+
+#penghargaan p {
+  font-size: 14px;
+  margin: 10px 0 30px;
+}
+
+/* GRID */
+.penghargaan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .penghargaan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .penghargaan-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD */
+.penghargaan-card {
+  background: #111;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.penghargaan-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.penghargaan-card button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  background: var(--primary);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* MODAL BLUR */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,193,7,0.4);
+  color: #fff;
+  padding: 25px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+  position: relative;
+
+  /* animasi */
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.modal-content.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-content.hide {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+/* VERIFY */
+.verify-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+}
