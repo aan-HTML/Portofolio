@@ -23,6 +23,7 @@ const data = {
     title: "Sertifikat Penghargaan Dicoding",
     text: "Penghargaan dari Dicoding Indonesia atas partisipasi pembelajaran teknologi.",
     date: "Diberikan pada 27 November 2025",
+    link: "#"
   }
 };
 
