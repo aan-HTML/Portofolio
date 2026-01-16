@@ -124,20 +124,6 @@
 			cursor:pointer;
 		}
 
-		/*Button Artikel*/
-		.btn-primary {
-		background-color: #ffc107;
-		border: none;
-		color: #000;
-		border-radius: 999px;
-		font-weight: 600;
-		letter-spacing: 1px;
-		}
-
-		.btn-primary:hover {
-		background-color: #e0a800;
-		color: #000;
-		}
 
 		/*Responsive*/
 		@media (max-width: 768px) {
@@ -181,6 +167,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/penghargaan.css">
+	<link res="stylesheet" href="css/btn-artikel.css">
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
  
@@ -647,11 +634,12 @@
             </div>
           </div>
 
-		<div class="row justify-content-center mt-5">
-    		<div class="col-md-6 text-center ftco-animate">
-    			<p><a href="artikel.html" class="btn btn-primary py-4 px-5">Artikel Selengkapnya</a></p>
-    		</div>
-    	</div>
+		<!--Buton Artikel-->
+		<div class="button-wrapper">
+  			<button id="artikelBtn" class="btn-artikel">
+    			ARTIKEL SELENGKAPNYA
+  			</button>
+		</div>
 
         </div>
       </div>
@@ -899,6 +887,7 @@
   <script src="js/main.js"></script>
   <script src="js/penghargaan.js"></script>
   <script src="js/contact.js"></script>
+  <script src="js/btn-artikel.js"></script>
     
   </body>
 </html>

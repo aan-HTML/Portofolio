@@ -1,0 +1,56 @@
+/* Reset ringan */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container tombol (center) */
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+/* Tombol utama */
+.btn-artikel {
+  background-color: #FFC83D;
+  color: #000;
+  border: none;
+  padding: 16px 50px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+
+  transition: background-color 0.3s ease,
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.btn-artikel:hover {
+  background-color: #ffb800;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Klik */
+.btn-artikel:active {
+  transform: scale(0.96);
+}
+
+/* Responsive (mobile) */
+@media (max-width: 480px) {
+  .btn-artikel {
+    padding: 14px 36px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+}
