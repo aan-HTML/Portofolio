@@ -4,15 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Penghargaan Lainnya</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/penghargaan-lainnya.css">
+  <link rel="stylesheet" href="css/btn-artikel.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <section class="penghargaan-section">
-    <h2>Penghargaan Lainnya</h2>
-    <!-- Container untuk JS generate -->
-    <div id="penghargaan-container" class="penghargaan-container"></div>
-    <a href="index.html#penghargaan-section" class="lihat-lainnya">← Kembali ke Penghargaan Utama</a>
-  </section>
+  <section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2" translate="no">Penghargaan</h1>
+            <h2 class="mb-4" translate="no">Penghargaan</h2>
+            <p translate="no">Penghargaan lainnya yang saya peroleh</p>
+          </div>
+        </div>
+
+	<div class="penghargaan-grid">
+		<div class="penghargaan-card">
+		<img src="images/dicoding1.jpeg" alt="">
+		<button onclick="openModal(4)">Detail</button>
+		</div>
+
+		<div class="penghargaan-card">
+		<img src="images/sertifikat-3.jpg" alt="">
+		<button onclick="openModal(5)">Detail</button>
+		</div>
+
+	</div>
+	</section>
+
+	<!-- MODAL PENJELASAN SERTIFIKAT/POP UP -->
+	<div class="modal" id="modal">
+	<div class="modal-content">
+		<span class="close" onclick="closeModal()">&times;</span>
+		<h3 id="modalTitle"></h3>
+		<p id="modalText"></p>
+		<span id="modalDate"></span>
+		<a id="modalLink" class="verify-btn" target="_blank">
+		Cek keaslian sertifikat
+		</a>
+	</div>
+	</div>
+
+	<!--Buton Penghargaan-->
+		<div class="button-wrapper">
+  			<button id="penghargaanBtn" class="btn-artikel">
+    			← KEMBALI KE PENGHARGAAN UTAMA
+  			</button>
+		</div>
 
   <script src="js/penghargaan-lainnya.js"></script>
 </body>

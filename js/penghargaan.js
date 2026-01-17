@@ -8,10 +8,10 @@ const modalLink  = document.getElementById("modalLink");
 
 const data = {
   1: {
-    title: "Introduction to Financial Literacy",
-    text: "Sertifikat Dicoding ini menunjukkan bahwa saya telah menyelesaikan pembelajaran dasar mengenai literasi keuangan.",
+    title: "Belajar Dasar Pemrograman Web",
+    text: "Sertifikat ini membuktikan pemahaman saya terhadap konsep dasar pemrograman web dan penerapannya dalam membuat halaman web sederhana.",
     date: "Diberikan pada 11 Januari 2026",
-    link: "https://www.dicoding.com/certificates/1RXYQ971QZVM"
+    link: "https://www.dicoding.com/certificates/72ZDKLYNVPYW"
   },
   2: {
     title: "Belajar Dasar Artificial Intelligence",
@@ -21,9 +21,9 @@ const data = {
   },
   3: {
     title: "Sertifikat Penghargaan Dicoding",
-    text: "Penghargaan dari Dicoding Indonesia atas partisipasi pembelajaran teknologi.",
-    date: "Diberikan pada 27 November 2025",
-    link: "#"
+    text: "Sertifikat ini membuktikan pemahaman saya terhadap konsep dasar JavaScript dan penerapannya dalam membuat kode interaktif sederhana",
+    date: "Diberikan pada 17 januari 2026",
+    link: "https://www.dicoding.com/certificates/L4PQ20QDOZO1"
   }
 };
 

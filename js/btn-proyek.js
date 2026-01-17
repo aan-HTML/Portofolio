@@ -1,5 +1,5 @@
-const artikelBtn = document.getElementById("projectBtn");
+const projectBtn = document.getElementById("projectBtn");
 
-artikelBtn.addEventListener("click", () => {
+projectBtn.addEventListener("click", () => {
   window.location.href = "proyek-lainnya.html";
 });

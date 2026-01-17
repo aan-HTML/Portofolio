@@ -1,5 +1,5 @@
-const artikelBtn = document.getElementById("penghargaanBtn");
+const penghargaanBtn = document.getElementById("penghargaanBtn");
 
-artikelBtn.addEventListener("click", () => {
+penghargaanBtn.addEventListener("click", () => {
   window.location.href = "penghargaan-lainnya.html";
 });
