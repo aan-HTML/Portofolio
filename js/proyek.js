@@ -28,7 +28,7 @@ const projectData = {
       "User Frendly"
     ],
     technologies: ["HTML", "JavaScript", "Google Map API", "CSS"],
-    demoLink: "https://demo-annbot.com",
+    demoLink: "demo.html",
     githubLink: "https://github.com/aan-HTML/Landing-Page-SMA-IT-Nusantara.git",
     image: "images/project-2.png"
   },
@@ -43,23 +43,22 @@ const projectData = {
       "Bisa export ke excel atau pdf"
     ],
     technologies: ["HTML", "CSS", "JavaScript", "TypeScript"],
-    demoLink: "https://demo-cafe.com",
+    demoLink: "demo.html",
     githubLink: "https://github.com/aan-HTML/Absensi-Kelas.git",
     image: "images/absensi-kelas.png"
   },
   4: {
-    title: "Bookshelf APP",
+    title: "Permainan Ular Tangga",
     description: "Aplikasi web untuk mengelola koleksi buku pribadi secara digital dengan fitur katalogisasi lengkap.",
     fullDescription: "Bookshelf App adalah platform web yang memungkinkan pengguna untuk mencatat, mengorganisir, dan melacak koleksi buku pribadi mereka. Aplikasi ini menggantikan rak buku fisik dengan versi digital yang bisa diakses dari mana saja, dilengkapi dengan sistem katalog, pencarian cerdas, dan status pembacaan yang interaktif.",
     features: [
       "User frendly",
-      "Mudah Digunakan",
-      "Statistik baca Buku",
+      "3 mode permainan",
     ],
-    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    demoLink: "demo.html",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demoLink: "https://permainanulartangga.vercel.app/",
     githubLink: "https://github.com/aan-HTML/Bookshelf.git",
-    image: "images/project-4.png"
+    image: "images/project-3.png"
   }
 };
 
