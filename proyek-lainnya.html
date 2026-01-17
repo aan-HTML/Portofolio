@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Lainnya</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212; /* hitam gelap */
+    }
+
+    .project-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .project-section h2 {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    /* Container project cards */
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    /* Card project */
+    .project-item {
+      width: 280px;
+      background-color: #1c1c1c; /* hitam elegan */
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    .project-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-item .card-body {
+      padding: 15px;
+    }
+
+    .project-item .card-title {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .project-item .card-text {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    /* Tombol project (pill style) */
+    .project-item .btn {
+      background-color: #ffc107;
+      color: #000;
+      border: none;
+      width: 100%;
+      padding: 10px 0;
+      font-weight: bold;
+      border-radius: 50px; /* pill */
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      transition: background-color 0.2s;
+    }
+
+    .project-item .btn:hover {
+      background-color: #e6ac00;
+      color: #000;
+    }
+
+    /* Tombol back (pill style) */
+    .btn-back {
+      margin-top: 30px;
+      background-color: #ffc107;
+      color: #000;
+      border: none;
+      padding: 12px 30px;
+      font-weight: bold;
+      border-radius: 50px; /* pill */
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.2s;
+    }
+
+    .btn-back:hover {
+      background-color: #e6ac00;
+      color: #000;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .project-item {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="project-section">
+    <h2>Project Lainnya</h2>
+    <div id="project-container" class="project-container"></div>
+    <a href="index.html#project-section" class="btn-back">← Kembali ke Project Utama</a>
+  </section>
+
+  <script>
+    const projectData = [
+      { judul: "Project 4", img: "images/minimarket-kasir.png", deskripsi: "Halaman login minimalis untuk autentikasi website", url: "#" },
+      { judul: "Project 5", img: "images/project-1.png", deskripsi: "Bot AI AnnBOT menggunakan API Google Gemini", url: "#" },
+      { judul: "Project 6", img: "img/project6.jpg", deskripsi: "Website interaktif dengan dashboard analitik", url: "#" }
+      // Tambah project lainnya di sini
+    ];
+
+    const container = document.getElementById("project-container");
+
+    projectData.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "project-item";
+
+      div.innerHTML = `
+        <img src="${item.img}" alt="${item.judul}">
+        <div class="card-body">
+          <h5 class="card-title">${item.judul}</h5>
+          <p class="card-text">${item.deskripsi}</p>
+          <a href="${item.url}" class="btn">SOURCE CODE</a>
+        </div>
+      `;
+
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
