@@ -1,58 +1,610 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Penghargaan Lainnya</title>
-  <link rel="stylesheet" href="css/penghargaan-lainnya.css">
-  <link rel="stylesheet" href="css/btn-artikel.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penghargaan Lainnya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 30px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #ffc107, transparent);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ffc107;
+            text-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: rgba(255, 193, 7, 0.1);
+            border: 1px solid #ffc107;
+            border-radius: 30px;
+            color: #ffc107;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #ffc107;
+            color: #0a0a0a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .award-card {
+            background: linear-gradient(145deg, #1a1a1a, #151515);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .award-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px #ffc107;
+        }
+
+        .award-image {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .award-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .award-card:hover .award-image img {
+            transform: scale(1.05);
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.7));
+        }
+
+        .award-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ffc107;
+            color: #0a0a0a;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .award-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .award-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .award-date {
+            font-size: 0.9rem;
+            color: #ffc107;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .award-date i {
+            font-size: 0.85rem;
+        }
+
+        .award-excerpt {
+            color: #bbb;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .view-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: transparent;
+            color: #ffc107;
+            border: 1px solid #ffc107;
+            padding: 8px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: auto;
+            justify-content: center;
+        }
+
+        .view-btn:hover {
+            background-color: #ffc107;
+            color: #0a0a0a;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .modal-content {
+            background: linear-gradient(145deg, #1a1a1a, #151515);
+            width: 100%;
+            max-width: 700px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            border: 2px solid #ffc107;
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .modal-content.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .modal-content.hide {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        .modal-header {
+            padding: 25px 25px 15px;
+            border-bottom: 1px solid #333;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 193, 7, 0.1);
+            border: none;
+            color: #ffc107;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .close-btn:hover {
+            background-color: #ffc107;
+            color: #0a0a0a;
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ffc107;
+            line-height: 1.3;
+            padding-right: 50px;
+        }
+
+        .modal-date {
+            font-size: 1rem;
+            color: #aaa;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-date i {
+            color: #ffc107;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .modal-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-text-container {
+            padding: 25px;
+        }
+
+        .modal-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid #333;
+        }
+
+        .modal-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #ffc107;
+            color: #0a0a0a;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .modal-link:hover {
+            background-color: #ff9800;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+        }
+
+        .modal-link i {
+            font-size: 1rem;
+        }
+
+        .authenticity-note {
+            color: #aaa;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .authenticity-note i {
+            color: #4CAF50;
+        }
+
+        .no-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background: linear-gradient(135deg, #222, #333);
+            color: #ffc107;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        .footer-highlight {
+            color: #ffc107;
+        }
+
+        @media (max-width: 992px) {
+            .awards-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .awards-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .modal-content {
+                max-width: 500px;
+            }
+            
+            .modal-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal-header {
+                padding: 20px 20px 10px;
+            }
+            
+            .modal-text-container {
+                padding: 20px;
+            }
+            
+            .modal-footer {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 10px;
+                align-items: stretch;
+            }
+            
+            .modal-link {
+                justify-content: center;
+            }
+            
+            .authenticity-note {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <section class="ftco-section">
-			<div class="container">
-				<div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2" translate="no">Penghargaan</h1>
-            <h2 class="mb-4" translate="no">Penghargaan</h2>
-            <p translate="no">Penghargaan lainnya yang saya peroleh</p>
-          </div>
+    <div class="container">
+        <header>
+            <h1>Penghargaan Lainnya</h1>
+            <p class="subtitle">Berikut adalah sertifikat tambahan yang telah saya raih. Klik untuk melihat detail dan verifikasi keasliannya.</p>
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Kembali ke Halaman Utama
+            </a>
+        </header>
+
+        <div class="awards-grid" id="awardsContainer">
+            <!-- Hanya 3 kartu penghargaan akan ditampilkan -->
         </div>
 
-	<div class="penghargaan-grid">
-		<div class="penghargaan-card">
-		<img src="images/dicoding1.jpeg" alt="">
-		<button onclick="openModal(4)">Detail</button>
-		</div>
+        <!-- Modal untuk detail penghargaan -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close-btn" onclick="closeModal()">&times;</button>
+                    <h2 class="modal-title" id="modalTitle">Judul Penghargaan</h2>
+                    <div class="modal-date" id="modalDate">
+                        <i class="far fa-calendar-alt"></i> Tanggal Pemberian
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image" id="modalImage">
+                        <!-- Gambar akan dimuat melalui JavaScript -->
+                    </div>
+                    <div class="modal-text-container">
+                        <p class="modal-text" id="modalText">
+                            Deskripsi penghargaan akan ditampilkan di sini.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="modal-link" id="modalLink" href="#" target="_blank">
+                        <i class="fas fa-search"></i> Lihat Keaslian Sertifikat
+                    </a>
+                    <div class="authenticity-note">
+                        <i class="fas fa-shield-alt"></i> Dapat diverifikasi melalui link resmi
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="penghargaan-card">
-		<img src="images/sertifikat-3.jpg" alt="">
-		<button onclick="openModal(5)">Detail</button>
-		</div>
+    </div>
 
-	</div>
-	</section>
+    <script>
+        const data = {
+          1: {
+            title: "Introduction To Financial Literacy",
+            text: "Sertifikat ini membuktikan pemahaman saya terhadap konsep dasar literasi keuangan dan penerapannya dalam pengelolaan uang secara bijak. Termasuk perencanaan keuangan, investasi dasar, dan manajemen risiko.",
+            date: "Diberikan pada 11 Januari 2026",
+            link: "https://www.dicoding.com/certificates/1RXYQ971QZVM",
+            image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          },
+          2: {
+            title: "Membangun Tampilan Website Yang Interaktif",
+            text: "Sertifikat ini saya dapatkan di event kompetisi membangun website yang responsive dan interaktif antara user/pengguna dengan website. Fokus pada UX/UI dan interaktivitas menggunakan JavaScript.",
+            date: "Diberikan pada 27 November 2025",
+            link: "#",
+            image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          },
+          3: {
+            title: "React.js untuk Pengembangan Aplikasi Web Modern",
+            text: "Sertifikat ini menunjukkan kemampuan saya dalam menggunakan React.js untuk membangun antarmuka pengguna yang dinamis dan efisien. Termasuk hooks, context API, dan integrasi dengan back-end.",
+            date: "Diberikan pada 10 September 2025",
+            link: "https://www.dicoding.com/certificates/example6",
+            image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          }
+        };
 
-	<!-- MODAL PENJELASAN SERTIFIKAT/POP UP -->
-	<div class="modal" id="modal">
-	<div class="modal-content">
-		<span class="close" onclick="closeModal()">&times;</span>
-		<h3 id="modalTitle"></h3>
-		<p id="modalText"></p>
-		<span id="modalDate"></span>
-		<a id="modalLink" class="verify-btn" target="_blank">
-		Cek keaslian sertifikat
-		</a>
-	</div>
-	</div>
+        // Elemen modal dan komponennya
+        const modal = document.getElementById("modal");
+        const modalContent = modal.querySelector(".modal-content");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalText = document.getElementById("modalText");
+        const modalDate = document.getElementById("modalDate");
+        const modalLink = document.getElementById("modalLink");
+        const modalImage = document.getElementById("modalImage");
+        const awardsContainer = document.getElementById("awardsContainer");
 
-	<!--Buton Penghargaan-->
-		<div class="button-wrapper">
-  			<button id="penghargaanBtn" class="btn-artikel">
-    			← KEMBALI KE PENGHARGAAN UTAMA
-  			</button>
-		</div>
+        // Fungsi untuk membuka modal
+        function openModal(id) {
+          const award = data[id];
+          modalTitle.textContent = award.title;
+          modalText.textContent = award.text;
+          modalDate.innerHTML = `<i class="far fa-calendar-alt"></i> ${award.date}`;
+          modalLink.href = award.link;
+          
+          // Set gambar modal
+          if (award.image) {
+            modalImage.innerHTML = `<img src="${award.image}" alt="${award.title}">`;
+          } else {
+            modalImage.innerHTML = `<div class="no-image">Gambar Sertifikat</div>`;
+          }
 
-  <script src="js/penghargaan-lainnya.js"></script>
+          modal.style.display = "flex";
+          setTimeout(() => {
+            modalContent.classList.add("show");
+          }, 10);
+        }
+
+        // Fungsi untuk menutup modal
+        function closeModal() {
+          modalContent.classList.remove("show");
+          modalContent.classList.add("hide");
+
+          setTimeout(() => {
+            modal.style.display = "none";
+            modalContent.classList.remove("hide");
+          }, 300);
+        }
+
+        // Klik di luar modal untuk menutup
+        modal.addEventListener("click", e => {
+          if (e.target === modal) closeModal();
+        });
+
+        // Tutup modal dengan tombol ESC
+        document.addEventListener("keydown", e => {
+          if (e.key === "Escape" && modal.style.display === "flex") {
+            closeModal();
+          }
+        });
+
+        // Fungsi untuk menghasilkan 3 kartu penghargaan
+        function generateAwardCards() {
+            // Hanya menampilkan 3 penghargaan
+            for (let i = 1; i <= 3; i++) {
+                const award = data[i];
+                
+                const card = document.createElement("div");
+                card.className = "award-card";
+                card.setAttribute("onclick", `openModal(${i})`);
+                
+                card.innerHTML = `
+                    <div class="award-image">
+                        <img src="${award.image}" alt="${award.title}" loading="lazy">
+                        <div class="image-overlay"></div>
+                        <div class="award-badge">${i}</div>
+                    </div>
+                    <div class="award-content">
+                        <h3 class="award-title">${award.title}</h3>
+                        <div class="award-date">
+                            <i class="far fa-calendar-alt"></i> ${award.date}
+                        </div>
+                        <p class="award-excerpt">${award.text.substring(0, 100)}...</p>
+                        <div class="view-btn">
+                            <i class="fas fa-search"></i> Verifikasi Keaslian
+                        </div>
+                    </div>
+                `;
+                
+                awardsContainer.appendChild(card);
+            }
+        }
+
+        // Jalankan fungsi untuk membuat kartu saat halaman dimuat
+        document.addEventListener("DOMContentLoaded", generateAwardCards);
+    </script>
 </body>
 </html>

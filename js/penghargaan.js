@@ -2,9 +2,23 @@ const modal = document.getElementById("modal");
 const modalContent = modal.querySelector(".modal-content");
 
 const modalTitle = document.getElementById("modalTitle");
-const modalText  = document.getElementById("modalText");
-const modalDate  = document.getElementById("modalDate");
-const modalLink  = document.getElementById("modalLink");
+const modalText = document.getElementById("modalText");
+const modalDate = document.getElementById("modalDate");
+const modalLink = document.getElementById("modalLink");
+
+const authenticityNote = document.createElement("div");
+authenticityNote.className = "authenticity-note";
+authenticityNote.innerHTML = '<i class="fas fa-shield-alt"></i> Klik link di atas untuk verifikasi keaslian sertifikat';
+
+const modalFooter = document.createElement("div");
+modalFooter.className = "modal-footer";
+modalFooter.appendChild(modalLink);
+modalFooter.appendChild(authenticityNote);
+
+const modalDateElement = document.getElementById("modalDate");
+if (modalDateElement) {
+    modalDateElement.parentNode.insertBefore(modalFooter, modalDateElement.nextSibling);
+}
 
 const data = {
   1: {
@@ -22,19 +36,26 @@ const data = {
   3: {
     title: "Sertifikat Penghargaan Dicoding",
     text: "Sertifikat ini membuktikan pemahaman saya terhadap konsep dasar JavaScript dan penerapannya dalam membuat kode interaktif sederhana",
-    date: "Diberikan pada 17 januari 2026",
+    date: "Diberikan pada 17 Januari 2026",
     link: "https://www.dicoding.com/certificates/L4PQ20QDOZO1"
   }
 };
 
 function openModal(id) {
-  modalTitle.textContent = data[id].title;
-  modalText.textContent  = data[id].text;
-  modalDate.textContent  = data[id].date;
-  modalLink.href         = data[id].link;
-
+  const award = data[id];
+  
+  modalTitle.textContent = award.title;
+  modalText.textContent = award.text;
+  modalDate.textContent = award.date;
+  modalLink.href = award.link;
+  
+  //teks tombol
+  modalLink.textContent = "Cek Keaslian Sertifikat";
+  
   modal.style.display = "flex";
-  modalContent.classList.add("show");
+  setTimeout(() => {
+    modalContent.classList.add("show");
+  }, 10);
 }
 
 function closeModal() {

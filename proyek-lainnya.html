@@ -1,152 +1,747 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Lainnya</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #121212;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek Lainnya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    .project-section {
-      padding: 50px 20px;
-      text-align: center;
-    }
+        body {
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .project-section h2 {
-      color: #fff;
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
 
-    /* Container project cards */
-    .project-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
+        header {
+            text-align: center;
+            padding: 50px 0 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
 
-    /* Card project */
-    .project-item {
-      width: 280px;
-      background-color: #1c1c1c;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 4px;
+            background: linear-gradient(to right, transparent, #ffc107, transparent);
+        }
 
-    .project-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ffc107;
+            text-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
+            letter-spacing: 1px;
+        }
 
-    .project-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
 
-    .project-item .card-body {
-      padding: 15px;
-    }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: rgba(255, 193, 7, 0.1);
+            border: 2px solid #ffc107;
+            border-radius: 30px;
+            color: #ffc107;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
 
-    .project-item .card-title {
-      color: #fff;
-      font-weight: bold;
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
+        .back-link:hover {
+            background-color: #ffc107;
+            color: #0a0a0a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+        }
 
-    .project-item .card-text {
-      font-size: 0.9rem;
-      color: #ccc;
-      margin-bottom: 15px;
-    }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 35px;
+            margin-bottom: 80px;
+        }
 
-    .project-item .btn {
-      background-color: #ffc107;
-      color: #000;
-      border: none;
-      width: 100%;
-      padding: 10px 0;
-      font-weight: bold;
-      border-radius: 50px; /* pill */
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-      transition: background-color 0.2s;
-    }
+        .project-card {
+            background: linear-gradient(145deg, #1a1a1a, #151515);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
 
-    .project-item .btn:hover {
-      background-color: #e6ac00;
-      color: #000;
-    }
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 2px #ffc107;
+        }
 
-    .btn-back {
-      margin-top: 30px;
-      background-color: #ffc107;
-      color: #000;
-      border: none;
-      padding: 12px 30px;
-      font-weight: bold;
-      border-radius: 50px; /* pill */
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.2s;
-    }
+        .project-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
 
-    .btn-back:hover {
-      background-color: #e6ac00;
-      color: #000;
-    }
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .project-item {
-        width: 80%;
-      }
-    }
-  </style>
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.8));
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #ffc107;
+            color: #0a0a0a;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            color: #fff;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .project-category {
+            font-size: 0.95rem;
+            color: #ffc107;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .project-category i {
+            font-size: 0.9rem;
+        }
+
+        .project-description {
+            color: #bbb;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tech-tag {
+            background: rgba(255, 193, 7, 0.1);
+            color: #ffc107;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: transparent;
+            color: #ffc107;
+            border: 1px solid #ffc107;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .project-link:hover {
+            background-color: #ffc107;
+            color: #0a0a0a;
+        }
+
+        .project-link.demo {
+            background-color: #ffc107;
+            color: #0a0a0a;
+        }
+
+        .project-link.demo:hover {
+            background-color: #ff9800;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: linear-gradient(145deg, #1a1a1a, #151515);
+            width: 100%;
+            max-width: 900px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+            border: 2px solid #ffc107;
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .modal-content.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .modal-content.hide {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        .modal-header {
+            padding: 30px 30px 20px;
+            border-bottom: 1px solid #333;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: rgba(255, 193, 7, 0.1);
+            border: none;
+            color: #ffc107;
+            font-size: 1.8rem;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .close-btn:hover {
+            background-color: #ffc107;
+            color: #0a0a0a;
+        }
+
+        .modal-title {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: #ffc107;
+            line-height: 1.3;
+            padding-right: 60px;
+        }
+
+        .modal-category {
+            font-size: 1.1rem;
+            color: #aaa;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-category i {
+            color: #ffc107;
+        }
+
+        .modal-body {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .modal-image {
+            flex: 1;
+            min-width: 300px;
+            max-height: 400px;
+            overflow: hidden;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-text-container {
+            flex: 1;
+            min-width: 300px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .modal-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #ddd;
+            margin-bottom: 25px;
+        }
+
+        .modal-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .modal-tech-tag {
+            background: rgba(255, 193, 7, 0.15);
+            color: #ffc107;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid #333;
+        }
+
+        .modal-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: #ffc107;
+            color: #0a0a0a;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .modal-link:hover {
+            background-color: #ff9800;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+        }
+
+        .modal-link i {
+            font-size: 1.2rem;
+        }
+
+        .modal-link.github {
+            background-color: transparent;
+            color: #ffc107;
+            border: 1px solid #ffc107;
+        }
+
+        .modal-link.github:hover {
+            background-color: #ffc107;
+            color: #0a0a0a;
+        }
+
+        .no-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background: linear-gradient(135deg, #222, #333);
+            color: #ffc107;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 0.95rem;
+        }
+
+        .footer-highlight {
+            color: #ffc107;
+        }
+
+        @media (max-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 25px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .modal-body {
+                flex-direction: column;
+            }
+            
+            .modal-image {
+                max-height: 300px;
+            }
+            
+            .modal-title {
+                font-size: 1.8rem;
+            }
+            
+            .project-links {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .modal-header {
+                padding: 25px 20px 15px;
+            }
+            
+            .modal-text-container {
+                padding: 20px;
+            }
+            
+            .modal-footer {
+                padding: 15px 20px;
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .modal-link {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <section class="project-section">
-    <h2>Project Lainnya</h2>
-    <div id="project-container" class="project-container"></div>
-    <a href="index.html#project-section" class="btn-back">← Kembali ke Project Utama</a>
-  </section>
+    <div class="container">
+        <header>
+            <h1>Proyek Lainnya</h1>
+            <p class="subtitle">Koleksi proyek tambahan yang telah saya kembangkan. Setiap proyek menggunakan teknologi modern dan implementasi terbaik.</p>
+            <a href="index.html#project-section" class="back-link">
+                <i class="fas fa-arrow-left"></i> Kembali ke Halaman Utama
+            </a>
+        </header>
 
-  <script>
-    const projectData = [
-      { judul: "Website Belanja Online", img: "images/web-belanja-online.png", deskripsi: "Project ini adalah website belanja online untuk toko, yang memungkinkan pengguna untuk melihat daftar produk, memilih barang, dan melakukan pembelian secara mudah. Website ini juga dilengkapi dengan keranjang belanja sehingga pengalaman belanja jadi cepat dan praktis.", url: "https://github.com/aan-HTML/websiteKasir.git" },
-      { judul: "Landing Page Kafe", img: "images/project-1.png", deskripsi: "Landing page ini memperkenalkan kafe secara modern dan menarik, menampilkan menu lengkap, promo/event terbaru, dan lokasi kafe. Desainnya responsif dan user-friendly, sehingga nyaman diakses di desktop maupun smartphone.", url: "https://github.com/aan-HTML/Landing-Page-Cafe.git" },
-      { judul: "Page Login", img: "images/project-4.png", deskripsi: "Project ini adalah halaman login yang dirancang untuk memudahkan pengguna masuk ke sistem secara aman dan cepat. Desainnya simple, user-friendly, dan responsif, sehingga bisa diakses dengan nyaman di desktop maupun smartphone.", url: "https://github.com/aan-HTML/Page-Login.git" },
-      { judul: "AnnBOT", img: "images/chatbot.png", deskripsi: "Project ini adalah BOT yang berbasis AI dengan memanfaatkan teknologi API dari Google untuk merespons segala pertanyaan dengan cepat." }
-      // Tambah project lainnya di sini
-    ];
-
-    const container = document.getElementById("project-container");
-
-    projectData.forEach(item => {
-      const div = document.createElement("div");
-      div.className = "project-item";
-
-      div.innerHTML = `
-        <img src="${item.img}" alt="${item.judul}">
-        <div class="card-body">
-          <h5 class="card-title">${item.judul}</h5>
-          <p class="card-text">${item.deskripsi}</p>
-          <a href="${item.url}" class="btn">SOURCE CODE</a>
+        <div class="projects-grid" id="projectsContainer">
+            <!-- Kartu proyek akan dimuat melalui JavaScript -->
         </div>
-      `;
 
-      container.appendChild(div);
-    });
-  </script>
+        <!-- Modal untuk detail proyek -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close-btn" onclick="closeModal()">&times;</button>
+                    <h2 class="modal-title" id="modalTitle">Judul Proyek</h2>
+                    <div class="modal-category" id="modalCategory">
+                        <i class="fas fa-code"></i> Kategori Proyek
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image" id="modalImage">
+                        <!-- Gambar akan dimuat melalui JavaScript -->
+                    </div>
+                    <div class="modal-text-container">
+                        <p class="modal-description" id="modalDescription">
+                            Deskripsi proyek akan ditampilkan di sini.
+                        </p>
+                        <div class="modal-tech" id="modalTech">
+                            <!-- Teknologi akan dimuat melalui JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="modal-link" id="modalDemoLink" href="#" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Lihat Demo
+                    </a>
+                    <a class="modal-link github" id="modalGithubLink" href="#" target="_blank">
+                        <i class="fab fa-github"></i> Kode Sumber
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Data proyek dengan gambar
+        const data = {
+          1: {
+            title: "Website E-Commerce",
+            category: "Website E-Commerce",
+            description: "Platform e-commerce yang lengkap dengan list produk dan keranjang serta perhitungan otomatis biaya belanja, dikembangkan dengan TypeScript dan HTML serta dapat dikaitkan dengan dasbord admin dan Data Base.",
+            technologies: ["TypeScript", "HTML", "CSS", "PHP", "MySQL"],
+            demoLink: "demo.html",
+            githubLink: "https://github.com/aan-HTML/websiteKasir.git",
+            image: "images/web-belanja-online.png"
+          },
+          2: {
+            title: "AnnBOT",
+            category: "Chat BOT",
+            description: "AnnBOT adalah BOT yang berbasis Artificial Intelegence (AI) dengan memanfaatkan teknologi API dari Google Gemini untuk memberikan respons yang baik dari user.",
+            technologies: ["API", "HTML", "JavaScript"],
+            demoLink: "demo.html",
+            githubLink: "https://github.com/aan-HTML",
+            image: "images/chatbot.png"
+          },
+          3: {
+            title: "Landing Page Kafe",
+            category: "Website",
+            description: "Landing page ini memperkenalkan kafe secara modern dan menarik, menampilkan menu lengkap, promo/event terbaru, dan lokasi kafe. Desainnya responsif dan user-friendly, sehingga nyaman diakses di desktop maupun smartphone.",
+            technologies: ["HTML", "CSS", "TailwindCSS", "Javascript"],
+            demoLink: "demo.html",
+            githubLink: "https://github.com/aan-HTML/Landing-Page-Cafe.git",
+            image: "images/project-1.jpg"
+          },
+          4: {
+            title: "Page Login",
+            category: "Web",
+            description: "Halaman login yang memungkinkan mengakses website atau aplikasi dengan aman, bisa di kaitkan dengan PHP dan Data Base.",
+            technologies: ["Next.js", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+            demoLink: "demo.html",
+            githubLink: "https://github.com/aan-HTML/Page-Login.git",
+            image: "images/project-4.png"
+          }
+        };
+
+        // Elemen modal dan komponennya
+        const modal = document.getElementById("modal");
+        const modalContent = modal.querySelector(".modal-content");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalCategory = document.getElementById("modalCategory");
+        const modalDescription = document.getElementById("modalDescription");
+        const modalTech = document.getElementById("modalTech");
+        const modalDemoLink = document.getElementById("modalDemoLink");
+        const modalGithubLink = document.getElementById("modalGithubLink");
+        const modalImage = document.getElementById("modalImage");
+        const projectsContainer = document.getElementById("projectsContainer");
+
+        // Kategori ikon
+        const categoryIcons = {
+          "Website E-Commerce": "fas fa-shopping-cart",
+          "Aplikasi Desktop": "fas fa-desktop",
+          "Aplikasi Mobile": "fas fa-mobile-alt",
+          "Website Blog": "fas fa-blog",
+          "Aplikasi Web": "fas fa-globe"
+        };
+
+        // Fungsi untuk membuka modal
+        function openModal(id) {
+          const project = data[id];
+          modalTitle.textContent = project.title;
+          modalCategory.innerHTML = `<i class="${categoryIcons[project.category] || 'fas fa-code'}"></i> ${project.category}`;
+          modalDescription.textContent = project.description;
+          modalDemoLink.href = project.demoLink;
+          modalGithubLink.href = project.githubLink;
+          
+          // Set gambar modal
+          if (project.image) {
+            modalImage.innerHTML = `<img src="${project.image}" alt="${project.title}">`;
+          } else {
+            modalImage.innerHTML = `<div class="no-image">Preview Proyek</div>`;
+          }
+          
+          // Set teknologi
+          modalTech.innerHTML = '';
+          project.technologies.forEach(tech => {
+            const tag = document.createElement("span");
+            tag.className = "modal-tech-tag";
+            tag.textContent = tech;
+            modalTech.appendChild(tag);
+          });
+
+          // Update teks tombol demo jika tidak ada demo
+          if (project.demoLink === "#") {
+            modalDemoLink.innerHTML = '<i class="fas fa-eye-slash"></i> Demo Tidak Tersedia';
+            modalDemoLink.style.opacity = "0.7";
+            modalDemoLink.style.cursor = "not-allowed";
+            modalDemoLink.onclick = (e) => e.preventDefault();
+          } else {
+            modalDemoLink.innerHTML = '<i class="fas fa-external-link-alt"></i> Lihat Demo';
+            modalDemoLink.style.opacity = "1";
+            modalDemoLink.style.cursor = "pointer";
+            modalDemoLink.onclick = null;
+          }
+
+          modal.style.display = "flex";
+          setTimeout(() => {
+            modalContent.classList.add("show");
+          }, 10);
+        }
+
+        // Fungsi untuk menutup modal
+        function closeModal() {
+          modalContent.classList.remove("show");
+          modalContent.classList.add("hide");
+
+          setTimeout(() => {
+            modal.style.display = "none";
+            modalContent.classList.remove("hide");
+          }, 400);
+        }
+
+        // Klik di luar modal untuk menutup
+        modal.addEventListener("click", e => {
+          if (e.target === modal) closeModal();
+        });
+
+        // Tutup modal dengan tombol ESC
+        document.addEventListener("keydown", e => {
+          if (e.key === "Escape" && modal.style.display === "flex") {
+            closeModal();
+          }
+        });
+
+        // Fungsi untuk menghasilkan kartu proyek
+        function generateProjectCards() {
+            for (let i = 1; i <= Object.keys(data).length; i++) {
+                const project = data[i];
+                const iconClass = categoryIcons[project.category] || 'fas fa-code';
+                
+                const card = document.createElement("div");
+                card.className = "project-card";
+                card.setAttribute("onclick", `openModal(${i})`);
+                
+                card.innerHTML = `
+                    <div class="project-image">
+                        <img src="${project.image}" alt="${project.title}" loading="lazy">
+                        <div class="image-overlay"></div>
+                        <div class="project-badge">
+                            <i class="${iconClass}"></i> ${project.category}
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">${project.title}</h3>
+                        <div class="project-category">
+                            <i class="${iconClass}"></i> ${project.category}
+                        </div>
+                        <p class="project-description">${project.description.substring(0, 120)}...</p>
+                        
+                        <div class="project-tech">
+                            ${project.technologies.slice(0, 3).map(tech => 
+                                `<span class="tech-tag">${tech}</span>`
+                            ).join('')}
+                            ${project.technologies.length > 3 ? 
+                                `<span class="tech-tag">+${project.technologies.length - 3}</span>` : ''
+                            }
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="${project.demoLink}" class="project-link demo" target="_blank" onclick="${project.demoLink === '#' ? 'event.preventDefault();' : ''}">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                            <a href="${project.githubLink}" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                `;
+                
+                projectsContainer.appendChild(card);
+            }
+        }
+
+        // Jalankan fungsi untuk membuat kartu saat halaman dimuat
+        document.addEventListener("DOMContentLoaded", generateProjectCards);
+    </script>
 </body>
 </html>
