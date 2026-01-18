@@ -1,8 +1,8 @@
 .skill-card {
   min-width: 150px;
-  height: 160px;                 /* kunci tinggi card */
+  height: 160px;
   background: #000;
-  border: 2px solid #ffc107;     /* border kuning */
+  border: 2px solid #ffc107;
   border-radius: 16px;
 
   display: flex;
