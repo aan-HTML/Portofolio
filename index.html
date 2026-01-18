@@ -64,12 +64,52 @@
 			}
 		}
 
+        .skills {
+  background: #000;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.skills-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.skills-track {
+  display: flex;
+  gap: 18px;
+}
+
+.skill-card {
+  min-width: 160px;
+  background: #000;
+  border: 2px solid #ffc107; /* 🔥 KUNING DI BORDER */
+  border-radius: 14px;
+  padding: 18px 10px;
+  text-align: center;
+  transition: transform .25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+}
+
+.skill-icon {
+  font-size: 44px;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  font-size: 14px;
+  color: #fff;
+}
+
     </style>
   <head>
     <title>Aan Portofolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -85,7 +125,6 @@
 	<link rel="stylesheet" href="css/penghargaan.css">
 	<link rel="stylesheet" href="css/btn-artikel.css">
 	<link rel="stylesheet" href="css/proyek.css">
-	<link rel="stylesheet" href="css/skils.css">
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
  
@@ -310,12 +349,13 @@
             <p>Beberapa Keahlian yang saya kuasai</p>
           </div>
         </div>
-				
-		<section class="skills">
-  			<div class="skills-wrapper">
-    			<div class="skills-track" id="skillsTrack"></div>
-  			</div>
-		</section>
+			
+        <section class="skills">
+            <div class="skills-wrapper">
+                <div class="skills-track" id="skillsTrack"></div>
+            </div>
+        </section>
+
 
 		</section>
 		<!--PROJECT/PROYEK-->
@@ -594,6 +634,35 @@
 			history.replaceState(null, "", "index.html");
 		}, 3000);
 	}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const skills = [
+    { name: 'HTML5', icon: 'devicon-html5-plain colored' },
+    { name: 'CSS3', icon: 'devicon-css3-plain colored' },
+    { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
+    { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored' },
+    { name: 'PHP', icon: 'devicon-php-plain colored' },
+    { name: 'Laravel', icon: 'devicon-laravel-plain colored' },
+    { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
+    { name: 'WordPress', icon: 'devicon-wordpress-plain colored' },
+    { name: 'GitHub', icon: 'devicon-github-original colored' }
+  ];
+
+  const track = document.querySelector('.skills-track');
+
+  skills.forEach(skill => {
+    const card = document.createElement('div');
+    card.className = 'skill-card';
+    card.innerHTML = `
+      <i class="${skill.icon} skill-icon"></i>
+      <div class="skill-name">${skill.name}</div>
+    `;
+    track.appendChild(card);
+  });
+
+});
+
 </script>
 <!--JavaScript-->
   <script src="js/jquery.min.js"></script>
@@ -616,8 +685,119 @@
   <script src="js/btn-penghargaan.js"></script>
   <script src="js/btn-proyek.js"></script>
   <script src="js/penghargaan-lainnya.js"></script>
-  <script src="js/proyek.js"></script>
-  <script src="js/skils.js"></script>
+  <scrip src="js/proyek.js"></script>
     
+	<!--CSS BAGIAN SKILLS-->
+<style>
+.skills {
+  background: #000;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.skills-wrapper {
+  overflow: hidden;
+}
+
+.skills-track {
+  display: flex;
+  gap: 18px;
+  padding: 12px 0;
+  will-change: transform;
+}
+
+.skill-card {
+  min-width: 150px;
+  height: 160px;
+  background: #000;
+  border: 2px solid #ffc107;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  transition: border-color .25s ease;
+}
+
+.skill-card:hover {
+  border-color: #ffda44;
+}
+
+.skill-icon {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon i {
+  font-size: 42px;
+}
+
+.skill-name {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+}
+</style>
+
+<!--JS SKILLS-->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const skills = [
+    { name: 'HTML5', icon: 'devicon-html5-plain colored' },
+    { name: 'CSS3', icon: 'devicon-css3-plain colored' },
+    { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
+    { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored' },
+    { name: 'PHP', icon: 'devicon-php-plain colored' },
+    { name: 'Laravel', icon: 'devicon-laravel-plain colored' },
+    { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
+    { name: 'WordPress', icon: 'devicon-wordpress-plain colored' },
+    { name: 'GitHub', icon: 'devicon-github-original colored' }
+  ];
+
+  const track = document.getElementById('skillsTrack');
+
+  /* render dua kali supaya seamless */
+  skills.concat(skills).forEach(skill => {
+    const card = document.createElement('div');
+    card.className = 'skill-card';
+    card.innerHTML = `
+      <div class="skill-icon"><i class="${skill.icon}"></i></div>
+      <div class="skill-name">${skill.name}</div>
+    `;
+    track.appendChild(card);
+  });
+
+  let x = 0;
+  let lastTime = null;
+
+  const mobile = window.matchMedia('(max-width: 768px)').matches;
+  const speed = mobile ? 20 : 40; // px per detik
+
+  function loop(time) {
+    if (!lastTime) lastTime = time;
+    const delta = time - lastTime;
+    lastTime = time;
+
+    x -= (speed * delta) / 1000;
+
+    if (Math.abs(x) >= track.scrollWidth / 2) {
+      x = 0;
+    }
+
+    track.style.transform = `translateX(${x}px)`;
+    requestAnimationFrame(loop);
+  }
+
+  requestAnimationFrame(loop);
+});
+</script>
+
   </body>
 </html>
