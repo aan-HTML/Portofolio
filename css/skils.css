@@ -1,0 +1,37 @@
+.skill-card {
+  min-width: 150px;
+  height: 160px;                 /* kunci tinggi card */
+  background: #000;
+  border: 2px solid #ffc107;     /* border kuning */
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  transition: border-color .25s ease;
+}
+
+.skill-card:hover {
+  border-color: #ffda44;
+}
+
+.skill-icon {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon i {
+  font-size: 42px;
+}
+
+.skill-name {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+}
