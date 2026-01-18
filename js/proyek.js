@@ -53,12 +53,13 @@ const projectData = {
     fullDescription: "Bookshelf App adalah platform web yang memungkinkan pengguna untuk mencatat, mengorganisir, dan melacak koleksi buku pribadi mereka. Aplikasi ini menggantikan rak buku fisik dengan versi digital yang bisa diakses dari mana saja, dilengkapi dengan sistem katalog, pencarian cerdas, dan status pembacaan yang interaktif.",
     features: [
       "User frendly",
-      "3 mode permainan",
+      "3 Mode Permainan",
+      "Bisa Dimainkan Semua Kalangan"
     ],
     technologies: ["HTML", "CSS", "JavaScript"],
     demoLink: "https://permainanulartangga.vercel.app/",
     githubLink: "https://github.com/aan-HTML/Bookshelf.git",
-    image: "images/project-3.png"
+    image: "images/project-3.jpg"
   }
 };
 
