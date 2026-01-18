@@ -514,6 +514,20 @@
             date: "Diberikan pada 17 Januari 2026",
             link: "https://www.dicoding.com/certificates/L4PQ2050OZO1",
             image: "images/fornt-end.png"
+          },
+		  4: {
+            title: "Memulai Pemrograman Dengan Java",
+            text: "Sertifikat ini menandakan bahwa pemegang telah menyelesaikan pelatihan dasar 'Memulai Pemrograman dengan Java' di Dicoding, memahami konsep pemrograman dasar, dan mampu membuat program Java sederhana.",
+            date: "Diberikan pada 18 Januari 2026",
+            link: "https://www.dicoding.com/certificates/81P25Y57YPOY",
+            image: "images/java.png"
+          },
+		  5: {
+            title: "Prinsip Pemrograman SOLID",
+            text: "Penghargaan ini diberikan oleh Dicoding sebagai pengakuan bahwa pemegang telah berhasil menyelesaikan pelatihan resmi, menunjukkan kompetensi dasar dalam pemrograman Java, serta memahami prinsip-prinsip dan praktik pemrograman yang baik.",
+            date: "Diberikan pada 18 Januari 2026",
+            link: "https://www.dicoding.com/certificates/MEPJ2129LP3V",
+            image: "images/prinsip-pemrograman.png"
           }
         };
 
@@ -571,10 +585,11 @@
           }
         });
 
-        // Fungsi untuk menghasilkan 3 kartu penghargaan
+        // Fungsi untuk menghasilkan kartu penghargaan
         function generateAwardCards() {
-            // Hanya menampilkan 3 penghargaan
-            for (let i = 1; i <= 3; i++) {
+            // Menampilkan semua penghargaan
+            const totalAwards = Object.keys(data).length;
+            for (let i = 1; i <= totalAwards; i++) {
                 const award = data[i];
                 
                 const card = document.createElement("div");
