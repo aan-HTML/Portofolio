@@ -125,6 +125,7 @@
 	<link rel="stylesheet" href="css/penghargaan.css">
 	<link rel="stylesheet" href="css/btn-artikel.css">
 	<link rel="stylesheet" href="css/proyek.css">
+	<link rel="stylesheet" href="css/btn-penghargaan.css">
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
  
@@ -334,11 +335,12 @@
 	</div>
 
 	<!--Buton Penghargaan-->
-		<a href="penghargaan-lainnya.html" class="other-projects-link">
-			<button class="project-btn">
-			<i class="fas fa-arrow-right"></i> Penghargaan Lainnya
-			</button>
-		</a>
+	<div class="penghargaan-btn-wrapper">
+  		<a href="penghargaan-lainnya.html" class="btn-penghargaan">
+    	Penghargaan Lainnya
+  		</a>
+	</div>
+
 	<!--SKILLS/KETERAMPILAN-->
 		<section class="ftco-section" id="skills-section">
 			<div class="container">
@@ -505,8 +507,8 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
-						<h2>I'm <span>Available</span> For Freelancing</h2>
-						<p>Lumayan buat nambah duid wkwkwkwkwkw.</p>
+						<h2>I'm <span>Open For</span> Learning & Collaboration</h2>
+						<p>Terbuka Untuk Belajar, Eksplorasi Teknologi, dan Kolaborasi Dalam Proyek Sederhana.</p>
 						<p class="mb-0"><a href="https://wa.me/6282352685242" target="_blank" class="btn btn-primary py-3 px-5">Kontak Saya</a></p>
 					</div>
 				</div>
@@ -519,7 +521,7 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Kontak</h1>
             <h2 class="mb-4">Kontak Saya</h2>
-            <p>Jika anda ingin menghubungi saya bisa lewat media sosial saya, email atau dengan nomor yang tertera di bawah.</p>
+            <p>Jika Anda ingin menghubungi saya, silakan melalui media sosial, email, atau nomor yang tertera di bawah.</p>
           </div>
         </div>
 
@@ -602,12 +604,12 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <ul class="ftco-footer-social list-unstyled">
-              <li class="ftco-animate"><a href="#" target="_blank"><span class="icon-linkedin"></span></a></li>
+              <li class="ftco-animate"><a href="www.linkedin.com/in/aan270510" target="_blank"><span class="icon-linkedin"></span></a></li>
               <li class="ftco-animate"><a href="https://github.com/Aan0123" target="_blank"><span class="icon-github"></span></a></li>
               <li class="ftco-animate"><a href="https://www.instagram.com/ann.x10" target="_blank"><span class="icon-instagram"></span></a></li>
             </ul>
             <p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Dibuat oleh ann.x10 <i class="icon-heart color-danger" aria-hidden="true"></i>  <a href="#" target="_blank"></a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Dibuat oleh ann.x10 | All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i>  <a href="#" target="_blank"></a>
   			</p>
           </div>
         </div>
@@ -634,35 +636,6 @@
 			history.replaceState(null, "", "index.html");
 		}, 3000);
 	}
-
-document.addEventListener('DOMContentLoaded', () => {
-
-  const skills = [
-    { name: 'HTML5', icon: 'devicon-html5-plain colored' },
-    { name: 'CSS3', icon: 'devicon-css3-plain colored' },
-    { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
-    { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored' },
-    { name: 'PHP', icon: 'devicon-php-plain colored' },
-    { name: 'Laravel', icon: 'devicon-laravel-plain colored' },
-    { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
-    { name: 'WordPress', icon: 'devicon-wordpress-plain colored' },
-    { name: 'GitHub', icon: 'devicon-github-original colored' }
-  ];
-
-  const track = document.querySelector('.skills-track');
-
-  skills.forEach(skill => {
-    const card = document.createElement('div');
-    card.className = 'skill-card';
-    card.innerHTML = `
-      <i class="${skill.icon} skill-icon"></i>
-      <div class="skill-name">${skill.name}</div>
-    `;
-    track.appendChild(card);
-  });
-
-});
-
 </script>
 <!--JavaScript-->
   <script src="js/jquery.min.js"></script>
@@ -689,60 +662,60 @@ document.addEventListener('DOMContentLoaded', () => {
     
 	<!--CSS BAGIAN SKILLS-->
 <style>
-.skills {
-  background: #000;
-  padding: 40px 0;
-  overflow: hidden;
-}
+	.skills {
+	background: #000;
+	padding: 40px 0;
+	overflow: hidden;
+	}
 
-.skills-wrapper {
-  overflow: hidden;
-}
+	.skills-wrapper {
+	overflow: hidden;
+	}
 
-.skills-track {
-  display: flex;
-  gap: 18px;
-  padding: 12px 0;
-  will-change: transform;
-}
+	.skills-track {
+	display: flex;
+	gap: 18px;
+	padding: 12px 0;
+	will-change: transform;
+	}
 
-.skill-card {
-  min-width: 150px;
-  height: 160px;
-  background: #000;
-  border: 2px solid #ffc107;
-  border-radius: 16px;
+	.skill-card {
+	min-width: 150px;
+	height: 160px;
+	background: #000;
+	border: 2px solid #ffc107;
+	border-radius: 16px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
 
-  transition: border-color .25s ease;
-}
+	transition: border-color .25s ease;
+	}
 
-.skill-card:hover {
-  border-color: #ffda44;
-}
+	.skill-card:hover {
+	border-color: #ffda44;
+	}
 
-.skill-icon {
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+	.skill-icon {
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
 
-.skill-icon i {
-  font-size: 42px;
-}
+	.skill-icon i {
+	font-size: 42px;
+	}
 
-.skill-name {
-  font-size: 14px;
-  color: #fff;
-  text-align: center;
-  line-height: 1.2;
-}
+	.skill-name {
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	line-height: 1.2;
+	}
 </style>
 
 <!--JS SKILLS-->
@@ -763,7 +736,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const track = document.getElementById('skillsTrack');
 
-  /* render dua kali supaya seamless */
+  /* ngerender 2 kali */
   skills.concat(skills).forEach(skill => {
     const card = document.createElement('div');
     card.className = 'skill-card';
@@ -778,7 +751,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let lastTime = null;
 
   const mobile = window.matchMedia('(max-width: 768px)').matches;
-  const speed = mobile ? 20 : 40; // px per detik
+  const speed = mobile ? 36 : 40; // px per detik
 
   function loop(time) {
     if (!lastTime) lastTime = time;

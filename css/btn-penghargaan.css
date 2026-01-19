@@ -1,0 +1,50 @@
+.penghargaan-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+/* Tombol */
+.btn-penghargaan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 44px;
+  border-radius: 999px;
+
+  background: transparent;
+  color: #ffc107;
+  border: 2px solid #ffc107;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.btn-penghargaan:hover {
+  background: #ffc107;
+  color: #000;
+}
+
+/* Klik */
+.btn-penghargaan:active {
+  transform: scale(0.96);
+}
+
+.penghargaan-grid {
+  margin-bottom: -40px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .btn-penghargaan {
+    padding: 12px 34px;
+    font-size: 13px;
+  }
+}
