@@ -8,6 +8,7 @@
 			background-color: #000;
 		}
 		
+		/*CSS BAGIAN POP UP PESAN TERKIRIM*/
 		.popup{
 			position:fixed;
 			top:0;
@@ -44,6 +45,61 @@
 			cursor:pointer;
 		}
 
+		/* CSS BAGIAN SKILS*/
+		.skills {
+		background: #000;
+		padding: 40px 0;
+		overflow: hidden;
+		}
+
+		.skills-wrapper {
+		overflow: hidden;
+		}
+
+		.skills-track {
+		display: flex;
+		gap: 18px;
+		padding: 12px 0;
+		will-change: transform;
+		}
+
+		.skill-card {
+		min-width: 150px;
+		height: 160px;
+		background: #000;
+		border: 2px solid #ffc107;
+		border-radius: 16px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+
+		transition: border-color .25s ease;
+		}
+
+		.skill-card:hover {
+		border-color: #ffda44;
+		}
+
+		.skill-icon {
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		}
+
+		.skill-icon i {
+		font-size: 42px;
+		}
+
+		.skill-name {
+		font-size: 14px;
+		color: #fff;
+		text-align: center;
+		line-height: 1.2;
+		}
 
 		/*Responsive*/
 		@media (max-width: 768px) {
@@ -361,6 +417,7 @@
 
 
 		</section>
+
 		<!--PROJECT/PROYEK-->
 	<section class="ftco-section" id="projects-section">
 			<div class="container">
@@ -382,8 +439,8 @@
 		</a>
 		</section>
 
-</section>
-</section>
+		  </section>
+	</section>
 
 	<!--ARTIKEL-->
     <section class="ftco-section" id="blog-section">
@@ -606,7 +663,7 @@
           <div class="col-md-12 text-center">
             <ul class="ftco-footer-social list-unstyled">
               <li class="ftco-animate"><a href="www.linkedin.com/in/aan270510" target="_blank"><span class="icon-linkedin"></span></a></li>
-              <li class="ftco-animate"><a href="https://github.com/Aan0123" target="_blank"><span class="icon-github"></span></a></li>
+              <li class="ftco-animate"><a href="https://github.com/aan-HTML" target="_blank"><span class="icon-github"></span></a></li>
               <li class="ftco-animate"><a href="https://www.instagram.com/ann.x10" target="_blank"><span class="icon-instagram"></span></a></li>
             </ul>
             <p>
@@ -627,6 +684,7 @@
   </div>
 </div>
 
+<!--JS BAGIAN POP UP PESAN TERKIRIM-->
 <script>
 	const url = new URL(window.location);
 	if (url.searchParams.get("notif") === "success") {
@@ -660,64 +718,6 @@
   <script src="js/btn-proyek.js"></script>
   <script src="js/penghargaan-lainnya.js"></script>
   <script src="js/proyek.js"></script>
-    
-	<!--CSS BAGIAN SKILLS-->
-<style>
-	.skills {
-	background: #000;
-	padding: 40px 0;
-	overflow: hidden;
-	}
-
-	.skills-wrapper {
-	overflow: hidden;
-	}
-
-	.skills-track {
-	display: flex;
-	gap: 18px;
-	padding: 12px 0;
-	will-change: transform;
-	}
-
-	.skill-card {
-	min-width: 150px;
-	height: 160px;
-	background: #000;
-	border: 2px solid #ffc107;
-	border-radius: 16px;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-
-	transition: border-color .25s ease;
-	}
-
-	.skill-card:hover {
-	border-color: #ffda44;
-	}
-
-	.skill-icon {
-	height: 48px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	}
-
-	.skill-icon i {
-	font-size: 42px;
-	}
-
-	.skill-name {
-	font-size: 14px;
-	color: #fff;
-	text-align: center;
-	line-height: 1.2;
-	}
-</style>
 
 <!--JS SKILLS-->
 <script>
@@ -752,7 +752,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let lastTime = null;
 
   const mobile = window.matchMedia('(max-width: 768px)').matches;
-  const speed = mobile ? 36 : 40; // px per detik
+  const speed = mobile ? 36 : 40; // kecepatan jalan ikon px per detik
 
   function loop(time) {
     if (!lastTime) lastTime = time;
