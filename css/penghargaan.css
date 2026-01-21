@@ -38,9 +38,20 @@
   color: var(--primary);
   font-size: 2.8rem;
   margin-bottom: 15px;
-  text-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
   letter-spacing: 1px;
+
+  /*JUDUL */
+  text-shadow: none;
+  background: none;
+  position: relative;
+  z-index: 2;
 }
+
+#penghargaan h1::before,
+#penghargaan h1::after {
+  content: none !important;
+}
+
 
 #penghargaan p {
   font-size: 1.1rem;
