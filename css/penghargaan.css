@@ -188,7 +188,7 @@
 }
 
 /* Modal Header */
-.modal-content h3#modalTitle {
+#penghargaan .modal-content h3#modalTitle {
   color: var(--primary);
   font-size: 2rem;
   font-weight: 700;
