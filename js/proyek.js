@@ -3,15 +3,7 @@ const projectData = {
     title: "Website E-Commerce",
     description: "Platform e-commerce yang lengkap dengan list produk dan katalog serta perhitungan otomatis biaya belanja.",
     fullDescription: "Platform e-commerce lengkap dengan sistem manajemen produk, keranjang belanja, checkout, dan dashboard admin. Fitur termasuk filter produk, pencarian, ulasan pelanggan, dan integrasi pembayaran.",
-    features: [
-      "Sistem keranjang belanja real-time",
-      "Filter dan pencarian produk",
-      "Sistem checkout multi-step",
-      "Dashboard admin untuk manajemen",
-      "Ulasan dan rating produk",
-      "Integrasi gateway pembayaran"
-    ],
-    technologies: ["HTML", "CSS", "JavaScript", "TailwindCSS", "PHP", "MySQL"],
+    technologies: ["HTML", "CSS", "JS", "TailwindCSS", "PHP", "MySQL"],
     demoLink: "demo.html",
     githubLink: "https://github.com/aan-HTML/E-commers_web.git",
     image: "images/web-belanja-online.png"
@@ -20,14 +12,7 @@ const projectData = {
     title: "Website Sekolah",
     description: "Website sekolah sebagai sarana komunikasi dan menegement informasi akademik seputar sekolah.",
     fullDescription: "Platform website sekolah yang menyediakan sistem informasi terpadu untuk seluruh stakeholder sekolah. Website ini berfungsi sebagai hub komunikasi antara pihak sekolah, siswa, orang tua, dan masyarakat umum, dengan fitur-fitur administrasi dan akademik yang lengkap.",
-    features: [
-      "Berita dan Pengumuman yang ter-update",
-      "Profil sekolah yang lengkap",
-      "Galeri dan foto kegiatan",
-      "Alamat Sekolah",
-      "User Frendly"
-    ],
-    technologies: ["HTML", "JavaScript", "Google Map API", "CSS"],
+    technologies: ["HTML", "JS", "Google Map API", "CSS"],
     demoLink: "demo.html",
     githubLink: "https://github.com/aan-HTML/Landing-Page-SMA-IT-Nusantara.git",
     image: "images/project-2.png"
@@ -35,14 +20,8 @@ const projectData = {
   3: {
     title: "Absensi Kelas Secara Online",
     description: "Platform web untuk mencatat dan mengelola kehadiran siswa secara online dengan antarmuka yang mudah digunakan.",
-    fullDescription: "Sistem absensi kelas berbasis website yang menggantikan metode manual dengan sistem digital terintegrasi. Platform ini memungkinkan guru untuk melakukan presensi dengan cepat, otomatis menghasilkan laporan kehadiran, serta memberikan akses real-time bagi orang tua untuk memantau kehadiran anak mereka. Dibangun dengan teknologi web modern yang responsif dan dapat diakses dari berbagai perangkat.",
-    features: [
-      "Monitoring kehadiran real-time",
-      "Statistik kehadiran",
-      "Desain yang minimalis dan mudah dibaca",
-      "Bisa export ke excel atau pdf"
-    ],
-    technologies: ["HTML", "CSS", "JavaScript", "TypeScript"],
+    fullDescription: "Sistem absensi kelas berbasis website yang menggantikan metode manual dengan sistem digital terintegrasi. Platform ini memungkinkan guru untuk melakukan presensi dengan cepat, otomatis menghasilkan laporan kehadiran.",
+    technologies: ["HTML", "CSS", "JS", "TypeScript"],
     demoLink: "demo.html",
     githubLink: "https://github.com/aan-HTML/Absensi-Kelas.git",
     image: "images/absensi-kelas.png"
@@ -50,13 +29,8 @@ const projectData = {
   4: {
     title: "Permainan Ular Tangga",
     description: "Aplikasi web untuk mengelola koleksi buku pribadi secara digital dengan fitur katalogisasi lengkap.",
-    fullDescription: "Bookshelf App adalah platform web yang memungkinkan pengguna untuk mencatat, mengorganisir, dan melacak koleksi buku pribadi mereka. Aplikasi ini menggantikan rak buku fisik dengan versi digital yang bisa diakses dari mana saja, dilengkapi dengan sistem katalog, pencarian cerdas, dan status pembacaan yang interaktif.",
-    features: [
-      "User frendly",
-      "3 Mode Permainan",
-      "Bisa Dimainkan Semua Kalangan"
-    ],
-    technologies: ["HTML", "CSS", "JavaScript"],
+    fullDescription: "Bookshelf App adalah platform web yang memungkinkan pengguna untuk mencatat, mengorganisir, dan melacak koleksi buku pribadi mereka. Aplikasi ini menggantikan rak buku fisik dengan versi digital yang bisa diakses dari mana saja.",
+    technologies: ["HTML", "CSS", "JS"],
     demoLink: "https://permainanulartangga.vercel.app/",
     githubLink: "https://github.com/aan-HTML/Bookshelf.git",
     image: "images/project-3.jpg"
@@ -123,11 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="project-modal-body">
             <p class="project-modal-description" id="projectModalDescription"></p>
             
-            <div class="project-modal-features">
-              <h4><i class="fas fa-star"></i> Fitur Utama</h4>
-              <ul id="projectModalFeatures"></ul>
-            </div>
-            
             <div class="project-modal-tech">
               <h4><i class="fas fa-code"></i> Teknologi</h4>
               <div id="projectModalTech"></div>
@@ -159,14 +128,6 @@ function openProjectModal(projectId) {
   document.getElementById('projectModalTitle').textContent = project.title;
   document.getElementById('projectModalDescription').textContent = project.fullDescription;
   
-  // Isi fitur
-  const featuresList = document.getElementById('projectModalFeatures');
-  featuresList.innerHTML = '';
-  project.features.forEach(feature => {
-    const li = document.createElement('li');
-    li.textContent = feature;
-    featuresList.appendChild(li);
-  });
   
   // Isi teknologi
   const techContainer = document.getElementById('projectModalTech');
