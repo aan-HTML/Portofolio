@@ -1,5 +1,4 @@
 :root {
-  --primary: #ffc107;
   --dark: #000;
   --dark-bg: #0a0a0a;
 }
@@ -86,7 +85,7 @@
 
 .penghargaan-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--primary);
+  box-shadow: 0 20px 40px #000, 0 0 0 1px var(--primary);
 }
 
 .penghargaan-card img {
