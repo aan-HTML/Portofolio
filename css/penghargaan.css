@@ -121,7 +121,7 @@
 }
 
 /* MODAL BLUR */
-#penghargaan .modal {
+.modal {
   display: none;
   position: fixed;
   top: 0;
@@ -136,7 +136,7 @@
   padding: 20px;
 }
 
-#penghargaan .modal-content {
+.modal-content {
   background: linear-gradient(145deg, #1a1a1a, #151515);
   border: 2px solid var(--primary);
   color: #fff;
@@ -154,17 +154,17 @@
   transition: all 0.4s ease;
 }
 
-#penghargaan .modal-content.show {
+.modal-content.show {
   transform: scale(1);
   opacity: 1;
 }
 
-#penghargaan .modal-content.hide {
+.modal-content.hide {
   transform: scale(0.9);
   opacity: 0;
 }
 
-#penghargaan .close {
+.close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -188,7 +188,7 @@
 }
 
 /* Modal Header */
-#penghargaan .modal-content h3#modalTitle {
+.modal-content h3#modalTitle {
   color: var(--primary);
   font-size: 2rem;
   font-weight: 700;
@@ -200,7 +200,7 @@
 }
 
 /* Modal Body */
-#penghargaan .modal-content p#modalText {
+.modal-content p#modalText {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #ddd;
@@ -208,7 +208,7 @@
   margin: 0;
 }
 
-#penghargaan .modal-content span#modalDate {
+.modal-content span#modalDate {
   display: flex;
   align-items: center;
   gap: 10px;
