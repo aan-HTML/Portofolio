@@ -1,4 +1,5 @@
 :root {
+  --primary: #ffc107;
   --dark: #000;
   --dark-bg: #0a0a0a;
 }
@@ -85,7 +86,7 @@
 
 .penghargaan-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px #000, 0 0 0 1px var(--primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--primary);
 }
 
 .penghargaan-card img {
@@ -120,7 +121,7 @@
 }
 
 /* MODAL BLUR */
-.modal {
+#penghargaan .modal {
   display: none;
   position: fixed;
   top: 0;
@@ -135,7 +136,7 @@
   padding: 20px;
 }
 
-.modal-content {
+#penghargaan .modal-content {
   background: linear-gradient(145deg, #1a1a1a, #151515);
   border: 2px solid var(--primary);
   color: #fff;
@@ -153,17 +154,17 @@
   transition: all 0.4s ease;
 }
 
-.modal-content.show {
+#penghargaan .modal-content.show {
   transform: scale(1);
   opacity: 1;
 }
 
-.modal-content.hide {
+#penghargaan .modal-content.hide {
   transform: scale(0.9);
   opacity: 0;
 }
 
-.close {
+#penghargaan .close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -187,7 +188,7 @@
 }
 
 /* Modal Header */
-.modal-content h3#modalTitle {
+#penghargaan .modal-content h3#modalTitle {
   color: var(--primary);
   font-size: 2rem;
   font-weight: 700;
@@ -199,7 +200,7 @@
 }
 
 /* Modal Body */
-.modal-content p#modalText {
+#penghargaan .modal-content p#modalText {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #ddd;
@@ -207,7 +208,7 @@
   margin: 0;
 }
 
-.modal-content span#modalDate {
+#penghargaan .modal-content span#modalDate {
   display: flex;
   align-items: center;
   gap: 10px;
