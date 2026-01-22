@@ -8,7 +8,6 @@
 			background-color: #000;
 		}
 		
-		/*CSS BAGIAN POP UP PESAN TERKIRIM*/
 		.popup{
 			position:fixed;
 			top:0;
@@ -160,592 +159,31 @@
 		color: #fff;
 		}
 
-        /*CSS bagian PROYWEK*/
-
-         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #0a0a0a;
-            color: #f0f0f0;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 20px;
-            flex: 1;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: #aaa;
-            max-width: 700px;
-            margin: 0 auto 25px;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: rgba(255, 193, 7, 0.1);
-            border: 2px solid #ffc107;
-            border-radius: 30px;
-            color: #ffc107;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .back-link:hover {
-            background-color: #ffc107;
-            color: #0a0a0a;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 35px;
-            margin-bottom: 80px;
-        }
-
-        .project-card {
-            background: linear-gradient(145deg, #1a1a1a, #151515);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            transition: all 0.4s ease;
-            border: 1px solid #333;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .project-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 2px #ffc107;
-        }
-
-        .project-image {
-            height: 220px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover .project-image img {
-            transform: scale(1.05);
-        }
-
-        .image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.8));
-        }
-
-        .project-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: #ffc107;
-            color: #0a0a0a;
-            padding: 8px 15px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .project-content {
-            padding: 25px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-title {
-            font-size: 1.6rem;
-            margin-bottom: 12px;
-            color: #fff;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-
-        .project-category {
-            font-size: 0.95rem;
-            color: #ffc107;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .project-category i {
-            font-size: 0.9rem;
-        }
-
-        .project-description {
-            color: #bbb;
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            flex: 1;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 25px;
-        }
-
-        .tech-tag {
-            background: rgba(255, 193, 7, 0.1);
-            color: #ffc107;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid rgba(255, 193, 7, 0.3);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 15px;
-            margin-top: auto;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: transparent;
-            color: #ffc107;
-            border: 1px solid #ffc107;
-            padding: 10px 22px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            flex: 1;
-            justify-content: center;
-        }
-
-        .project-link:hover {
-            background-color: #ffc107;
-            color: #0a0a0a;
-        }
-
-        .project-link.demo {
-            background-color: #ffc107;
-            color: #0a0a0a;
-        }
-
-        .project-link.demo:hover {
-            background-color: #ff9800;
-        }
-
-        /* Modal Styles for Projects */
-        .modal-proyek {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .modal-proyek-content {
-            background: linear-gradient(145deg, #1a1a1a, #151515);
-            width: 100%;
-            max-width: 900px;
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
-            border: 2px solid #ffc107;
-            transform: scale(0.9);
-            opacity: 0;
-            transition: all 0.4s ease;
-        }
-
-        .modal-proyek-content.show {
-            transform: scale(1);
-            opacity: 1;
-        }
-
-        .modal-proyek-content.hide {
-            transform: scale(0.9);
-            opacity: 0;
-        }
-
-        .modal-proyek-header {
-            padding: 30px 30px 20px;
-            border-bottom: 1px solid #333;
-            position: relative;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            background: rgba(255, 193, 7, 0.1);
-            border: none;
-            color: #ffc107;
-            font-size: 1.8rem;
-            cursor: pointer;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-
-        .close-btn:hover {
-            background-color: #ffc107;
-            color: #0a0a0a;
-        }
-
-        .modal-proyek-title {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            color: #ffc107;
-            line-height: 1.3;
-            padding-right: 60px;
-        }
-
-        .modal-proyek-category {
-            font-size: 1.1rem;
-            color: #aaa;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .modal-proyek-category i {
-            color: #ffc107;
-        }
-
-        .modal-proyek-body {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0;
-        }
-
-        .modal-proyek-image {
-            flex: 1;
-            min-width: 300px;
-            max-height: 400px;
-            overflow: hidden;
-        }
-
-        .modal-proyek-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .modal-proyek-text-container {
-            flex: 1;
-            min-width: 300px;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .modal-proyek-description {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #ddd;
-            margin-bottom: 25px;
-        }
-
-        .modal-proyek-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 25px;
-        }
-
-        .modal-tech-tag {
-            background: rgba(255, 193, 7, 0.15);
-            color: #ffc107;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: 1px solid rgba(255, 193, 7, 0.3);
-        }
-
-        .modal-proyek-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            padding: 20px 30px;
-            background-color: rgba(0, 0, 0, 0.3);
-            border-top: 1px solid #333;
-        }
-
-        .modal-proyek-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background-color: #ffc107;
-            color: #0a0a0a;
-            padding: 14px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-        }
-
-        .modal-proyek-link:hover {
-            background-color: #ff9800;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
-        }
-
-        .modal-proyek-link i {
-            font-size: 1.2rem;
-        }
-
-        .modal-proyek-link.github {
-            background-color: transparent;
-            color: #ffc107;
-            border: 1px solid #ffc107;
-        }
-
-        .modal-proyek-link.github:hover {
-            background-color: #ffc107;
-            color: #0a0a0a;
-        }
-
-        /* Modal Styles for Certificates */
-        .modal-sertifikat {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .modal-sertifikat-content {
-            background: linear-gradient(145deg, #1a1a1a, #151515);
-            width: 100%;
-            max-width: 600px;
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
-            border: 2px solid #ffc107;
-            transform: scale(0.9);
-            opacity: 0;
-            transition: all 0.4s ease;
-        }
-
-        .modal-sertifikat-content.show {
-            transform: scale(1);
-            opacity: 1;
-        }
-
-        .modal-sertifikat-content.hide {
-            transform: scale(0.9);
-            opacity: 0;
-        }
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            color: #ffc107;
-            font-size: 2rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close:hover {
-            color: #ff9800;
-        }
-
-        .modal-sertifikat-content h3 {
-            margin: 0;
-            padding: 20px;
-            color: #ffc107;
-            font-size: 1.5rem;
-            text-align: center;
-        }
-
-        .modal-sertifikat-content p {
-            padding: 0 20px;
-            color: #ddd;
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .modal-sertifikat-content span {
-            display: block;
-            padding: 0 20px;
-            color: #aaa;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-
-        .verify-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 12px 25px;
-            background-color: #ffc107;
-            color: #0a0a0a;
-            border: none;
-            border-radius: 25px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .verify-btn:hover {
-            background-color: #ff9800;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
-        }
-
-        .no-image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            background: linear-gradient(135deg, #222, #333);
-            color: #ffc107;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid #333;
-            color: #777;
-            font-size: 0.95rem;
-        }
-
-        .footer-highlight {
-            color: #ffc107;
-        }
-
-        @media (max-width: 1200px) {
-            .projects-grid {
-                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-                gap: 30px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                gap: 25px;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .modal-proyek-body {
-                flex-direction: column;
-            }
-
-            .modal-proyek-image {
-                max-height: 300px;
-            }
-
-            .modal-proyek-title {
-                font-size: 1.8rem;
-            }
-
-            .project-links {
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .modal-proyek-header {
-                padding: 25px 20px 15px;
-            }
-
-            .modal-proyek-text-container {
-                padding: 20px;
-            }
-
-            .modal-proyek-footer {
-                padding: 15px 20px;
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .modal-proyek-link {
-                justify-content: center;
-            }
-        }
+		/*Responsive*/
+		@media (max-width: 768px) {
+			.projects-section h2 {
+				font-size: 2em;
+			}
+
+			.projects-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.project-card .buttons {
+				flex-direction: column;
+			}
+
+			.penghargaan-grid {
+				grid-template-columns: 1fr;
+			}
+		}
 
     </style>
   <head>
-    <title>Aan Website</title>
-	<meta name="google-site-verification" content="ExCLe7W_XduNJqZ0NsrRZgCvxGLL5dA1GjPk3ifjeHI" />
+    <title>Aan Portofolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -760,33 +198,32 @@
 	<link rel="stylesheet" href="css/penghargaan.css">
 	<link rel="stylesheet" href="css/btn-artikel.css">
 	<link rel="stylesheet" href="css/proyek.css">
-	<link rel="stylesheet" href="css/btn-penghargaan.css">
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Navigation</a>
+	      <a class="navbar-brand" href="index.html">navigation</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 		  <!--Navbar-->
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home" class="nav-link"><span>Beranda</span></a></li>
-	          <li class="nav-item"><a href="#about" class="nav-link"><span>Tentang Saya</span></a></li>
-	          <li class="nav-item"><a href="#profil" class="nav-link"><span>Profil</span></a></li>
-	          <li class="nav-item"><a href="#penghargaan" class="nav-link"><span translate="no">Penghargaan</span></a></li>
-	          <li class="nav-item"><a href="#skills" class="nav-link"><span translate="no">Skills</span></a></li>
-	          <li class="nav-item"><a href="#projects" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#blog" class="nav-link"><span>Artikel</span></a></li>
-	          <li class="nav-item"><a href="#contact" class="nav-link"><span>Kontak</span></a></li>
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Beranda</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>Tentang Saya</span></a></li>
+	          <li class="nav-item"><a href="#profil-section" class="nav-link"><span>Profil</span></a></li>
+	          <li class="nav-item"><a href="#penghargaan-section" class="nav-link"><span translate="no">Penghargaan</span></a></li>
+	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span translate="no">Skills</span></a></li>
+	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Artikel</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Kontak</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
-	  <section id="home" class="hero">
+	  <section id="home-section" class="hero">
 		  <div class="home-slider  owl-carousel">
 	      <div class="slider-item ">
 	      	<div class="overlay"></div>
@@ -840,7 +277,7 @@
     			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<h1 class="big" id="about">Tentang</h1>
+		          	<h1 class="big" id="about-section">Tentang</h1>
 		            <h2 class="mb-4">Tentang Saya</h2>
 		            <p>Saya Annasirat, biasa dipanggil Aan, seorang pelajar SMP yang tertarik dengan dunia teknologi dan web development. Saya suka belajar dan ngulik hal-hal baru seputar HTML, CSS, JavaScript, serta mengikuti perkembangan teknologi modern seperti AI. Melalui portofolio ini, saya ingin membagikan hasil belajar dan proyek yang saya kerjakan sebagai bagian dari perjalanan saya di dunia teknologi 🚀
 					</p>
@@ -868,7 +305,7 @@
     	</div>
     </section>
 	<!--PROFIL-->
-    <section class="ftco-section ftco-no-pb" id="profil">
+    <section class="ftco-section ftco-no-pb" id="profil-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
@@ -928,13 +365,13 @@
     	</div>
     </section>
 	<!--PENGHARGAAN/SERTIFIKAT-->
-    <section class="ftco-section" id="penghargaan">
+    <section class="ftco-section" id="penghargaan-section">
 			<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<!--<h1 class="big big-2" translate="no">Penghargaan</h1>-->
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2" translate="no">Penghargaan</h1>
             <h2 class="mb-4" translate="no">Penghargaan</h2>
-            <p>Berisi tentang penghargaan atau sertifikat yang saya dapatkan dibidang teknologi.</p>
+            <p translate="no">Beberapa penghargaan yang saya dapatkan</p>
           </div>
         </div>
 
@@ -957,8 +394,8 @@
 	</section>
 
 	<!-- MODAL PENJELASAN SERTIFIKAT/POP UP -->
-	<div class="modal-sertifikat" id="modal-sertifikat">
-	<div class="modal-sertifikat-content">
+	<div class="modal" id="modal">
+	<div class="modal-content">
 		<span class="close" onclick="closeModal()">&times;</span>
 		<h3 id="modalTitle"></h3>
 		<p id="modalText"></p>
@@ -970,13 +407,13 @@
 	</div>
 
 	<!--Buton Penghargaan-->
-	<div class="penghargaan-btn-wrapper">
-  		<a href="penghargaan-lainnya.html" class="btn-penghargaan">
-    	Penghargaan Lainnya
-  		</a>
-	</div>
-
-	<!--SKILLS/KETERAMPILAN-->
+		<a href="penghargaan-lainnya.html" class="other-projects-link">
+			<button class="project-btn">
+			<i class="fas fa-arrow-right"></i> Penghargaan Lainnya
+			</button>
+		</a>
+	
+		<!--SKILLS/KETERAMPILAN-->
 		<section class="ftco-section" id="skills">
 			<div class="container">
 				<div class="row justify-content-center pb-5">
@@ -993,11 +430,10 @@
             </div>
         </section>
 
-
 		</section>
 
 		<!--PROJECT/PROYEK-->
-	<section class="ftco-section" id="projects">
+	<section class="ftco-section" id="projects-section">
 			<div class="container">
 				<div class="row justify-content-center pb-5">
           <section class="col-md-12 heading-section text-center ftco-animate">
@@ -1005,49 +441,23 @@
         <h2 class="mb-4">Project Saya</h2>
 		<p>Project seputar teknologi yang berhasil saya buat</p>
 
-		<div class="container">
-        <div class="projects-grid" id="projectsContainer">
-            <!-- Kartu proyek akan dimuat melalui JavaScript -->
-        </div>
+		<section id="projects">
+		<div class="projects-grid">
+			<!-- Kartu proyek akan digenerate oleh JavaScript -->
+		</div>
+		
+		<a href="proyek-lainnya.html" class="other-projects-link">
+			<button class="project-btn">
+			<i class="fas fa-arrow-right"></i> Proyek Lainnya
+			</button>
+		</a>
+		</section>
 
-        <!-- Modal untuk detail proyek -->
-        <div class="modal-proyek" id="modal-proyek">
-            <div class="modal-proyek-content">
-                <div class="modal-proyek-header">
-                    <button class="close-btn" onclick="closeModal()">&times;</button>
-                    <h2 class="modal-proyek-title" id="modalTitle">Judul Proyek</h2>
-                    <div class="modal-proyek-category" id="modalCategory">
-                        <i class="fas fa-code"></i> Kategori Proyek
-                    </div>
-                </div>
-                <div class="modal-proyek-body">
-                    <div class="modal-proyek-image" id="modalImage">
-                        <!-- Gambar akan dimuat melalui JavaScript -->
-                    </div>
-                    <div class="modal-proyek-text-container">
-                        <p class="modal-proyek-description" id="modalDescription">
-                            Deskripsi proyek akan ditampilkan di sini.
-                        </p>
-                        <div class="modal-proyek-tech" id="modalTech">
-                            <!-- Teknologi akan dimuat melalui JavaScript -->
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-proyek-footer">
-                    <a class="modal-proyek-link" id="modalDemoLink" href="#" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> Lihat Demo
-                    </a>
-                    <a class="modal-proyek-link github" id="modalGithubLink" href="#" target="_blank">
-                        <i class="fab fa-github"></i> Kode Sumber
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </div>
+</section>
+</section>
 
 	<!--ARTIKEL-->
-    <section class="ftco-section" id="blog">
+    <section class="ftco-section" id="blog-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -1132,7 +542,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="6">0</strong>
+                <strong class="number" data-number="8">0</strong>
                 <span translate="no">Penghargaan</span>
               </div>
             </div>
@@ -1169,21 +579,21 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
-						<h2>Open To Learn &<span> Collaborate</span></h2>
-						<p>Terbuka Untuk Belajar, Eksplorasi Teknologi, dan Kolaborasi Dalam Proyek Sederhana.</p>
+						<h2>Terbuka Untuk <span>Berkolaborasi</span></h2>
+						<p>Terbuka untuk belajar, eksplorasi dan kolaborasi seputar teknologi.</p>
 						<p class="mb-0"><a href="https://wa.me/6282352685242" target="_blank" class="btn btn-primary py-3 px-5">Kontak Saya</a></p>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!--KONTAK/CONTACT-->
-    <section class="ftco-section contact-section ftco-no-pb" id="contact">
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Kontak</h1>
             <h2 class="mb-4">Kontak Saya</h2>
-            <p>Jika Anda ingin menghubungi saya, silakan melalui media sosial, email, atau nomor yang tertera di bawah.</p>
+            <p>Jika anda ingin menghubungi saya bisa lewat media sosial saya, email atau dengan nomor yang tertera di bawah.</p>
           </div>
         </div>
 
@@ -1267,11 +677,11 @@
           <div class="col-md-12 text-center">
             <ul class="ftco-footer-social list-unstyled">
               <li class="ftco-animate"><a href="https://www.linkedin.com/in/aan270510" target="_blank"><span class="icon-linkedin"></span></a></li>
-              <li class="ftco-animate"><a href="https://github.com/aan-HTML" target="_blank"><span class="icon-github"></span></a></li>
+              <li class="ftco-animate"><a href="https://github.com/Aan0123" target="_blank"><span class="icon-github"></span></a></li>
               <li class="ftco-animate"><a href="https://www.instagram.com/ann.x10" target="_blank"><span class="icon-instagram"></span></a></li>
             </ul>
             <p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Dibuat oleh ann.x10 | All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i>  <a href="#" target="_blank"></a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Aan | All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i>  <a href="#" target="_blank"></a>
   			</p>
           </div>
         </div>
@@ -1288,7 +698,6 @@
   </div>
 </div>
 
-<!--JS BAGIAN POP UP PESAN TERKIRIM-->
 <script>
 	const url = new URL(window.location);
 	if (url.searchParams.get("notif") === "success") {
@@ -1299,33 +708,9 @@
 			history.replaceState(null, "", "index.html");
 		}, 3000);
 	}
-</script>
-<!--JavaScript-->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="js/project-filter.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/penghargaan.js"></script>
-  <script src="js/contact.js"></script>
-  <script src="js/btn-artikel.js"></script>
-  <script src="js/btn-penghargaan.js"></script>
-  <script src="js/btn-proyek.js"></script>
-  <script src="js/penghargaan-lainnya.js"></script>
-  <script src="js/proyek.js"></script>
 
-<!--JS SKILLS-->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
+	//JS BAGIAN SKILSS
+	document.addEventListener('DOMContentLoaded', () => {
 
   const skills = [
     { name: 'HTML5', icon: 'devicon-html5-plain colored' },
@@ -1376,188 +761,23 @@ document.addEventListener('DOMContentLoaded', () => {
   requestAnimationFrame(loop);
 });
 </script>
-
-<script>
-        // Data proyek dengan gambar
-        const data = {
-          1: {
-            title: "Website E-commers",
-            category: "Website",
-            description: "Platform e-commerce lengkap dengan sistem manajemen produk, keranjang belanja, checkout, dan dashboard admin. Fitur termasuk filter produk, pencarian, dan integrasi pembayaran.",
-            technologies: ["HTML", "CSS", "TypeScript", "React"],
-            demoLink: "demo.html",
-            githubLink: "https://github.com/aan-HTML/E-commers_web.git",
-            image: "images/web-belanja-online.png"
-          },
-          2: {
-            title: "Website Sekolah",
-            category: "Website",
-            description: "Platform website sekolah yang menyediakan sistem informasi terpadu untuk seluruh stakeholder sekolah. Website ini berfungsi sebagai hub komunikasi antara pihak sekolah, siswa, orang tua, dan masyarakat umum, dengan fitur-fitur administrasi dan akademik yang lengkap.",
-            technologies: ["HTML", "CSS", "Javascript"],
-            demoLink: "demo.html",
-            githubLink: "https://github.com/aan-HTML/Landing-Page-SMA-IT-Nusantara.git",
-            image: "images/project-2.png"
-          },
-          3: {
-            title: "Absensi Kelas Secara Online",
-            category: "Website",
-            description: "Platform web untuk mencatat dan mengelola kehadiran siswa secara online dengan antarmuka yang mudah digunakan.",
-            technologies: ["HTML", "CSS", "Javascript"],
-            demoLink: "demo.html",
-            githubLink: "https://github.com/aan-HTML/Absensi-Kelas.git",
-            image: "images/absensi-kelas.png"
-          },
-          4: {
-            title: "Permainan Ular Tangga",
-            category: "Web Game",
-            description: "Aplikasi web untuk mengelola koleksi buku pribadi secara digital dengan fitur katalogisasi lengkap.",
-            technologies: ["HTML", "CSS", "JavaScript"],
-            demoLink: "https://permainanulartangga.vercel.app/",
-            githubLink: "https://github.com/aan-HTML/Permainan-Ular-Tangga.git",
-            image: "images/project-3.jpg"
-          }
-        };
-
-        // Elemen modal dan komponennya
-        const modal = document.getElementById("modal-proyek");
-        const modalContent = modal.querySelector(".modal-proyek-content");
-        const modalTitle = document.getElementById("modalTitle");
-        const modalCategory = document.getElementById("modalCategory");
-        const modalDescription = document.getElementById("modalDescription");
-        const modalTech = document.getElementById("modalTech");
-        const modalDemoLink = document.getElementById("modalDemoLink");
-        const modalGithubLink = document.getElementById("modalGithubLink");
-        const modalImage = document.getElementById("modalImage");
-        const projectsContainer = document.getElementById("projectsContainer");
-
-        // Kategori ikon
-        const categoryIcons = {
-          "Website E-Commerce": "fas fa-shopping-cart",
-          "Aplikasi Desktop": "fas fa-desktop",
-          "Aplikasi Mobile": "fas fa-mobile-alt",
-          "Website Blog": "fas fa-blog",
-          "Aplikasi Web": "fas fa-globe"
-        };
-
-        // Fungsi untuk membuka modal
-        function openModal(id) {
-          const project = data[id];
-          modalTitle.textContent = project.title;
-          modalCategory.innerHTML = `<i class="${categoryIcons[project.category] || 'fas fa-code'}"></i> ${project.category}`;
-          modalDescription.textContent = project.description;
-          modalDemoLink.href = project.demoLink;
-          modalGithubLink.href = project.githubLink;
-          
-          // Set gambar modal
-          if (project.image) {
-            modalImage.innerHTML = `<img src="${project.image}" alt="${project.title}">`;
-          } else {
-            modalImage.innerHTML = `<div class="no-image">Preview Proyek</div>`;
-          }
-          
-          // Set teknologi
-          modalTech.innerHTML = '';
-          project.technologies.forEach(tech => {
-            const tag = document.createElement("span");
-            tag.className = "modal-tech-tag";
-            tag.textContent = tech;
-            modalTech.appendChild(tag);
-          });
-
-          // Update teks tombol demo jika tidak ada demo
-          if (project.demoLink === "#") {
-            modalDemoLink.innerHTML = '<i class="fas fa-eye-slash"></i> Demo Tidak Tersedia';
-            modalDemoLink.style.opacity = "0.7";
-            modalDemoLink.style.cursor = "not-allowed";
-            modalDemoLink.onclick = (e) => e.preventDefault();
-          } else {
-            modalDemoLink.innerHTML = '<i class="fas fa-external-link-alt"></i> Lihat Demo';
-            modalDemoLink.style.opacity = "1";
-            modalDemoLink.style.cursor = "pointer";
-            modalDemoLink.onclick = null;
-          }
-
-          modal.style.display = "flex";
-          setTimeout(() => {
-            modalContent.classList.add("show");
-          }, 10);
-        }
-
-        // Fungsi untuk menutup modal
-        function closeModal() {
-          modalContent.classList.remove("show");
-          modalContent.classList.add("hide");
-
-          setTimeout(() => {
-            modal.style.display = "none";
-            modalContent.classList.remove("hide");
-          }, 400);
-        }
-
-        // Klik di luar modal untuk menutup
-        modal.addEventListener("click", e => {
-          if (e.target === modal) closeModal();
-        });
-
-        // Tutup modal dengan tombol ESC
-        document.addEventListener("keydown", e => {
-          if (e.key === "Escape" && modal.style.display === "flex") {
-            closeModal();
-          }
-        });
-
-        // Fungsi untuk menghasilkan kartu proyek
-        function generateProjectCards() {
-            for (let i = 1; i <= Object.keys(data).length; i++) {
-                const project = data[i];
-                const iconClass = categoryIcons[project.category] || 'fas fa-code';
-                
-                const card = document.createElement("div");
-                card.className = "project-card";
-                card.setAttribute("onclick", `openModal(${i})`);
-                
-                card.innerHTML = `
-                    <div class="project-image">
-                        <img src="${project.image}" alt="${project.title}" loading="lazy">
-                        <div class="image-overlay"></div>
-                        <div class="project-badge">
-                            <i class="${iconClass}"></i> ${project.category}
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">${project.title}</h3>
-                        <div class="project-category">
-                            <i class="${iconClass}"></i> ${project.category}
-                        </div>
-                        <p class="project-description">${project.description.substring(0, 120)}...</p>
-                        
-                        <div class="project-tech">
-                            ${project.technologies.slice(0, 3).map(tech => 
-                                `<span class="tech-tag">${tech}</span>`
-                            ).join('')}
-                            ${project.technologies.length > 3 ? 
-                                `<span class="tech-tag">+${project.technologies.length - 3}</span>` : ''
-                            }
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="${project.demoLink}" class="project-link demo" target="_blank" onclick="${project.demoLink === '#' ? 'event.preventDefault();' : ''}">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                            <a href="${project.githubLink}" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                `;
-                
-                projectsContainer.appendChild(card);
-            }
-        }
-
-        // Jalankan fungsi untuk membuat kartu saat halaman dimuat
-        document.addEventListener("DOMContentLoaded", generateProjectCards);
-    </script>
-
+<!--JavaScript-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/project-filter.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/penghargaan.js"></script>
+  <script src="js/contact.js"></script>
+    
   </body>
 </html>
