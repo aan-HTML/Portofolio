@@ -160,8 +160,9 @@
 		color: #fff;
 		}
 
-		/*CSS BAGIAN PROYEK*/
-		 * {
+        /*CSS bagian PROYWEK*/
+
+         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -744,6 +745,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -757,6 +759,7 @@
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/penghargaan.css">
 	<link rel="stylesheet" href="css/btn-artikel.css">
+	<link rel="stylesheet" href="css/proyek.css">
 	<link rel="stylesheet" href="css/btn-penghargaan.css">
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -954,8 +957,8 @@
 	</section>
 
 	<!-- MODAL PENJELASAN SERTIFIKAT/POP UP -->
-	<div class="modal" id="modal">
-	<div class="modal-content">
+	<div class="modal-sertifikat" id="modal-sertifikat">
+	<div class="modal-sertifikat-content">
 		<span class="close" onclick="closeModal()">&times;</span>
 		<h3 id="modalTitle"></h3>
 		<p id="modalText"></p>
@@ -1041,8 +1044,7 @@
             </div>
         </div>
 
-		  </section>
-	</section>
+    </div>
 
 	<!--ARTIKEL-->
     <section class="ftco-section" id="blog">
@@ -1319,6 +1321,7 @@
   <script src="js/btn-penghargaan.js"></script>
   <script src="js/btn-proyek.js"></script>
   <script src="js/penghargaan-lainnya.js"></script>
+  <script src="js/proyek.js"></script>
 
 <!--JS SKILLS-->
 <script>
@@ -1374,8 +1377,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<!--JS BAGIAN PROYEK-->
-	<script>
+<script>
         // Data proyek dengan gambar
         const data = {
           1: {
