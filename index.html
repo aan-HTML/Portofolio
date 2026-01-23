@@ -5,10 +5,9 @@
 			font-family: Arial, sans-serif;
 			margin: 0;
 			padding: 0;
-			background-color: #000;
+			background-color: #000000;
 		}
 		
-		/*CSS BAGIAN POP UP PESAN TERKIRIM*/
 		.popup{
 			position:fixed;
 			top:0;
@@ -45,9 +44,9 @@
 			cursor:pointer;
 		}
 
-		/* CSS BAGIAN SKILS*/
+		/*SKILSS*/
 		.skills {
-		background: #000;
+		background: #000000;
 		padding: 40px 0;
 		overflow: hidden;
 		}
@@ -101,26 +100,7 @@
 		line-height: 1.2;
 		}
 
-		/*Responsive*/
-		@media (max-width: 768px) {
-			.projects-section h2 {
-				font-size: 2em;
-			}
-
-			.projects-grid {
-				grid-template-columns: 1fr;
-			}
-
-			.project-card .buttons {
-				flex-direction: column;
-			}
-
-			.penghargaan-grid {
-				grid-template-columns: 1fr;
-			}
-		}
-
-        .skills {
+		.skills {
 		background: #000;
 		padding: 40px 0;
 		overflow: hidden;
@@ -160,14 +140,38 @@
 		color: #fff;
 		}
 
+		/*Responsive*/
+		@media (max-width: 768px) {
+			.projects-section h2 {
+				font-size: 2em;
+			}
+
+			.projects-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.project-card .buttons {
+				flex-direction: column;
+			}
+
+			.penghargaan-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		/* FORCE PENGHARGAAN BACKGROUND */
+		#penghargaan {
+			background-color: #000000 !important;
+			background-image: none !important;
+		}
+
     </style>
   <head>
-    <title>Aan Website</title>
-	<meta name="google-site-verification" content="ExCLe7W_XduNJqZ0NsrRZgCvxGLL5dA1GjPk3ifjeHI" />
+    <meta name="google-site-verification" content="ExCLe7W_XduNJqZ0NsrRZgCvxGLL5dA1GjPk3ifjeHI" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
+    
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -181,15 +185,15 @@
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/penghargaan.css">
 	<link rel="stylesheet" href="css/btn-artikel.css">
-	<link rel="stylesheet" href="css/proyek.css">
 	<link rel="stylesheet" href="css/btn-penghargaan.css">
+	<link rel="stylesheet" href="css/proyek.css">
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Navigation</a>
+	      <a class="navbar-brand" href="index.html">navigation</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -352,26 +356,26 @@
 	<!--PENGHARGAAN/SERTIFIKAT-->
     <section class="ftco-section" id="penghargaan">
 			<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<!--<h1 class="big big-2" translate="no">Penghargaan</h1>-->
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2" translate="no">Penghargaan</h1>
             <h2 class="mb-4" translate="no">Penghargaan</h2>
-            <p>Berisi tentang penghargaan atau sertifikat yang saya dapatkan dibidang teknologi.</p>
+            <p translate="no">Beberapa penghargaan yang saya dapatkan</p>
           </div>
         </div>
 
 	<div class="penghargaan-grid">
-		<div class="penghargaan-card">
+		<div class="penghargaan-card ftco-animate">
 		<img src="images/dasar-pemrograman-web.png" alt="Belajar dasar pemrograman web">
 		<button onclick="openModal(1)">Detail</button>
 		</div>
 
-		<div class="penghargaan-card">
+		<div class="penghargaan-card ftco-animate">
 		<img src="images/dicoding2.jpeg" alt="Belajar dasar AI">
 		<button onclick="openModal(2)">Detail</button>
 		</div>
 
-		<div class="penghargaan-card">
+		<div class="penghargaan-card ftco-animate">
 		<img src="images/belajar-javascript.png" alt="Belajar dasar pemrograman Javascript">
 		<button onclick="openModal(3)">Detail</button>
 		</div>
@@ -380,24 +384,37 @@
 
 	<!-- MODAL PENJELASAN SERTIFIKAT/POP UP -->
 	<div class="modal" id="modal">
-	<div class="modal-content">
-		<span class="close" onclick="closeModal()">&times;</span>
-		<h3 id="modalTitle"></h3>
-		<p id="modalText"></p>
-		<span id="modalDate"></span>
-		<a id="modalLink" class="verify-btn" target="_blank">
-		Cek keaslian sertifikat
-		</a>
-	</div>
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close-btn" onclick="closeModal()">&times;</button>
+				<h2 class="modal-title" id="modalTitle">Judul Penghargaan</h2>
+				<div class="modal-date" id="modalDate">
+					<i class="far fa-calendar-alt"></i> Tanggal Pemberian
+				</div>
+			</div>
+			<div class="modal-body">
+				<div class="modal-image" id="modalImage"></div>
+				<div class="modal-text-container">
+					<p class="modal-text" id="modalText">Deskripsi penghargaan akan ditampilkan di sini.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a class="modal-link" id="modalLink" href="#" target="_blank">
+					<i class="fas fa-search"></i> Lihat Keaslian Sertifikat
+				</a>
+				<div class="authenticity-note">
+					<i class="fas fa-shield-alt"></i> Dapat diverifikasi melalui link resmi
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!--Buton Penghargaan-->
-	<div class="penghargaan-btn-wrapper">
+	<div class="penghargaan-btn-wrapper ftco-animate">
   		<a href="penghargaan-lainnya.html" class="btn-penghargaan">
     	Penghargaan Lainnya
   		</a>
 	</div>
-
 	<!--SKILLS/KETERAMPILAN-->
 		<section class="ftco-section" id="skills">
 			<div class="container">
@@ -420,26 +437,46 @@
 
 		<!--PROJECT/PROYEK-->
 	<section class="ftco-section" id="projects">
-			<div class="container">
-				<div class="row justify-content-center pb-5">
-          <section class="col-md-12 heading-section text-center ftco-animate">
-		<h1 class="big big-2">Project</h1>
-        <h2 class="mb-4">Project Saya</h2>
-		<p>Project seputar teknologi yang berhasil saya buat</p>
+		<div class="container">
+			<div class="heading-section text-center ftco-animate">
+				<h1 class="big big-2">Project</h1>
+				<h2 class="mb-4">Project Saya</h2>
+				<p>Project seputar teknologi yang berhasil saya buat</p>
+			</div>
 
-		<section id="projects">
-		<div class="projects-grid">
-			<!-- Kartu proyek akan digenerate oleh JavaScript -->
+			<div class="projects-grid">
+				<!-- Test card -->
+				<div class="project-card ftco-animate">
+					<div class="project-image">
+						<img src="images/web-belanja-online.png" alt="Test Project" loading="lazy">
+					</div>
+					<div class="project-content">
+						<h3>Test Project</h3>
+						<p class="project-description">Test description</p>
+						<div class="project-tech">
+							<span class="tech-tag">HTML</span>
+							<span class="tech-tag">CSS</span>
+						</div>
+						<div class="project-actions">
+							<button class="project-btn demo">
+								<i class="fas fa-eye"></i> Demo
+							</button>
+							<button class="project-btn github">
+								<i class="fab fa-github"></i> GitHub
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="penghargaan-btn-wrapper ftco-animate">
+				<a href="proyek-lainnya.html" class="other-projects-link">
+					<button class="project-btn">
+						<i class="fas fa-arrow-right"></i> Proyek Lainnya
+					</button>
+				</a>
+			</div>
 		</div>
-		
-		<a href="proyek-lainnya.html" class="other-projects-link">
-			<button class="project-btn">
-			<i class="fas fa-arrow-right"></i> Proyek Lainnya
-			</button>
-		</a>
-		</section>
-
-		  </section>
 	</section>
 
 	<!--ARTIKEL-->
@@ -462,7 +499,7 @@
               	<div class="d-flex align-items-center mb-3 meta">
 	                <p class="mb-0">
 	                	<span class="mr-2">12 Desember 2025</span>
-	                	<a href="index.html#about-section" class="mr-2">Aan</a>
+	                	<a href="index.html#about" class="mr-2">Aan</a>
 	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
 	                </p>
                 </div>
@@ -481,7 +518,7 @@
               	<div class="d-flex align-items-center mb-3 meta">
 	                <p class="mb-0">
 	                	<span class="mr-2">8 Desember 2025</span>
-	                	<a href="index.html#about-section" class="mr-2">Aan</a>
+	                	<a href="index.html#about" class="mr-2">Aan</a>
 	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
 	                </p>
                 </div>
@@ -500,7 +537,7 @@
               	<div class="d-flex align-items-center mb-3 meta">
 	                <p class="mb-0">
 	                	<span class="mr-2">1 Mei 2025</span>
-	                	<a href="index.html#about-section" class="mr-2">Aan</a>
+	                	<a href="index.html#about" class="mr-2">Aan</a>
 	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
 	                </p>
                 </div>
@@ -512,7 +549,7 @@
           </div>
 
 		<!--Buton Artikel-->
-		<a href="artikel.html" class="other-projects-link">
+		<a href="artikel.html" class="other-projects-link ftco-animate">
 			<button class="project-btn">
 			<i class="fas fa-arrow-right"></i> Artikel Lainnya
 			</button>
@@ -528,7 +565,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="6">0</strong>
+                <strong class="number" data-number="8">0</strong>
                 <span translate="no">Penghargaan</span>
               </div>
             </div>
@@ -536,7 +573,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="106">0</strong>
+                <strong class="number" data-number="93">0</strong>
                 <span>Project Selesai</span>
               </div>
             </div>
@@ -565,8 +602,8 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
-						<h2>Open To Learn &<span> Collaborate</span></h2>
-						<p>Terbuka Untuk Belajar, Eksplorasi Teknologi, dan Kolaborasi Dalam Proyek Sederhana.</p>
+						<h2>Ayo Kita <span>Berkolaborasi</span> Bersama</h2>
+						<p>Terbuka Untuk Berkolaborasi Seputar Teknologi.</p>
 						<p class="mb-0"><a href="https://wa.me/6282352685242" target="_blank" class="btn btn-primary py-3 px-5">Kontak Saya</a></p>
 					</div>
 				</div>
@@ -579,7 +616,7 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Kontak</h1>
             <h2 class="mb-4">Kontak Saya</h2>
-            <p>Jika Anda ingin menghubungi saya, silakan melalui media sosial, email, atau nomor yang tertera di bawah.</p>
+            <p>Jika anda ingin menghubungi saya bisa lewat media sosial saya, email atau dengan nomor yang tertera di bawah.</p>
           </div>
         </div>
 
@@ -663,11 +700,11 @@
           <div class="col-md-12 text-center">
             <ul class="ftco-footer-social list-unstyled">
               <li class="ftco-animate"><a href="https://www.linkedin.com/in/aan270510" target="_blank"><span class="icon-linkedin"></span></a></li>
-              <li class="ftco-animate"><a href="https://github.com/aan-HTML" target="_blank"><span class="icon-github"></span></a></li>
+              <li class="ftco-animate"><a href="https://github.com/Aan0123" target="_blank"><span class="icon-github"></span></a></li>
               <li class="ftco-animate"><a href="https://www.instagram.com/ann.x10" target="_blank"><span class="icon-instagram"></span></a></li>
             </ul>
             <p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Dibuat oleh ann.x10 | All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i>  <a href="#" target="_blank"></a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Ann.x10 | All rights reserved <a href="#" target="_blank"></a>
   			</p>
           </div>
         </div>
@@ -684,8 +721,8 @@
   </div>
 </div>
 
-<!--JS BAGIAN POP UP PESAN TERKIRIM-->
 <script>
+	//pop up
 	const url = new URL(window.location);
 	if (url.searchParams.get("notif") === "success") {
 		const n = document.getElementById("notif");
@@ -696,6 +733,7 @@
 		}, 3000);
 	}
 </script>
+
 <!--JavaScript-->
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -713,15 +751,12 @@
   <script src="js/main.js"></script>
   <script src="js/penghargaan.js"></script>
   <script src="js/contact.js"></script>
-  <script src="js/btn-artikel.js"></script>
-  <script src="js/btn-penghargaan.js"></script>
-  <script src="js/btn-proyek.js"></script>
   <script src="js/penghargaan-lainnya.js"></script>
   <script src="js/proyek.js"></script>
-
-<!--JS SKILLS-->
+    
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+	//SKILSS
+	document.addEventListener('DOMContentLoaded', () => {
 
   const skills = [
     { name: 'HTML5', icon: 'devicon-html5-plain colored' },

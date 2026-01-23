@@ -517,7 +517,7 @@
         <header>
             <h1>Proyek Lainnya</h1>
             <p class="subtitle">Koleksi proyek tambahan yang telah saya kembangkan. Setiap proyek menggunakan teknologi modern dan implementasi terbaik.</p>
-            <a href="index.html#projects" class="back-link">
+            <a href="index.html" class="back-link">
                 <i class="fas fa-arrow-left"></i> Kembali ke Halaman Utama
             </a>
         </header>
@@ -612,7 +612,6 @@
         const modalTech = document.getElementById("modalTech");
         const modalDemoLink = document.getElementById("modalDemoLink");
         const modalGithubLink = document.getElementById("modalGithubLink");
-        const modalImage = document.getElementById("modalImage");
         const projectsContainer = document.getElementById("projectsContainer");
 
         // Kategori ikon
@@ -632,13 +631,6 @@
           modalDescription.textContent = project.description;
           modalDemoLink.href = project.demoLink;
           modalGithubLink.href = project.githubLink;
-          
-          // Set gambar modal
-          if (project.image) {
-            modalImage.innerHTML = `<img src="${project.image}" alt="${project.title}">`;
-          } else {
-            modalImage.innerHTML = `<div class="no-image">Preview Proyek</div>`;
-          }
           
           // Set teknologi
           modalTech.innerHTML = '';

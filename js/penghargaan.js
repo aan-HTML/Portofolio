@@ -6,20 +6,6 @@ const modalText = document.getElementById("modalText");
 const modalDate = document.getElementById("modalDate");
 const modalLink = document.getElementById("modalLink");
 
-const authenticityNote = document.createElement("div");
-authenticityNote.className = "authenticity-note";
-authenticityNote.innerHTML = '<i class="fas fa-shield-alt"></i> Klik link di atas untuk verifikasi keaslian sertifikat';
-
-const modalFooter = document.createElement("div");
-modalFooter.className = "modal-footer";
-modalFooter.appendChild(modalLink);
-modalFooter.appendChild(authenticityNote);
-
-const modalDateElement = document.getElementById("modalDate");
-if (modalDateElement) {
-    modalDateElement.parentNode.insertBefore(modalFooter, modalDateElement.nextSibling);
-}
-
 const data = {
   1: {
     title: "Belajar Dasar Pemrograman Web",
@@ -46,11 +32,8 @@ function openModal(id) {
   
   modalTitle.textContent = award.title;
   modalText.textContent = award.text;
-  modalDate.textContent = award.date;
+  modalDate.innerHTML = `<i class="far fa-calendar-alt"></i> ${award.date}`;
   modalLink.href = award.link;
-  
-  //teks tombol
-  modalLink.textContent = "Cek Keaslian Sertifikat";
   
   modal.style.display = "flex";
   setTimeout(() => {
