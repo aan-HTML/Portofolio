@@ -3,7 +3,7 @@ const projectData = {
     title: "Website E-Commerce",
     description: "Platform e-commerce yang lengkap dengan list produk dan katalog serta perhitungan otomatis biaya belanja.",
     fullDescription: "Platform e-commerce lengkap dengan sistem manajemen produk, keranjang belanja, dan checkout. Fitur termasuk filter produk, pencarian, dan integrasi pembayaran.",
-    technologies: ["React", "TypeScript", "TailwindCSS"],
+    technologies: ["React", "TypeScript", "TailwindCSS", "PHP", "MySQL"],
     demoLink: "demo.html",
     githubLink: "https://github.com/aan-HTML/E-commers_web.git",
     image: "images/web-belanja-online.png"
@@ -12,7 +12,7 @@ const projectData = {
     title: "Website Sekolah",
     description: "Website sekolah sebagai sarana komunikasi dan menegement informasi akademik seputar sekolah.",
     fullDescription: "Platform website sekolah yang menyediakan sistem informasi terpadu untuk seluruh stakeholder sekolah. Website ini berfungsi sebagai hub komunikasi antara pihak sekolah, siswa, orang tua, dan masyarakat umum, dengan fitur-fitur administrasi dan akademik yang lengkap.",
-    technologies: ["HTML", "JavaScript", "CSS",],
+    technologies: ["HTML", "JavaScript", "CSS", "Google Maps API"],
     demoLink: "demo.html",
     githubLink: "https://github.com/aan-HTML/Landing-Page-SMA-IT-Nusantara.git",
     image: "images/project-2.png"
