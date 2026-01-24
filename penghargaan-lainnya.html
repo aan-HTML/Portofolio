@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penghargaan Lainnya | Aan</title>
+    <title>Penghargaan Lainnya</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -226,7 +226,7 @@
         .modal-content {
             background: linear-gradient(145deg, #1a1a1a, #151515);
             width: 100%;
-            max-width: 700px;
+            max-width: 550px;
             border-radius: 15px;
             overflow: hidden;
             position: relative;
@@ -457,7 +457,7 @@
         </header>
 
         <div class="awards-grid" id="awardsContainer">
-            <!-- Hanya 3 kartu penghargaan akan ditampilkan -->
+            <!-- Kartu penghargaan akan ditampilkan di sini secara otomatis -->
         </div>
 
         <!-- Modal untuk detail penghargaan -->
@@ -471,9 +471,6 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-image" id="modalImage">
-                        <!-- Gambar akan dimuat melalui JavaScript -->
-                    </div>
                     <div class="modal-text-container">
                         <p class="modal-text" id="modalText">
                             Deskripsi penghargaan akan ditampilkan di sini.
@@ -494,6 +491,9 @@
     </div>
 
     <script>
+        // ============================================
+        // DATA PENGHARGAAN - TAMBAH DI SINI!
+        // ============================================
         const data = {
           1: {
             title: "Introduction To Financial Literacy",
@@ -503,11 +503,11 @@
             image: "images/dicoding1.jpeg"
           },
           2: {
-            title: "Membangun Tampilan Website Yang Interaktif",
-            text: "Sertifikat ini saya dapatkan di event kompetisi membangun website yang responsive dan interaktif antara user/pengguna dengan website. Fokus pada UX/UI dan interaktivitas menggunakan JavaScript.",
-            date: "Diberikan pada 27 November 2025",
-            link: "#",
-            image: "images/sertifikat-3.jpg"
+            title: "Prinsip Pemrograman SOLID",
+            text: "Sertifikat ini membuktikan pemahaman saya terhadap lima prinsip dasar pemrograman SOLID yang digunakan untuk membangun kode yang bersih, terstruktur, mudah dikembangkan, dan mudah dipelihara, serta meningkatkan kualitas desain perangkat lunak secara profesional.",
+            date: "Diberikan pada 18 Januari 2026",
+            link: "https://www.dicoding.com/certificates/MEPJ2129LP3V",
+            image: "images/prinsip-pemrograman.png"
           },
           3: {
             title: "Membangun Front-End",
@@ -515,17 +515,30 @@
             date: "Diberikan pada 17 Januari 2026",
             link: "https://www.dicoding.com/certificates/L4PQ2050OZO1",
             image: "images/fornt-end.png"
+          },
+          4: {
+            title: "Dasar Pemrograman Java",
+            text: "Penghargaan ini diberikan sebagai bukti kemampuan dalam memahami dan menerapkan dasar-dasar pemrograman Java untuk membangun aplikasi yang terstruktur dan berorientasi objek.",
+            date: "Diberikan pada 18 Januari 2026",
+            link: "https://www.dicoding.com/certificates/EXAMPLE4",
+            image: "images/sertifikat-4.jpg"
+          },
+          5: {
+            title: "Pemrograman Menggunakan C",
+            text: "Penghargaan ini diberikan sebagai bukti kemampuan dalam memahami dan menerapkan dasar-dasar pemrograman C untuk membangun program yang efisien dan terstruktur.",
+            date: "Diberikan pada 24 Januari 2026",
+            link: "https://www.dicoding.com/certificates/JLX15O2DNZ72",
+            image: "images/pemrograman-dengan-C.png"
           }
         };
 
-        // Elemen modal dan komponennya
+        //KODE PROGRAM MODAL DAN KARTU PENGHARGAAN
         const modal = document.getElementById("modal");
         const modalContent = modal.querySelector(".modal-content");
         const modalTitle = document.getElementById("modalTitle");
         const modalText = document.getElementById("modalText");
         const modalDate = document.getElementById("modalDate");
         const modalLink = document.getElementById("modalLink");
-        const modalImage = document.getElementById("modalImage");
         const awardsContainer = document.getElementById("awardsContainer");
 
         // Fungsi untuk membuka modal
@@ -535,9 +548,6 @@
           modalText.textContent = award.text;
           modalDate.innerHTML = `<i class="far fa-calendar-alt"></i> ${award.date}`;
           modalLink.href = award.link;
-          
-          // Set gambar modal
-          
 
           modal.style.display = "flex";
           setTimeout(() => {
@@ -568,10 +578,13 @@
           }
         });
 
-        // Fungsi untuk menghasilkan 3 kartu penghargaan
+        // Fungsi untuk menghasilkan kartu penghargaan (OTOMATIS SEMUA DATA)
         function generateAwardCards() {
-            // Hanya menampilkan 3 penghargaan
-            for (let i = 1; i <= 3; i++) {
+            // Hitung berapa banyak penghargaan yang ada
+            const totalAwards = Object.keys(data).length;
+            
+            // Buat kartu untuk setiap penghargaan
+            for (let i = 1; i <= totalAwards; i++) {
                 const award = data[i];
                 
                 const card = document.createElement("div");

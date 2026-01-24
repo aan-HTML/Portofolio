@@ -20,7 +20,7 @@ const data = {
     link: "https://www.dicoding.com/certificates/JLX156RL5Z72"
   },
   3: {
-    title: "Sertifikat Penghargaan Dicoding",
+    title: "Pemrograman Dengan JavaScript",
     text: "Sertifikat ini membuktikan pemahaman saya terhadap konsep dasar JavaScript dan penerapannya dalam membuat kode interaktif sederhana",
     date: "Diberikan pada 17 Januari 2026",
     link: "https://www.dicoding.com/certificates/L4PQ20QDOZO1"
