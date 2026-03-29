@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krisis Komponen PC | Aan</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:#000;
+  color:#ddd;
+  font-family:Arial, sans-serif;
+  line-height:1.7;
+}
+
+/* PROGRESS BAR */
+.reading-progress{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:4px;
+  background:#111;
+  z-index:9999;
+}
+.progress-bar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#ffc107,#ffe082);
+}
+
+/* BACK BUTTON */
+.btn-back{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:80px 20px 20px;
+  padding:10px 18px;
+  border-radius:999px;
+  background:#111;
+  color:#ffc107;
+  text-decoration:none;
+  border:1px solid #222;
+  transition:.3s;
+  font-size:14px;
+}
+.btn-back:hover{
+  background:#ffc107;
+  color:#000;
+}
+
+/* HEADER */
+header{
+  padding:60px 20px;
+  text-align:center;
+  background:radial-gradient(circle at top,#1a1a1a,#000);
+}
+header h1{
+  color:#ffc107;
+  font-size:2.3rem;
+}
+header p{
+  max-width:720px;
+  margin:15px auto;
+  color:#aaa;
+}
+.meta{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  font-size:13px;
+  color:#888;
+}
+
+/* PILL NAV */
+.tech-pill-nav{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin:40px 0;
+}
+.tech-pill{
+  padding:12px 22px;
+  border-radius:999px;
+  background:#111;
+  border:1px solid #222;
+  color:#ddd;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
+}
+.tech-pill:hover{
+  border-color:#ffc107;
+  color:#ffc107;
+  box-shadow:0 0 12px rgba(255,193,7,.35);
+}
+.tech-pill.active{
+  background:#ffc107;
+  color:#000;
+  font-weight:600;
+}
+
+/* ARTICLE */
+article{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+.section{
+  margin-bottom:80px;
+}
+.section h2{
+  color:#ffc107;
+  margin-bottom:15px;
+}
+.section p{
+  color:#ccc;
+}
+.section img{
+  max-width:100%;
+  border-radius:12px;
+  margin:20px 0;
+}
+
+/* REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+/* BACK TOP */
+.back-top{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:#ffc107;
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  text-decoration:none;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+}
+.back-top.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+@media(max-width:600px){
+  header h1{font-size:1.8rem}
+}
+</style>
+</head>
+
+<body>
+
+<div class="reading-progress">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<a href="artikel.html" class="btn-back">← Kembali ke artikel lainnya</a>
+
+<header>
+  <h1>Merakit PC di 2026 Akan Menjadi Barang Mewah</h1>
+  <p>Analisis lengkap kenapa merakit PC di tahun 2026 akan menjadi mahal dan sulit dijangkau.</p>
+  <div class="meta">
+    <span>📅 2025-2026</span>
+    <span>✍️ Aan</span>
+  </div>
+</header>
+
+<nav class="tech-pill-nav">
+  <a href="#krisis" class="tech-pill active">💻 Krisis Komponen</a>
+  <a href="#ram" class="tech-pill">🖥 RAM</a>
+  <a href="#ssd" class="tech-pill">💾 SSD</a>
+  <a href="#gpu" class="tech-pill">🎮 GPU</a>
+  <a href="#ai-pc" class="tech-pill">🤖 AI PC</a>
+  <a href="#pasar" class="tech-pill">📈 Perubahan Pasar</a>
+  <a href="#kesimpulan" class="tech-pill">📝 Kesimpulan</a>
+</nav>
+
+<article>
+
+<section id="krisis" class="section reveal">
+<h2>Krisis Komponen PC</h2>
+<p><img src="images/ai.webp" alt="AI Chip"></p>
+<p>Tahun 2025 menjadi titik balik yang menyakitkan bagi komunitas perakit PC global. Jika dulu kenaikan harga komponen disebabkan oleh bencana alam atau krisis logistik, kali ini penyebabnya sistemik: Perang Infrastruktur AI. Perusahaan besar seperti Microsoft, Google, Meta, dan NVIDIA memprioritaskan produksi untuk AI, sehingga konsumen individu harus mengantre panjang dan membayar harga tinggi.</p>
+</section>
+
+<section id="ram" class="section reveal">
+<h2>#1. Perang Kapasitas HBM vs DDR5</h2>
+<p>Pergeseran produksi besar-besaran dari DDR5 ke HBM membuat RAM untuk PC rumahan langka dan mahal.</p>
+<ul>
+<li>Produksi HBM lebih boros: memerlukan wafer 3x lebih banyak dibanding DDR5.</li>
+<li>Margin keuntungan tinggi untuk HBM: 60% vs 30-40% untuk DDR5 biasa.</li>
+<li>Prioritas untuk perusahaan besar: Suplier mengalihkan produksi ke AI, stok konsumen menipis.</li>
+</ul>
+</section>
+
+<section id="ssd" class="section reveal">
+<h2>#2. Krisis Penyimpanan: SSD Kelas Server</h2>
+<p>Pabrik NAND Flash fokus pada modul untuk data center, membuat SSD konsumen naik harga drastis. Fenomena "panic buying" memperparah kelangkaan SSD 1-2TB untuk pengguna rumahan.</p>
+</section>
+
+<section id="gpu" class="section reveal">
+<h2>#3. GPU: Gamer vs Peneliti AI</h2>
+<p>Kartu grafis high-end kini digunakan untuk AI, bukan hanya gaming. Harga formal tidak lagi relevan, VRAM besar langka, dan konsumen individu kesulitan membeli GPU yang sesuai kebutuhan mereka.</p>
+</section>
+
+<section id="ai-pc" class="section reveal">
+<h2>#4. Standar "AI PC"</h2>
+<p>Produsen prosesor Intel & AMD wajib menyertakan NPU di setiap chip terbaru. Biaya produksi meningkat, sehingga konsumen tetap membayar "Pajak AI" meski tidak menggunakan fitur AI.</p>
+</section>
+
+<section id="pasar" class="section reveal">
+<h2>#5. Perubahan Perilaku Pasar 2026</h2>
+<ul>
+<li>Pasar barang bekas makin ramai: pengguna beli komponen generasi lama karena lebih murah.</li>
+<li>PC pre-built bisa lebih murah dari rakitan sendiri karena vendor sudah mengamankan stok.</li>
+<li>RAM standar 16GB terancam tidak memadai untuk kebutuhan AI Windows terbaru.</li>
+</ul>
+<p>Strategi Konsumen: Ambil RAM/SSD promo, jangan buru-buru generasi terbaru, evaluasi VRAM GPU untuk umur PC panjang.</p>
+</section>
+
+<section id="kesimpulan" class="section reveal">
+<h2>#6. Kesimpulan</h2>
+<p>Kenaikan harga komponen PC di 2025-2026 akibat pergeseran industri semikonduktor yang memprioritaskan margin tinggi perusahaan besar. Hingga pabrik baru beroperasi penuh di 2027, PC mumpuni bukan lagi barang murah.</p>
+</section>
+
+</article>
+
+<a href="#" class="back-top" id="backTop">↑</a>
+
+<script>
+const progressBar=document.getElementById("progressBar");
+const article=document.querySelector("article");
+window.addEventListener("scroll",()=>{
+  const scrollY=window.scrollY+window.innerHeight;
+  const progress=Math.min(Math.max((scrollY-article.offsetTop)/article.offsetHeight,0),1);
+  progressBar.style.width=(progress*100)+"%";
+});
+
+const reveals=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add("active");
+  });
+},{threshold:.15});
+reveals.forEach(el=>observer.observe(el));
+
+const backTop=document.getElementById("backTop");
+window.addEventListener("scroll",()=>{backTop.classList.toggle("show",window.scrollY>400)});
+</script>
+
+</body>
+</html>

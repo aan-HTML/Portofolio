@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Artikel tentang pengembangan teknologi dan website ">
+  <meta name="keywords" content="Teknologi, Aan, Website, Bima, NTB, Artikel, Website pribadi">
+<title>Pengembangan Teknologi dan Website</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:#000;
+  color:#ddd;
+  font-family:Arial, sans-serif;
+  line-height:1.7;
+}
+
+/* PROGRESS BAR */
+.reading-progress{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:4px;
+  background:#111;
+  z-index:9999;
+}
+.progress-bar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#ffc107,#ffe082);
+}
+
+/* BACK BUTTON */
+.btn-back{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:80px 20px 20px;
+  padding:10px 18px;
+  border-radius:999px;
+  background:#111;
+  color:#ffc107;
+  text-decoration:none;
+  border:1px solid #222;
+  transition:.3s;
+  font-size:14px;
+}
+.btn-back:hover{
+  background:#ffc107;
+  color:#000;
+}
+
+/* HEADER */
+header{
+  padding:60px 20px;
+  text-align:center;
+  background:radial-gradient(circle at top,#1a1a1a,#000);
+}
+header h1{
+  color:#ffc107;
+  font-size:2.3rem;
+}
+header p{
+  max-width:720px;
+  margin:15px auto;
+  color:#aaa;
+}
+.meta{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  font-size:13px;
+  color:#888;
+}
+
+/* PILL NAV */
+.tech-pill-nav{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin:40px 0;
+}
+.tech-pill{
+  padding:12px 22px;
+  border-radius:999px;
+  background:#111;
+  border:1px solid #222;
+  color:#ddd;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
+}
+.tech-pill:hover{
+  border-color:#ffc107;
+  color:#ffc107;
+}
+.tech-pill.active{
+  background:#ffc107;
+  color:#000;
+  font-weight:600;
+}
+
+/* ARTICLE */
+article{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+.section{
+  margin-bottom:80px;
+}
+.section h2{
+  color:#ffc107;
+  margin-bottom:15px;
+}
+.section p{
+  color:#ccc;
+  margin-bottom:14px;
+}
+
+/* SCROLL REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+/* BACK TO TOP */
+.back-top{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:#ffc107;
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  text-decoration:none;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+}
+.back-top.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+@media(max-width:600px){
+  header h1{font-size:1.8rem}
+  .tech-pill{font-size:13px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="reading-progress">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<a href="artikel.html" class="btn-back">← Kembali ke artikel lainnya</a>
+
+<header>
+  <h1>PENGEMBANGAN TEKNOLOGI DAN WEBSITE</h1>
+  <p>Perkembangan teknologi web dan pengaruhnya terhadap website modern.</p>
+  <div class="meta">
+    <span>📅 2026</span>
+    <span>✍️ Aan</span>
+  </div>
+</header>
+
+<nav class="tech-pill-nav">
+  <a href="#pengantar" class="tech-pill active">🌐 Pengantar</a>
+  <a href="#pengaruh" class="tech-pill">⚙️ Perkembangan</a>
+  <a href="#masa-depan" class="tech-pill">🚀 Masa Depan</a>
+</nav>
+
+<article>
+
+<section id="pengantar" class="section reveal">
+<h2>Pengembangan Teknologi dan Website</h2>
+<p>
+Pengembangan teknologi dan website terus mengalami perubahan dari waktu ke waktu. Website tidak lagi hanya berfungsi sebagai media informasi, tetapi juga sebagai sarana interaksi, branding, dan penyampaian layanan secara digital.
+</p>
+<p>
+Dalam pengembangan website, struktur kode yang rapi dan mudah dipahami sangat penting. Hal ini memudahkan proses pengelolaan, perbaikan, dan pengembangan di kemudian hari.
+</p>
+<p>
+Website yang dikembangkan dengan baik akan lebih stabil, minim kesalahan, dan lebih siap untuk dikembangkan lebih lanjut sesuai kebutuhan.
+</p>
+</section>
+
+<section id="pengaruh" class="section reveal">
+<h2>Bagaimana Teknologi Mempengaruhi Website Modern</h2>
+<p>
+Seiring berkembangnya teknologi, peran website juga ikut berubah. Website tidak lagi sekadar tempat menyampaikan informasi, tetapi menjadi bagian penting dalam membangun identitas digital.
+</p>
+<p>
+Banyak orang menggunakan website sebagai sarana untuk menunjukkan karya, berbagi pengetahuan, hingga mengembangkan bisnis atau personal branding.
+</p>
+<p>
+Kemajuan teknologi web memungkinkan website dibuat dengan struktur yang lebih fleksibel dan mudah dikembangkan tanpa harus mengubah keseluruhan sistem.
+</p>
+<p>
+Teknologi juga mendorong website menjadi lebih interaktif, sehingga pengunjung tidak hanya membaca konten tetapi juga dapat berinteraksi melalui fitur-fitur sederhana.
+</p>
+</section>
+
+<section id="masa-depan" class="section reveal">
+<h2>Arah Pengembangan Website di Masa Depan</h2>
+<p>
+Ke depan, pengembangan website akan semakin menekankan pada kenyamanan dan efisiensi. Website harus mudah diakses, tidak membingungkan, dan tetap konsisten di berbagai perangkat.
+</p>
+<p>
+Perubahan teknologi juga mendorong website untuk terus beradaptasi dengan kebiasaan pengguna yang semakin beragam.
+</p>
+<p>
+Dengan penyesuaian yang tepat, website dapat tetap relevan dan nyaman digunakan dalam jangka panjang tanpa kehilangan fungsi utamanya.
+</p>
+</section>
+
+</article>
+
+<a href="#" class="back-top" id="backTop">↑</a>
+
+<script>
+const progressBar=document.getElementById("progressBar");
+const article=document.querySelector("article");
+
+window.addEventListener("scroll",()=>{
+  const scrollY=window.scrollY+window.innerHeight;
+  const progress=Math.min(
+    Math.max((scrollY-article.offsetTop)/article.offsetHeight,0),1
+  );
+  progressBar.style.width=(progress*100)+"%";
+});
+
+const reveals=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add("active");
+  });
+},{threshold:.15});
+reveals.forEach(el=>observer.observe(el));
+
+const backTop=document.getElementById("backTop");
+window.addEventListener("scroll",()=>{
+  backTop.classList.toggle("show",window.scrollY>400);
+});
+</script>
+
+</body>
+</html>

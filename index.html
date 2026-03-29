@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="google-site-verification" content="ExCLe7W_XduNJqZ0NsrRZgCvxGLL5dA1GjPk3ifjeHI" />
+	<title>Aan | Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Portfolio Aan, web developer yang fokus pada HTML, CSS, JavaScript, dan front-end development.">
+	<meta name="keywords" content="Aan, Aan web developer, Aan portfolio, front end developer">
+	<meta name="author" content="Aan">
+	<meta property="og:title" content="Aan | Web Developer">
+	<meta property="og:description" content="Portfolio dan project web developer Aan">
+	<meta property="og:url" content="https://aan.my.id">
+	<meta property="og:image" content="https://aan.my.id/images/bg_1.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+	<link rel="canonical" href="https://aan.my.id" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/penghargaan.css">
+	<link rel="stylesheet" href="css/btn-artikel.css">
+	<link rel="stylesheet" href="css/btn-penghargaan.css">
+	<link rel="stylesheet" href="css/proyek.css">
+
+	<style>
+        body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+		}
+		
+		.popup{
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background:rgba(0,0,0,.5);
+			display:none;
+			align-items:center;
+			justify-content:center;
+			z-index:9999;
+		}
+
+		.popup-box{
+			background:#fff;
+			padding:20px;
+			border-radius:12px;
+			width:90%;
+			max-width:320px;
+			text-align:center;
+		}
+
+		.popup-box p{
+			font-size:16px;
+			margin-bottom:15px;
+		}
+
+		.popup-box button{
+			padding:8px 20px;
+			border:none;
+			background:#22c55e;
+			color:#fff;
+			border-radius:6px;
+			cursor:pointer;
+		}
+
+		/*SKILLS*/
+		.skills {
+			background: #000;
+			padding: 40px 0;
+			overflow: hidden;
+		}
+
+		.skills-wrapper { width: 100%; overflow: hidden; }
+		.skills-track { display: flex; gap: 18px; will-change: transform; padding: 15px 0; }
+
+		.skill-card {
+			min-width: 160px;
+			background: #000;
+			border: 2px solid #ffc107;
+			border-radius: 14px;
+			padding: 18px 10px;
+			text-align: center;
+			transition: transform .25s ease, border-color .25s ease;
+		}
+
+		.skill-card:hover { transform: translateY(-4px); border-color: #ffda44; }
+		.skill-icon { font-size: 44px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; }
+		.skill-name { font-size: 14px; color: #fff; }
+
+		/*Responsive Improvements*/
+		@media (max-width: 768px) {
+			.penghargaan-grid, .projects-grid { grid-template-columns: 1fr; }
+		}
+
+		/* Fade-in Animation */
+		.fade-in-item {
+			opacity: 0;
+			transform: translateY(30px);
+			transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+			will-change: opacity, transform;
+			visibility: hidden;
+		}
+
+		.fade-in-item.fade-in-visible {
+			opacity: 1;
+			transform: translateY(0);
+			visibility: visible;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.fade-in-item {
+				opacity: 1 !important;
+				transform: none !important;
+				transition: none !important;
+			}
+		}
+
+		#penghargaan {
+			background-color: #000000 !important;
+			background-image: none !important;
+		}
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+ 
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">navigation</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+		  <!--Navbar-->
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home" class="nav-link"><span>Beranda</span></a></li>
+	          <li class="nav-item"><a href="#about" class="nav-link"><span>Tentang Saya</span></a></li>
+	          <li class="nav-item"><a href="#profil" class="nav-link"><span>Profil</span></a></li>
+	          <li class="nav-item"><a href="#penghargaan" class="nav-link"><span translate="no">Penghargaan</span></a></li>
+	          <li class="nav-item"><a href="#skills" class="nav-link"><span translate="no">Skills</span></a></li>
+	          <li class="nav-item"><a href="#projects" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#blog" class="nav-link"><span>Artikel</span></a></li>
+	          <li class="nav-item"><a href="#contact" class="nav-link"><span>Kontak</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home" class="hero">
+		  <div class="home-slider  owl-carousel">
+	      <div class="slider-item ">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          		<div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hallo!</span>
+			            <h1 class="mb-4 mt-3">Saya <span>Aan</span></h1>
+			            <h2 class="mb-4">Front End Developer</h2>
+			            <p><a href="https://wa.me/6282352685242"target="_blank" class="btn btn-primary py-3 px-4">Kontak Saya</a> <a href="https://github.com/aan-HTML" target="_blank" class="btn btn-white btn-outline-white py-3 px-4">Github Profile</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+
+	      <div class="slider-item">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_2.png);">
+	          		<div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3" translate="no">Welcome <span translate="no">To My </span>Website</h1>
+			            <p><a href="https://wa.me/6282352685242"target="_blank" class="btn btn-primary py-3 px-4">Kontak Saya</a> <a href="https://github.com/aan-HTML" target="_blank" class="btn btn-white btn-outline-white py-3 px-4">Github Profile</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
+	<!--TENTANG SAYA/ABOUT ME-->
+    <section class="ftco-about img ftco-section ftco-no-pb" >
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 col-lg-5 d-flex">
+    				<div class="img-about img d-flex align-items-stretch">
+    					<div class="overlay"></div>
+	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/bg_1.png);">
+	    				</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+    				<div class="row justify-content-start pb-3">
+		          <div class="col-md-12 heading-section ftco-animate">
+		          	<h1 class="big" id="about">Tentang</h1>
+		            <h2 class="mb-4">Tentang Saya</h2>
+		            <p>Saya Annasirat, biasa dipanggil Aan, seorang pelajar SMP yang tertarik dengan dunia teknologi dan web development. Saya suka belajar dan ngulik hal-hal baru seputar HTML, CSS, JavaScript, serta mengikuti perkembangan teknologi modern seperti AI. Melalui portofolio ini, saya ingin membagikan hasil belajar dan proyek yang saya kerjakan sebagai bagian dari perjalanan saya di dunia teknologi 🚀
+					</p>
+		            <ul class="about-info mt-4 px-md-0 px-2">
+		            	<li class="d-flex"><span>Nama:</span> <span>Annasirat (Aan)</span></li>
+		            	<li class="d-flex"><span>Tanggal Lahir:</span> <span>Mei 27, 2010</span></li>
+		            	<li class="d-flex"><span>Alamat:</span> <span>Bima, Nusa Tenggara Barat, Indonesia</span></li>
+		            	<li class="d-flex"><span>Kode Pos:</span> <span>84182</span></li>
+		            	<li class="d-flex"><span>Email:</span> <span>aan2702010@gmail.com</span></li>
+		            	<li class="d-flex"><span>Telpon: </span> <span>+62 823-526-852-42</span></li>
+		            </ul>
+		          </div>
+		        </div>
+	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+              <div class="text">
+              	<p class="mb-4">
+	                <span class="number" data-number="106">0</span>
+	                <span>Project Selesai</span>
+                </p>
+                <p><a href="https://wa.me/6282352685242" target="_blank" class=" btn btn-primary py-3 px-3"> Whatsapp </a></p>
+              </div>
+	          </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+	<!--PROFIL-->
+    <section class="ftco-section ftco-no-pb" id="profil">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Profil</h1>
+            <h2 class="mb-4">Profil</h2>
+            <p>Berisi tentang riwayat pendidikan saya, pengalaman, serta pendidikan yang akan saya tempuh di taun yang akan mendatang.</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023-Sekarang</span>
+    					<h2>Siswa SMP</h2>
+    					<span class="position">SMP Negeri 1 Sape</span>
+    					<p class="mt-4">Saat ini sedang menempuh pendidikan formal. Aktif dalam kegiatan OSIS dan memiliki minat besar dalam dunia teknologi serta build website.</p>
+    				</div>
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2017-2023</span>
+    					<h2>Lulusan Sekolah Dasar (SD)</h2>
+    					<span class="position">SD Negeri Jia</span>
+    					<p class="mt-4">Menyelesaikan pendidikan dasar dengan minat khusus pada komputer, tapi sayangnya di sd saat saya bersekolah tidak ada pelajaran tentang komputer dan saya hanya belajar pada orangtua saya.</p>
+    				</div>
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2026-Mendatang</span>
+    					<h2>Siswa SMP</h2>
+    					<span class="position">Calon Siswa SMK Jurusan RPL</span>
+    					<p class="mt-4">Berencana melanjutkan pendidikan ke jenjang yang lebih tinggi dengan mengambil jurusan RPL di SMK agar menambah ilmu pengetahuan saya dengan fokus pada pengembangan perangkat lunak untuk memperdalam ilmu coding.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2024-Sekarang</span>
+    					<h2>Self-Taught Web Developer</h2>
+    					<span class="position">Belajar Web Development</span>
+    					<p class="mt-4">Terbiasa dalam menggunakan berbagai aplikasi komputer untuk produktivitas dan mulai belajar desain dasar untuk mempercantik tampilan antarmuka web.</p>
+    				</div>
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2024</span>
+    					<h2>Mulai Mendalami Software</h2>
+    					<span class="position">Mendalami Struktur Website</span>
+    					<p class="mt-4">Mempelajari struktur HTML, dekorasi CSS, dan framework Bootstrap untuk membuat tampilan website lebih responsif dan menarik serta memudahkan saya untuk membangun atau membuat sebuah website.</p>
+    				</div>
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2024</span>
+    					<h2>Personal Portofolio Project</h2>
+    					<span class="position">Proyek Pertama</span>
+    					<p class="mt-4">Berhasil mengedit dan menjalankan website portofolio sebagai langkah awal memahami bagaimana sebuah website bekerja di browser serta bagaimana website bisa dilihat semua orang secara terbuka tanpa private DNS dengan mengguanakan hosting.</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://github.com/aan-HTML" target="_blank" class="btn btn-primary py-4 px-5">Github</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+	<!--PENGHARGAAN/SERTIFIKAT-->
+    <section class="ftco-section" id="penghargaan">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2" translate="no">Penghargaan</h1>
+            <h2 class="mb-4" translate="no">Penghargaan</h2>
+            <p translate="no">Beberapa penghargaan yang saya dapatkan</p>
+          </div>
+        </div>
+
+	<div class="awards-grid" id="awardsContainer">
+		<!-- Kartu penghargaan akan ditampilkan di sini secara otomatis -->
+	</div>
+	</section>
+
+	<!-- MODAL PENJELASAN SERTIFIKAT/POP UP -->
+	<div class="modal" id="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close-btn" onclick="closeModal()">&times;</button>
+				<h2 class="modal-title" id="modalTitle">Judul Penghargaan</h2>
+				<div class="modal-date" id="modalDate">
+					<i class="far fa-calendar-alt"></i> Tanggal Pemberian
+				</div>
+			</div>
+			<div class="modal-body">
+				<div class="modal-text-container">
+					<p class="modal-text" id="modalText">Deskripsi penghargaan akan ditampilkan di sini.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a class="modal-link" id="modalLink" href="#" target="_blank">
+					<i class="fas fa-search"></i> Lihat Keaslian Sertifikat
+				</a>
+				<div class="authenticity-note">
+					<i class="fas fa-shield-alt"></i> Dapat diverifikasi melalui link resmi
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Buton Penghargaan-->
+	<div class="penghargaan-btn-wrapper ftco-animate">
+  		<a href="penghargaan-lainnya.html" class="btn-penghargaan">
+    	Penghargaan Lainnya
+  		</a>
+	</div>
+	<!--SKILLS/KETERAMPILAN-->
+		<section class="ftco-section" id="skills">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Skills</h1>
+            <h2 class="mb-4">Skills Saya</h2>
+            <p>Beberapa Keahlian yang saya kuasai</p>
+          </div>
+        </div>
+			
+        <section class="skills">
+            <div class="skills-wrapper">
+                <div class="skills-track" id="skillsTrack"></div>
+            </div>
+        </section>
+
+
+		</section>
+
+		<!--PROJECT/PROYEK-->
+	<section class="ftco-section" id="projects">
+		<div class="container">
+			<div class="heading-section text-center ftco-animate">
+				<h1 class="big big-2">Project</h1>
+				<h2 class="mb-4">Project Saya</h2>
+				<p>Project seputar teknologi yang berhasil saya buat</p>
+			</div>
+
+			<div class="projects-grid" id="projectsContainer">
+				<!-- Content will be generated by js/proyek.js -->
+			</div>
+			
+			<div class="penghargaan-btn-wrapper ftco-animate">
+				<a href="proyek-lainnya.html" class="other-projects-link">
+					<button class="project-btn">
+						<i class="fas fa-arrow-right"></i> Proyek Lainnya
+					</button>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!--ARTIKEL-->
+    <section class="ftco-section" id="blog">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Artikel</h1>
+            <h2 class="mb-4">Artikel saya</h2>
+            <p>Berbagi Wawasan Seputar teknologi, coding, dan website</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+			<!--ARTIKEL 2-->
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="blog1.html" class="block-20" style="background-image: url('images/teknologi-masa-kini.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+              	<div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">12 Desember 2025</span>
+	                	<a href="index.html#about" class="mr-2">Aan</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <h3 class="heading">Teknologi Masa Kini</h3>
+                <p>Teknologi masa kini mempermudah kehidupan manusia melalui akses informasi cepat, komunikasi instan, dan otomatisasi digital di berbagai bidang.</p>
+				<h6 class="mr-2"><a href="blog1.html">Baca Selengkapnya →</a></h6>
+              </div>
+            </div>
+          </div>
+		  <!--ARTIKEL 1-->
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="blog5.html" class="block-20" style="background-image: url('images/Peta\ Dunia.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+              	<div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">8 Desember 2025</span>
+	                	<a href="index.html#about" class="mr-2">Aan</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <h3 class="heading">Cara Kerja Internet</h3>
+                <p>Internet bekerja dengan mengirim dan menerima data antar perangkat melalui jaringan global menggunakan protokol khusus secara cepat dan efisien.</p>
+				<h6 class="mr-2"><a href="blog5.html">Baca Selengkapnya →</a></h6>
+              </div>
+            </div>
+          </div>
+		  <!--ARTIKEL 3-->
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="blog4.html" class="block-20" style="background-image: url('images/image_4.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+              	<div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">1 Mei 2025</span>
+	                	<a href="index.html#about" class="mr-2">Aan</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <h3 class="heading">Komponen Komputer</h3>
+                <p> komponen fisik dari sebuah komputer yang bisa kita liat dan kita sentuh, semua komponen bekerja sama untuk menjalankan intruksi dari software.</p>
+				<h6 class="mr-2"><a href="blog4.html">Baca Selengkapnya →</a></h6>
+              </div>
+            </div>
+          </div>
+
+		<!--Buton Artikel-->
+		<a href="artikel.html" class="other-projects-link ftco-animate">
+			<button class="project-btn">
+			<i class="fas fa-arrow-right"></i> Artikel Lainnya
+			</button>
+		</a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    	<div class="container">
+				<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="8">0</strong>
+                <span translate="no">Penghargaan</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="93">0</strong>
+                <span>Project Selesai</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="23">0</strong>
+                <span>Kolaborasi</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="51">0</strong>
+                <span>Kopi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>Ayo Kita <span>Berkolaborasi</span> Bersama</h2>
+						<p>Terbuka Untuk Berkolaborasi Seputar Teknologi.</p>
+						<p class="mb-0"><a href="https://wa.me/6282352685242" target="_blank" class="btn btn-primary py-3 px-5">Kontak Saya</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--KONTAK/CONTACT-->
+    <section class="ftco-section contact-section ftco-no-pb" id="contact">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Kontak</h1>
+            <h2 class="mb-4">Kontak Saya</h2>
+            <p>Jika anda ingin menghubungi saya bisa lewat media sosial saya, email atau dengan nomor yang tertera di bawah.</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Alamat</h3>
+	            <p>Bima, Nusa Tenggara Barat, Indonesia</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Nomor Kontak</h3>
+	            <p><a href="tel://6282352685242">+6282-3526-85242</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email</h3>
+	            <p><a href="mailto:aan27052010@gmail.com">aan27052010@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Website</h3>
+	            <p><a href="https://aan.my.id">aan.my.id</a></p>
+	          </div>
+          </div>
+        </div>
+		<!--PESAN-->
+        <div class="row no-gutters block-9">
+          <div class="col-md-6 order-md-last d-flex">
+
+            <form id="contactForm" action="index.html" method="POST" class="bg-light p-4 p-md-5 contact-form">
+
+  				<div class="form-group">
+    				<input type="text" name="name" class="form-control" placeholder="Nama" required>
+ 				 </div>
+
+  				<div class="form-group">
+   					 <input type="email" name="email" class="form-control" placeholder="Email" required>
+  				</div>
+
+  				<div class="form-group">
+   					 <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Pesan" required></textarea>
+  				</div>
+
+  				<div class="form-group">
+   					 <input type="submit" value="Kirim Pesan" class="btn btn-primary py-3 px-5">
+ 				 </div>
+			</form>
+          
+          </div>
+
+          <div class="col-md-6 d-flex">
+          	<div class="img" style="background-image: url(images/about.jpg);"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+	<!--FOOTER/AKHIRAN WEBSITE-->
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <ul class="ftco-footer-social list-unstyled">
+              <li class="ftco-animate"><a href="https://www.linkedin.com/in/aan270510" target="_blank"><span class="icon-linkedin"></span></a></li>
+              <li class="ftco-animate"><a href="https://github.com/Aan0123" target="_blank"><span class="icon-github"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.instagram.com/ann.x10" target="_blank"><span class="icon-instagram"></span></a></li>
+            </ul>
+            <p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Ann.x10 | All rights reserved <a href="#" target="_blank"></a>
+  			</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <!-- POP UP PESAN TERKIRIM -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+	<div id="popup" class="popup">
+  <div class="popup-box">
+    <p id="popup-text">Pesan terkirim</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<!-- Loader Failsafe: Memastikan website tetap terbuka jika JS error -->
+<script>
+  setTimeout(function() {
+    var loader = document.getElementById('ftco-loader');
+    if(loader) loader.classList.remove('show');
+  }, 2500);
+</script>
+
+<!--JavaScript-->
+  <script src="js/jquery.min.js"></script> <!-- jQuery tanpa defer lebih stabil untuk plugin lama -->
+  <script src="js/popper.min.js" defer></script>
+  <script src="js/bootstrap.min.js" defer></script>
+  <script src="js/jquery.easing.1.3.js" defer></script>
+  <script src="js/jquery.waypoints.min.js" defer></script>
+  <script src="js/jquery.stellar.min.js" defer></script>
+  <script src="js/owl.carousel.min.js" defer></script>
+  <script src="js/jquery.magnific-popup.min.js" defer></script>
+  <script src="js/aos.js" defer></script>
+  <script src="js/jquery.animateNumber.min.js" defer></script>
+  <script src="js/scrollax.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/penghargaan.js" defer></script>
+  <script src="js/contact.js" defer></script>
+  <script src="js/proyek.js" defer></script>
+
+<script>
+	//SKILSS
+	document.addEventListener('DOMContentLoaded', () => {
+
+  const skills = [
+    { name: 'HTML5', icon: 'devicon-html5-plain colored' },
+    { name: 'CSS3', icon: 'devicon-css3-plain colored' },
+    { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
+    { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored' },
+    { name: 'PHP', icon: 'devicon-php-plain colored' },
+    { name: 'Laravel', icon: 'devicon-laravel-plain colored' },
+    { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
+    { name: 'WordPress', icon: 'devicon-wordpress-plain colored' },
+    { name: 'GitHub', icon: 'devicon-github-original colored' }
+  ];
+
+  const track = document.getElementById('skillsTrack');
+
+  /* ngerender 2 kali */
+  skills.concat(skills).forEach(skill => {
+    const card = document.createElement('div');
+    card.className = 'skill-card';
+    card.innerHTML = `
+      <div class="skill-icon"><i class="${skill.icon}"></i></div>
+      <div class="skill-name">${skill.name}</div>
+    `;
+    track.appendChild(card);
+  });
+
+  let x = 0;
+  let lastTime = null;
+
+  const mobile = window.matchMedia('(max-width: 768px)').matches;
+  const speed = mobile ? 36 : 40; // kecepatan jalan ikon px per detik
+
+  function loop(time) {
+    if (!lastTime) lastTime = time;
+    const delta = time - lastTime;
+    lastTime = time;
+
+    x -= (speed * delta) / 1000;
+
+    if (Math.abs(x) >= track.scrollWidth / 2) {
+      x = 0;
+    }
+
+    track.style.transform = `translateX(${x}px)`;
+    requestAnimationFrame(loop);
+  }
+
+  requestAnimationFrame(loop);
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion || !('IntersectionObserver' in window)) return;
+
+  const fadeSelectors = [
+    '.ftco-animate',
+    '.hero .text',
+    '.hero .one-third',
+    '#about .heading-section',
+    '#about .about-info',
+    '#about .counter-wrap',
+    '#profil .resume-wrap',
+    '#penghargaan .heading-section',
+    '#penghargaan .award-card',
+    '#skills .heading-section',
+    '#skills .skills',
+    '#projects .heading-section',
+    '#projects .project-card',
+    '#blog .heading-section',
+    '#blog .blog-entry',
+    '#contact .heading-section',
+    '#contact .contact-form',
+    '#contact .box',
+    '.ftco-hireme .text-center',
+    '.ftco-footer'
+  ].join(', ');
+
+  const isInView = el => {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -8% 0px'
+  });
+
+  const collectTargets = root => {
+    const targets = [];
+    if (root && root.nodeType === 1 && root.matches && root.matches(fadeSelectors)) {
+      targets.push(root);
+    }
+    if (root && root.querySelectorAll) {
+      root.querySelectorAll(fadeSelectors).forEach(el => targets.push(el));
+    }
+    return targets;
+  };
+
+  const registerFadeItems = root => {
+    if (!root) return;
+
+    const targets = collectTargets(root);
+    targets.forEach((el, index) => {
+      if (el.classList.contains('fade-in-item')) return;
+      el.classList.add('fade-in-item');
+      el.style.transitionDelay = `${(index % 4) * 150}ms`; // Memberikan jeda antar elemen agar muncul berurutan
+
+      if (isInView(el)) {
+        el.classList.add('fade-in-visible');
+      } else {
+        observer.observe(el);
+      }
+    });
+  };
+
+  registerFadeItems(document);
+
+  const mutationObserver = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      mutation.addedNodes.forEach(node => {
+        if (node.nodeType === 1) {
+          registerFadeItems(node);
+        }
+      });
+    });
+  });
+
+  mutationObserver.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+
+  </body>
+</html>

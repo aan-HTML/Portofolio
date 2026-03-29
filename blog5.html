@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara Kerja Internet | Aan</title>
+
+<link rel="preload" href="fonts/artikel-font/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+@font-face{
+font-family:'Inter';
+src:url('fonts/artikel-font/Inter-Regular.woff2') format('woff2');
+font-weight:400;
+font-display:swap;
+}
+@font-face{
+font-family:'Inter';
+src:url('fonts/artikel-font/Inter-Medium.woff2') format('woff2');
+font-weight:500;
+font-display:swap;
+}
+@font-face{
+font-family:'Inter';
+src:url('fonts/artikel-font/Inter-SemiBold.woff2') format('woff2');
+font-weight:600;
+font-display:swap;
+}
+
+:root{
+--bg:#0b0b0b;
+--card:#111;
+--text:#eaeaea;
+--muted:#9a9a9a;
+--primary:#ffc107;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',system-ui,sans-serif;
+}
+
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* BACK */
+.back-btn{
+display:inline-flex;
+gap:8px;
+padding:10px 18px;
+border-radius:999px;
+border:1px solid var(--primary);
+color:var(--primary);
+text-decoration:none;
+font-weight:600;
+}
+
+/* HERO */
+.hero{
+margin-top:30px;
+padding:80px 30px;
+border-radius:26px;
+text-align:center;
+background:
+radial-gradient(circle at top, rgba(255,193,7,.18), transparent 60%),
+linear-gradient(180deg,#111,#0b0b0b);
+border:1px solid #1f1f1f;
+}
+.hero h1{
+font-size:clamp(2rem,5vw,3.2rem);
+color:var(--primary);
+}
+.hero-line{
+width:80px;
+height:4px;
+background:var(--primary);
+margin:22px auto;
+border-radius:999px;
+}
+.hero p{
+max-width:760px;
+margin:auto;
+line-height:1.9;
+color:#dcdcdc;
+}
+
+/* TOC */
+.toc-bullet{
+margin:60px 0;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+.toc-bullet a{
+width:86px;
+height:86px;
+border-radius:50%;
+background:var(--card);
+border:1px solid #1f1f1f;
+text-decoration:none;
+color:var(--text);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:6px;
+transition:.3s;
+}
+.toc-bullet span{font-size:1.5rem;}
+.toc-bullet small{font-size:.7rem;text-align:center;}
+.toc-bullet a:hover{
+border-color:var(--primary);
+color:var(--primary);
+box-shadow:0 0 20px rgba(255,193,7,.25);
+transform:translateY(-4px);
+}
+
+/* ARTICLE */
+article{
+display:flex;
+flex-direction:column;
+gap:40px;
+}
+.section{
+background:var(--card);
+padding:30px;
+border-radius:18px;
+border:1px solid #1f1f1f;
+}
+.section h2{
+color:var(--primary);
+margin-bottom:12px;
+}
+.section p{
+line-height:1.9;
+color:#dcdcdc;
+text-align:justify;
+}
+
+/* IMAGE */
+.lazy-img{
+width:100%;
+border-radius:14px;
+margin-bottom:18px;
+filter:blur(18px);
+transform:scale(1.05);
+transition:.7s ease;
+}
+.lazy-img.loaded{
+filter:blur(0);
+transform:scale(1);
+}
+
+/* REVEAL */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:.8s ease;
+}
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* SCROLL TOP */
+.scroll-top{
+position:fixed;
+bottom:22px;
+right:22px;
+width:48px;
+height:48px;
+border-radius:50%;
+background:var(--primary);
+color:#000;
+border:none;
+font-size:1.4rem;
+cursor:pointer;
+display:none;
+}
+
+/* PROGRESS BAR */
+.reading-progress{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:#111;
+z-index:9999;
+}
+.progress-bar{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#ffc107,#ffd54f);
+}
+</style>
+</head>
+
+<body>
+
+<div class="reading-progress">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<div class="container">
+
+<a href="index.html#blog" class="back-btn">← Kembali ke artikel</a>
+
+<section class="hero" id="hero">
+<h1>CARA KERJA INTERNET</h1>
+<div class="hero-line"></div>
+<p>
+Internet adalah jaringan global yang menghubungkan jutaan perangkat
+di seluruh dunia untuk saling bertukar data secara cepat dan otomatis.
+</p>
+</section>
+
+<nav class="toc-bullet" id="toc"></nav>
+
+<article>
+
+<section class="section" id="internet">
+<img src="images/internet-map.png" loading="lazy" class="lazy-img">
+<h2>Apa Itu Internet?</h2>
+<p>Internet adalah jaringan global yang menghubungkan komputer, server, smartphone, dan perangkat lainnya. Melalui internet, perangkat-perangkat ini dapat saling bertukar data seperti teks, gambar, video, dan suara dalam waktu sangat singkat.</p>
+<p>Ketika kamu membuka sebuah website, sebenarnya perangkatmu sedang berkomunikasi dengan server yang berada di lokasi lain, bahkan bisa di negara yang berbeda.</p>
+</section>
+
+<section class="section" id="dns">
+<img src="images/browser ke server.png" loading="lazy" class="lazy-img">
+<h2>DNS (Domain Name System)</h2>
+<p>Saat kamu mengetik alamat website seperti google.com, komputer tidak langsung mengerti. Internet menggunakan sistem DNS untuk mengubah nama domain tersebut menjadi alamat IP agar server tujuan dapat ditemukan.</p>
+<p>DNS bekerja seperti buku telepon internet, yang mencocokkan nama website dengan alamat IP server.</p>
+</section>
+
+<section class="section" id="packet">
+<img src="images/alur pengiriman data.png" loading="lazy" class="lazy-img">
+<h2>Pengiriman Data (Packet)</h2>
+<p>Data yang dikirim melalui internet tidak dikirim sekaligus, melainkan dipecah menjadi bagian kecil yang disebut packet. Setiap packet bisa melewati jalur jaringan yang berbeda.</p>
+<p>Setelah semua packet sampai di tujuan, perangkat akan menyusunnya kembali sehingga data dapat ditampilkan secara utuh.</p>
+</section>
+
+<section class="section" id="fiber">
+<img src="images/fiber optic.png" loading="lazy" class="lazy-img">
+<h2>Media Pengiriman Data</h2>
+<p>Internet menggunakan berbagai media pengiriman, salah satunya adalah fiber optik. Fiber optik mengirimkan data menggunakan cahaya dengan kecepatan sangat tinggi dan gangguan minimal.</p>
+<p>Kabel fiber optik bawah laut menghubungkan internet antar negara dan benua.</p>
+</section>
+
+<section class="section" id="bts">
+<img src="images/menara bts.png" loading="lazy" class="lazy-img">
+<h2>Jaringan Seluler (BTS)</h2>
+<p>Internet pada smartphone bekerja melalui BTS (Base Transceiver Station). BTS menghubungkan perangkat ke jaringan operator menggunakan sinyal radio.</p>
+<p>Semakin dekat dan baik kualitas BTS, semakin stabil koneksi internet.</p>
+</section>
+
+<section class="section" id="wifi">
+<img src="images/router wifi.png" loading="lazy" class="lazy-img">
+<h2>WiFi dan Router</h2>
+<p>WiFi adalah jaringan nirkabel yang menghubungkan perangkat ke internet melalui router. Router berfungsi membagi koneksi internet ke banyak perangkat.</p>
+<p>WiFi banyak digunakan di rumah, sekolah, dan tempat umum karena praktis.</p>
+</section>
+
+<section class="section" id="tcpip">
+<img src="images/diagram tcp-ip.png" loading="lazy" class="lazy-img">
+<h2>Protokol TCP/IP</h2>
+<p>TCP/IP adalah protokol dasar internet. TCP memastikan data dikirim lengkap dan berurutan, sedangkan IP bertugas menentukan alamat tujuan data.</p>
+<p>Kombinasi keduanya membuat komunikasi data di internet berjalan stabil dan akurat.</p>
+</section>
+
+<section class="section" id="http">
+<img src="images/http-dan-https.png" loading="lazy" class="lazy-img">
+<h2>HTTP dan HTTPS</h2>
+<p>HTTP adalah protokol pertukaran data antara browser dan server. HTTPS adalah versi aman yang menggunakan enkripsi.</p>
+<p>HTTPS melindungi data pengguna seperti password dan informasi pribadi dari penyadapan.</p>
+</section>
+
+</article>
+
+</div>
+
+<button class="scroll-top" id="scrollTop">↑</button>
+
+<script>
+/* SCROLL TOP */
+const btn=document.getElementById("scrollTop");
+window.addEventListener("scroll",()=>{btn.style.display=window.scrollY>400?"block":"none";});
+btn.onclick=()=>document.getElementById("hero").scrollIntoView({behavior:"smooth"});
+
+/* TOC */
+const toc=document.getElementById("toc");
+const sections=document.querySelectorAll("article .section");
+const icons={
+internet:"🌍",dns:"📡",packet:"📦",fiber:"💡",
+bts:"📶",wifi:"📡",tcpip:"🔗",http:"🔒"
+};
+sections.forEach(sec=>{
+toc.innerHTML+=`
+<a href="#${sec.id}">
+<span>${icons[sec.id]}</span>
+<small>${sec.querySelector("h2").innerText}</small>
+</a>`;
+});
+
+/* REVEAL */
+const obs=new IntersectionObserver(e=>{
+e.forEach(i=>{if(i.isIntersecting)i.target.classList.add("active");});
+},{threshold:.15});
+document.querySelectorAll(".section").forEach(s=>{s.classList.add("reveal");obs.observe(s);});
+
+/* IMAGE LOAD */
+document.querySelectorAll(".lazy-img").forEach(img=>{
+img.addEventListener("load",()=>img.classList.add("loaded"));
+});
+
+/* PROGRESS BAR */
+const bar=document.getElementById("progressBar");
+const article=document.querySelector("article");
+window.addEventListener("scroll",()=>{
+const p=Math.min(Math.max((window.scrollY+innerHeight-article.offsetTop)/article.offsetHeight,0),1);
+bar.style.width=(p*100)+"%";
+});
+</script>
+
+</body>
+</html>

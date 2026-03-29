@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Belajar Coding bagi Pemula | Aan</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:#000;
+  color:#ddd;
+  font-family:Arial, sans-serif;
+  line-height:1.7;
+}
+
+/* PROGRESS BAR */
+.reading-progress{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:4px;
+  background:#111;
+  z-index:9999;
+}
+.progress-bar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#ffc107,#ffe082);
+}
+
+/* BACK BUTTON */
+.btn-back{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:80px 20px 20px;
+  padding:10px 18px;
+  border-radius:999px;
+  background:#111;
+  color:#ffc107;
+  text-decoration:none;
+  border:1px solid #222;
+  transition:.3s;
+  font-size:14px;
+}
+.btn-back:hover{
+  background:#ffc107;
+  color:#000;
+}
+
+/* HEADER */
+header{
+  padding:60px 20px;
+  text-align:center;
+  background:radial-gradient(circle at top,#1a1a1a,#000);
+}
+header h1{
+  color:#ffc107;
+  font-size:2.3rem;
+}
+header p{
+  max-width:720px;
+  margin:15px auto;
+  color:#aaa;
+}
+.meta{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  font-size:13px;
+  color:#888;
+}
+
+/* PILL NAV */
+.tech-pill-nav{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin:40px 0;
+}
+.tech-pill{
+  padding:12px 22px;
+  border-radius:999px;
+  background:#111;
+  border:1px solid #222;
+  color:#ddd;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
+}
+.tech-pill:hover{
+  border-color:#ffc107;
+  color:#ffc107;
+  box-shadow:0 0 12px rgba(255,193,7,.35);
+}
+.tech-pill.active{
+  background:#ffc107;
+  color:#000;
+  font-weight:600;
+}
+
+/* ARTICLE */
+article{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+.section{
+  margin-bottom:80px;
+}
+.section h2{
+  color:#ffc107;
+  margin-bottom:15px;
+}
+.section p{
+  color:#ccc;
+}
+
+/* CODE BLOCK */
+pre{
+  background:#0d0d0d;
+  padding:16px;
+  border-radius:12px;
+  overflow-x:auto;
+  border-left:4px solid #ffc107;
+  margin:20px 0;
+}
+code{
+  color:#eee;
+  font-family:Consolas, monospace;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+/* BACK TOP */
+.back-top{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:#ffc107;
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  text-decoration:none;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+}
+.back-top.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+@media(max-width:600px){
+  header h1{font-size:1.8rem}
+}
+</style>
+</head>
+
+<body>
+
+<div class="reading-progress">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<a href="artikel.html" class="btn-back">← Kembali ke artikel lainnya</a>
+
+<header>
+  <h1>BELAJAR CODING BAGI PEMULA</h1>
+  <p>Panduan dasar belajar coding dengan penjelasan sederhana dan contoh nyata.</p>
+  <div class="meta">
+    <span>📅 2026</span>
+    <span>✍️ Aan</span>
+  </div>
+</header>
+
+<nav class="tech-pill-nav">
+  <a href="#dasar" class="tech-pill active">💻 Dasar Coding</a>
+  <a href="#html" class="tech-pill">📄 HTML</a>
+  <a href="#css" class="tech-pill">🎨 CSS</a>
+  <a href="#js" class="tech-pill">⚙️ JavaScript</a>
+</nav>
+
+<article>
+
+<section id="dasar" class="section reveal">
+<h2>Apa itu Coding?</h2>
+<p>
+Coding adalah proses menulis instruksi agar komputer dapat menjalankan perintah tertentu.
+Dengan coding, kita bisa membuat website, aplikasi, dan berbagai sistem digital.
+</p>
+<p>
+Bagi pemula, coding sebaiknya dipelajari secara bertahap agar mudah dipahami dan tidak membingungkan.
+</p>
+</section>
+
+<section id="html" class="section reveal">
+<h2>HTML (Struktur Website)</h2>
+<p>
+HTML (HyperText Markup Language) adalah bahasa dasar yang digunakan untuk membuat struktur sebuah halaman website. HTML berfungsi untuk menyusun dan menampilkan konten, seperti judul, paragraf, gambar, tautan, tabel, dan tombol, agar dapat dibaca dan dipahami oleh browser.
+</p>
+
+<p>
+Dalam HTML, setiap elemen ditulis menggunakan tag. Contohnya, tag 
+&lt;h1&gt; digunakan untuk judul, 
+&lt;p&gt; untuk paragraf, dan 
+&lt;img&gt; untuk menampilkan gambar. 
+HTML tidak mengatur tampilan atau desain, melainkan hanya menentukan isi dan susunan konten pada halaman web.
+</p>
+
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Website Pertama&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Halo Dunia&lt;/h1&gt;
+    &lt;p&gt;Saya sedang belajar coding&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</section>
+
+<section id="css" class="section reveal">
+<h2>CSS (Tampilan Website)</h2>
+<p>
+CSS adalah bahasa untuk mengatur tampilan halaman web. Kalau HTML menentukan struktur atau isi konten, CSS membuat konten itu terlihat menarik.
+</p>
+
+<p>
+Dalam CSS, setiap elemen dapat diatur tampilannya menggunakan <code>selector</code> dan <code>property</code>. Misalnya:
+<code>color</code> untuk warna teks, <code>background-color</code> untuk warna latar, dan <code>font-size</code> untuk ukuran huruf. CSS membuat website lebih menarik tanpa mengubah isi dari HTML.
+</p>
+
+
+<pre><code>
+body {
+  background: black;
+  color: white;
+}
+
+h1 {
+  color: #ffc107;
+}
+</code></pre>
+</section>
+
+<section id="js" class="section reveal">
+<h2>JavaScript (Interaksi)</h2>
+<p>
+JavaScript adalah bahasa pemrograman yang digunakan untuk membuat website menjadi interaktif. Dengan JavaScript, kita bisa membuat tombol bisa diklik, animasi berjalan, form bisa memvalidasi data, dan banyak lagi. Misalnya:
+<code>alert(&quot;Halo Dunia!&quot;);</code> akan menampilkan pesan di layar saat dijalankan. JavaScript bekerja bersama HTML dan CSS untuk membuat halaman web dinamis dan menarik.
+</p>
+
+<pre><code>
+alert("Halo, selamat belajar coding!");
+
+document.querySelector("button")
+  .addEventListener("click", () => {
+    alert("Tombol diklik!");
+  });
+</code></pre>
+
+<p>
+Dengan menguasai HTML, CSS, dan JavaScript, pemula sudah memiliki fondasi kuat dalam dunia web development.
+</p>
+</section>
+
+</article>
+
+<a href="#" class="back-top" id="backTop">↑</a>
+
+<script>
+const progressBar=document.getElementById("progressBar");
+const article=document.querySelector("article");
+window.addEventListener("scroll",()=>{
+  const scrollY=window.scrollY+window.innerHeight;
+  const progress=Math.min(
+    Math.max((scrollY-article.offsetTop)/article.offsetHeight,0),1
+  );
+  progressBar.style.width=(progress*100)+"%";
+});
+
+const reveals=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add("active");
+  });
+},{threshold:.15});
+reveals.forEach(el=>observer.observe(el));
+
+const backTop=document.getElementById("backTop");
+window.addEventListener("scroll",()=>{
+  backTop.classList.toggle("show",window.scrollY>400);
+});
+</script>
+
+</body>
+</html>
