@@ -266,4 +266,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 })(jQuery);
 
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "be84fd4ccfd04921994bedf05e7c7bba"}'></script><!-- End Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "be84fd4ccfd04921994bedf05e7c7bba"}'></script>
